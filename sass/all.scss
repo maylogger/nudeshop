@@ -21,3 +21,6 @@ $page-container: ".page";
 @import "typography";
 @import "layout";
 @import "pages";
+
+// import partial
+@import "partials/nav"

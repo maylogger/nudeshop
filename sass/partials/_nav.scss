@@ -1,0 +1,32 @@
+.nav {
+  @include padding-leader(3);
+  .logo {
+    padding-left: rhythm(2);
+    text-indent: -18px;
+  }
+  h2 {
+    display: none;
+  }
+  ul {
+    @include reset-box-model;
+    list-style: none;
+    @include adjust-font-size-to(12px);
+  }
+  .main-nav {
+    padding-left: rhythm(2);
+    a {
+      @include link-colors(black);
+    }
+  }
+  .shop-nav {
+    float: left;
+    padding: rhythm(.5) rhythm(1);
+    @include padding-leader(2);
+    @include leader(5);
+    background: black;
+    a {
+      @include link-colors(white);
+    }
+  }
+}
+
