@@ -1,17 +1,31 @@
 // basic for susy
-$total-columns  : 6;
-$column-width   : 5em;
-$gutter-width   : 1em;
-$grid-padding   : $gutter-width;
+$total-columns  : 12;
+$column-width   : 60px;
+$gutter-width   : 20px;
+$grid-padding   : $gutter-width / 2;
 
 // add media
-$phone          : $total-columns;
-$pad            : 8;
-$desktop        : 12;
 
 // debug
 @import "layout-debug";
 
+body {
+  background: #eeeeef;
+}
+
 #{$page-container} {
-  @include container($phone, $pad, $desktop);
+  @include container;
+  background: white;
+  min-height: 1600px;
+}
+
+$nav-width: 3;
+$main-width: $total-columns - $nav-width;
+
+.nav {
+  @include span-columns($nav-width);
+}
+
+.main {
+  @include span-columns($main-width omega);
 }

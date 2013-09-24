@@ -1,13 +1,10 @@
 /* debug background grid */
-body {
-  @include baseline-grid-background;
-}
-#{$page-container} {
+#{$page-container}.debug {
   @include susy-grid-background;
-  @include at-breakpoint($pad) {
-    @include susy-grid-background;
+  .nav {
+    @include baseline-grid-background;
   }
-  @include at-breakpoint($desktop) {
-    @include susy-grid-background;
+  .main {
+    @include baseline-grid-background;
   }
 }

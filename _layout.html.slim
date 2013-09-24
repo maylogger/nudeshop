@@ -4,6 +4,10 @@ html lang="zh-TW"
     = render "/layout_head"
     = render "/layout_og"
   body
-    = yield
+    .page.debug
+      .nav
+        = render "/partials/nav"
+      .main
+        = yield
     = render "/layout_foot"
     = render "/layout_livereload"
