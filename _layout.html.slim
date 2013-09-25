@@ -5,8 +5,9 @@ html lang="zh-TW"
     = render "/layout_og"
   body
     .page
-      .nav data-spy="affix"
-        = render "/partials/nav"
+      .nav
+        .nav-inner
+          = render "/partials/nav"
       .main
         = yield
     = render "/layout_foot"

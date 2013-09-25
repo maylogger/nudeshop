@@ -143,7 +143,7 @@ p { margin: 0; padding: 0; border: 0; font-size: 13px; line-height: 24px; margin
 .page.debug .nav { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 154, 142, 0.3)), color-stop(5%, rgba(0, 154, 142, 0))); background-image: -webkit-linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); background-image: linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); -webkit-background-size: 100% 24px; -moz-background-size: 100% 24px; -o-background-size: 100% 24px; background-size: 100% 24px; background-position: left top; }
 .page.debug .main { background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 154, 142, 0.3)), color-stop(5%, rgba(0, 154, 142, 0))); background-image: -webkit-linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); background-image: -moz-linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); background-image: -o-linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); background-image: linear-gradient(bottom, rgba(0, 154, 142, 0.3) 5%, rgba(0, 154, 142, 0) 5%); -webkit-background-size: 100% 24px; -moz-background-size: 100% 24px; -o-background-size: 100% 24px; background-size: 100% 24px; background-position: left top; }
 
-body { background: #eeeeef; }
+body { background: #eeeeef; min-width: 950px; }
 
 .page { max-width: 950px; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; background: white; min-height: 1600px; max-width: none; width: 950px; transition: width .3s; }
 .page:after { content: ""; display: table; clear: both; }
@@ -156,13 +156,14 @@ body { background: #eeeeef; }
 /*! demo for a page */
 /*! demo for parital 1 */
 /*! demo for parital 2 */
-.nav { padding-top: 72px; }
-.nav .logo { padding-left: 72px; text-indent: -.9em; font-family: Futura-Medium; letter-spacing: .2em; }
+.nav .nav-inner { padding-top: 72px; background: rgba(255, 255, 255, 0.9); }
+.nav .nav-inner:after { content: ""; display: table; clear: both; }
+.nav .logo { font-family: Futura-Medium; letter-spacing: .2em; margin-left: 44px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo.png?1380123996'); background-repeat: no-repeat; background-position: 50% 50%; width: 130px; height: 48px; background-image: none, url('/images/logo.svg?1380123973'); margin-bottom: 24px; }
 .nav h2 { display: none; }
 .nav ul { margin: 0; padding: 0; border: 0; list-style: none; font-size: 12px; line-height: 24px; }
 .nav .main-nav { padding-left: 72px; }
 .nav .main-nav a { color: black; }
 .nav .shop-nav { float: left; padding: 12px 24px; padding-top: 48px; margin-top: 120px; background: black; }
 .nav .shop-nav a { color: white; }
-.nav.affix { position: fixed; }
-@media (max-height: 500px) { .nav.affix { position: static; } }
+.nav .nav-inner.affix { position: fixed; width: 230px; }
+@media (max-height: 640px) { .nav .nav-inner.affix { position: static; } }

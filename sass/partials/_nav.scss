@@ -1,10 +1,16 @@
 .nav {
-  @include padding-leader(3);
+  .nav-inner {
+    @include padding-leader(3);
+    @include pie-clearfix;
+    background: rgba(white, .9);
+  }
   .logo {
-    padding-left: rhythm(3);
-    text-indent: -.9em;
     font-family: Futura-Medium;
     letter-spacing: .2em;
+    margin-left: rhythm(3) - 28px;
+    @include replace-text-with-dimensions("logo.png");
+    background-image: none, image-url("logo.svg");
+    @include trailer(1);
   }
   h2 {
     display: none;
@@ -32,9 +38,10 @@
     }
   }
   // for affix plugin
-  &.affix {
+  .nav-inner.affix {
     position: fixed;
-    @media (max-height: 500px) {
+    width: columns(3, 12, static);
+    @media (max-height: 640px) {
       position: static;
     }
   }
