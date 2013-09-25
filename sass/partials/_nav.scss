@@ -31,7 +31,7 @@
       @include link-colors(white);
     }
   }
-  // for affix
+  // for affix plugin
   &.affix {
     position: fixed;
     @media (max-height: 500px) {
