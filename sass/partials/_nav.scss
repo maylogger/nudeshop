@@ -1,8 +1,10 @@
 .nav {
   @include padding-leader(3);
   .logo {
-    padding-left: rhythm(2);
-    text-indent: -18px;
+    padding-left: rhythm(3);
+    text-indent: -.9em;
+    font-family: Futura-Medium;
+    letter-spacing: .2em;
   }
   h2 {
     display: none;
@@ -13,12 +15,13 @@
     @include adjust-font-size-to(12px);
   }
   .main-nav {
-    padding-left: rhythm(2);
+    padding-left: rhythm(3);
     a {
       @include link-colors(black);
     }
   }
   .shop-nav {
+    @extend %subpixel;
     float: left;
     padding: rhythm(.5) rhythm(1);
     @include padding-leader(2);
@@ -26,6 +29,13 @@
     background: black;
     a {
       @include link-colors(white);
+    }
+  }
+  // for affix
+  &.affix {
+    position: fixed;
+    @media (max-height: 500px) {
+      position: static;
     }
   }
 }

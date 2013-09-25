@@ -10,6 +10,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+%subpixel {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
 .hide {
   display: none;
 }

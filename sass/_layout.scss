@@ -3,11 +3,11 @@ $total-columns  : 12;
 $column-width   : 70px;
 $gutter-width   : 10px;
 $grid-padding   : 0;
-$container-style: static;
-$container-width: 950px;
+// $container-style: static;
+// $container-width: 950px;
 // add media
 
-// no media
+$wide-screen: 1280px 12;
 
 // debug
 @import "layout-debug";
@@ -17,9 +17,17 @@ body {
 }
 
 #{$page-container} {
-  @include container;
+  @include container($total-columns, static);
   background: white;
   min-height: 1600px;
+  max-width: none;
+  width: 950px;
+  transition: width .3s;
+  @include at-breakpoint($wide-screen) {
+    @include with-grid-settings(12,90px,10px,0) {
+      @include set-container-width(12, static);
+    };
+  }
 }
 
 $nav-width: 3;
