@@ -1,0 +1,166 @@
+$grid-context: 9;
+
+.message {
+  text-align: center;
+  @include adjust-font-size-to(20px);
+  margin: 0 gutter($grid-context) gutter($grid-context) 0;
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  background: black;
+  color: white;
+}
+
+.events {
+  background: white;
+  @include pie-clearfix;
+  width: 720px;
+  @include at-breakpoint($wide-screen) {
+    width: 900px;
+  }
+}
+
+.event {
+
+  @include pie-clearfix;
+
+
+  %item-size {
+    // @include transition( width .3s, height .3s );
+    width: columns(3, $grid-context, static);
+    @include at-breakpoint($wide-screen) {
+      @include with-grid-settings(12,90px,10px,0) {
+      width: columns(3, $grid-context, static);
+      }
+    }
+    margin-right: $gutter-width;
+  }
+
+  .grid-sizer{
+    @extend %item-size;
+    // height: 0px;
+  }
+
+  .item {
+    overflow: hidden;
+    float: left;
+    margin: 0 $gutter-width $gutter-width 0;
+
+    // setting normal and w2 width
+    @extend %item-size;
+    &:nth-child(6n+1),
+    &:nth-child(6n+5) {
+      width: columns(6, $grid-context, static);
+      @include at-breakpoint($wide-screen) {
+        @include with-grid-settings(12,90px,10px,0) {
+        width: columns(6, $grid-context, static);
+        }
+      }
+    }
+
+    // item padding-height
+    height: columns(4, $grid-context, static);
+    @include at-breakpoint($wide-screen) {
+      @include with-grid-settings(12,90px,10px,0) {
+      height: columns(4, $grid-context, static);
+      }
+    }
+    &:nth-child(6n+1),
+    &:nth-child(6n+5) {
+      height: columns(4, $grid-context, static) * 2 + gutter($grid-context, static);
+      @include at-breakpoint($wide-screen) {
+        @include with-grid-settings(12,90px,10px,0) {
+        height: columns(4, $grid-context, static) * 2 + gutter($grid-context, static);
+        }
+      }
+    }
+
+    // inside objects and background
+    .item-inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      @include background-size(cover);
+    }
+
+
+    // item color
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}n) .item-inner {
+        background-color: rgba(black, $i / 30 );
+      }
+      &:nth-child(3n+1) .item-inner {
+        background-color: rgba(black, 1 / 10 );
+      }
+    }
+
+    // item title
+    .item-title {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      // background: rgba(black, .5);
+      @include background-image(radial-gradient( rgba(#aaa,.5) 10%, rgba(black,.2) 110%));
+      color: white;
+      text-decoration: none;
+      @include transition(opacity .7s .2s);
+      .name {
+        margin-top: 59%;
+        @include adjust-font-size-to(20px);
+      }
+      .price {
+        @include adjust-font-size-to(13px);
+      }
+    }
+    &:nth-child(6n+1) .item-title,
+    &:nth-child(6n+5) .item-title {
+      .name {
+        margin-top: 60%;
+        @include adjust-font-size-to(32px);
+      }
+      .price {
+        @include adjust-font-size-to(18px);
+      }
+    }
+
+  } // item
+
+
+
+  .item-link:hover .item-title {
+    opacity: 1;
+  }
+
+  // hover item scale
+  .item-link {
+    display: block;
+    .item-inner {
+      @include transition( transform .7s, -webkit-transform .7s);
+    }
+    &:hover .item-inner {
+      @include transition( transform 25s .7s ease-in-out, -webkit-transform 25s .7s ease-in-out);
+      @include transform( scale(1.25), true);
+    }
+  }
+
+  // sold out event
+  &.sold-out {
+    .item-link {
+      opacity: .5;
+      @include transition(opacity .3s);
+      .item-title {
+        @include transition(none);
+        background: rgba(black, .3);
+      }
+    }
+    .item-link:hover {
+      opacity: 1;
+    }
+  }
+
+} // event
+
+

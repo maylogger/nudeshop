@@ -1,5 +1,6 @@
 %helvetica-light {
-  font-family: "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
+  // font-family: "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
+  font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
 }
 
@@ -16,6 +17,12 @@ body {
 
 .hide {
   display: none;
+}
+
+.divider {
+  height: 0;
+  border-top: 1px solid #666;
+  margin: 8px 0;
 }
 
 #{headings()} {

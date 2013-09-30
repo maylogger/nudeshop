@@ -1,0 +1,15 @@
+$product-page-context: 9;
+
+.product-detail {
+  @include padding-leader(3);
+  @include span-columns(6, $product-page-context);
+  img {
+    max-width: 100%;
+    display: block;
+    @include trailer(1);
+  }
+  p {
+    @include adjust-font-size-to(13px);
+    @include trailer(1);
+  }
+}

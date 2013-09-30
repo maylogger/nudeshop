@@ -1,0 +1,56 @@
+$product-page-context: 9;
+
+.sidebar {
+  position: relative;
+  @include padding-leader(3);
+  @include span-columns(3 omega, $product-page-context);
+  @include box-sizing(border-box);
+  padding-left: columns(.3, $product-page-context);
+
+  // space adjust
+  p {
+    margin: 0;
+  }
+
+  // title and meta description...
+  .product-title {
+    @include adjust-font-size-to(16px);
+    font-weight: bold;
+  }
+  .product-number {
+    @include adjust-font-size-to(12px);
+    color: rgba(black,.85);
+  }
+  .product-price {
+    @include leader(1);
+    @include adjust-font-size-to(16px);
+    @include trailer(1);
+  }
+
+  // timer
+  .timer {
+    @include leader(4);
+    .d,.h,.m {
+      display: block;
+      @include adjust-font-size-to(48px, 2.5);
+      font-family: "AvenirNext-UltraLight", "Avenir-Light", "Helvetica", "Arial", sans-serif;
+      font-weight: 100;
+      color: rgba(black,.85);
+      letter-spacing: -.1em;
+    }
+    .unit {
+      @include adjust-font-size-to(12px);
+      margin-left: 1em;
+      letter-spacing: 2px;
+    }
+  }
+
+
+  // for affix
+  .sidebar-inner.affix {
+    position: fixed;
+    @media (max-height: 640px) {
+      position: static;
+    }
+  }
+}

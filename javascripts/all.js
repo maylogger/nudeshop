@@ -9,10 +9,17 @@ function isMobile(){
   );
 }
 
-
 // 如果不是手持裝置
 if(!isMobile()) {
-
   $(".nav-inner").affix();
-
+  $(".sidebar-inner").affix();
 }
+
+$('.event').each(function(){
+
+  $(this).masonry({
+    columnWidth: '.grid-sizer',
+    itemSelector: '.item'
+  });
+
+});
