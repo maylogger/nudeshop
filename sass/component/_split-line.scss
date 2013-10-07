@@ -1,0 +1,7 @@
+.split-line {
+  height: 1px;
+  margin: 0 auto;
+  @include background-image(
+    radial-gradient(100% 100%, rgba(black, .125) 50%, rgba(black, 0) 65%)
+  );
+}
