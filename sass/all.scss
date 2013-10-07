@@ -25,7 +25,11 @@ $page-container: ".page";
 
 // import component and partial
 @import "component/add-cart";
+@import "component/formalize";
+@import "component/button";
+@import "component/button-group";
+@import "component/form-group";
+@import "component/split-line";
 // ----------------------------
-@import "partials/formalize";
 @import "partials/nav";
 @import "partials/events";
