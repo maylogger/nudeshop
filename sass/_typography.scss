@@ -36,7 +36,7 @@ h4 {
 }
 
 a {
-  @include link-colors(blue);
+  @include link-colors(#369);
   @include hover-link;
 }
 

@@ -21,15 +21,19 @@ $page-container: ".page";
 @import "colors";
 @import "typography";
 @import "layout";
-@import "pages";
 
 // import component and partial
 @import "component/add-cart";
 @import "component/formalize";
 @import "component/button";
 @import "component/button-group";
-@import "component/form-group";
+@import "component/form";
 @import "component/split-line";
+@import "component/social-link";
 // ----------------------------
 @import "partials/nav";
 @import "partials/events";
+@import "partials/main";
+
+// pages
+@import "pages";
