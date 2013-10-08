@@ -1,0 +1,43 @@
+form.main-inner-container
+  h2.main-title
+    |註冊
+    span.alert 透過註冊成為會員後，才能購買商品。
+  .main-block
+    h3.main-block-title 快速註冊
+    = render "/partials/component/social-link"
+  .split-line-with-text: span 或
+  .main-block
+    h3.main-block-title 註冊
+    .form-group
+      label.form-group-title
+        |帳號
+        span.required= "(必填)"
+      .form-group-content
+        input type="text"
+
+    .form-group
+      label.form-group-title
+        |email
+        span.required= "(必填)"
+      .form-group-content
+        input type="email"
+
+    .form-group
+      label.form-group-title
+        |密碼
+        span.required= "(必填)"
+      .form-group-content
+        input type="password"
+
+    .form-group
+      label.form-group-title
+        |確認密碼
+        span.required= "(必填)"
+      .form-group-content
+        input type="password"
+
+    .form-text
+      p 當您按下註冊時，也就代表您同意 <a href="#">使用者條款</a> 與 <a href="#">隱私政策</a>。
+
+    .form-action
+      button.action type="submit" 註冊
