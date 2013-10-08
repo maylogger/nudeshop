@@ -1,4 +1,4 @@
-/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 8/9. */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0; font-size: 32px; line
 
 h4 { font-size: 16px; line-height: 24px; }
 
-a { color: blue; text-decoration: none; }
+a { color: #336699; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 p { margin: 0; padding: 0; border: 0; font-size: 13px; line-height: 24px; margin-top: 24px; margin-bottom: 24px; }
@@ -157,20 +157,7 @@ body { background: #eeeeef; min-width: 950px; }
 
 .main { width: 74.73684%; float: right; margin-right: 0; }
 
-.product-detail { padding-top: 72px; width: 66.19718%; float: left; margin-right: 1.40845%; }
-.product-detail img { max-width: 100%; display: block; margin-bottom: 24px; }
-.product-detail p { font-size: 13px; line-height: 24px; margin-bottom: 24px; }
-
-.sidebar { position: relative; padding-top: 72px; width: 32.39437%; float: right; margin-right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 2.95775%; }
-.sidebar p { margin: 0; }
-.sidebar .product-title { font-size: 16px; line-height: 24px; font-weight: bold; }
-.sidebar .product-number { font-size: 12px; line-height: 24px; color: rgba(0, 0, 0, 0.85); }
-.sidebar .product-price { margin-top: 24px; font-size: 16px; line-height: 24px; margin-bottom: 24px; }
-.sidebar .timer { margin-top: 96px; }
-.sidebar .timer .d, .sidebar .timer .h, .sidebar .timer .m { display: block; font-size: 48px; line-height: 60px; font-family: "AvenirNext-UltraLight", "Avenir-Light", "Helvetica", "Arial", sans-serif; font-weight: 100; color: rgba(0, 0, 0, 0.85); letter-spacing: -.1em; }
-.sidebar .timer .unit { font-size: 12px; line-height: 24px; margin-left: 1em; letter-spacing: 2px; }
-.sidebar .sidebar-inner.affix { position: fixed; }
-@media (max-height: 640px) { .sidebar .sidebar-inner.affix { position: static; } }
+.main-inner-container { padding-top: 78px; width: 66.19718%; float: left; margin-right: 1.40845%; margin-left: 11.26761%; min-height: 300px; }
 
 .add-cart { font-size: 15px; line-height: 24px; color: black; border: 1px solid black; padding: 5px 10px; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
 .add-cart:hover { color: white; }
@@ -246,11 +233,12 @@ optgroup::-moz-focus-inner { border: 0; padding: 0; }
 
 .ie6_input_disabled { background: #eeeeee; }
 
-button, a.button { padding: 0 12px; border: none; background-color: #444; background-image: none; color: #ddd; text-shadow: none; font-size: 13px; line-height: 24px; font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; font-weight: 300; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
-button:hover, a.button:hover { background-image: none; }
+button, a.button { text-align: center; padding: 0 24px; border: none; background-color: #444; background-image: none; color: #ddd; text-shadow: none; font-size: 13px; line-height: 24px; font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; font-weight: 300; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
 button.action, a.button.action { background-color: black; }
 button.danger, a.button.danger { background-color: #aa0000; }
 button.disable, a.button.disable { background-color: #ccc; color: #888; }
+button:hover, a.button:hover { background-image: none; color: #999; }
+button.active, a.button.active { background-color: #eee; color: #888; cursor: default; }
 
 .button-group { display: inline-block; }
 .button-group button, .button-group a.button { float: left; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
@@ -258,24 +246,36 @@ button.disable, a.button.disable { background-color: #ccc; color: #888; }
 .button-group button:last-child, .button-group a.button:last-child { -webkit-border-radius: 0 4px 4px 0; -moz-border-radius: 0 4px 4px 0; -ms-border-radius: 0 4px 4px 0; -o-border-radius: 0 4px 4px 0; border-radius: 0 4px 4px 0; }
 .button-group button + button, .button-group a.button + a.button { border-left: 1px solid #666; }
 
-.form-group { margin-bottom: 24px; }
+.form-group { margin-bottom: 12px; }
 .form-group .form-group-title { font-size: 13px; line-height: 24px; font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; }
+.form-group .form-group-title .required { color: #aa0000; margin-left: 6px; }
+.form-group .form-group-title .alert { color: #888; margin-left: 6px; }
 .form-group .form-group-content { display: block; }
 .form-group input, .form-group textarea, .form-group select { width: 100%; height: 24px; font-size: 13px; line-height: 16px; font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; }
 .form-group textarea { min-height: 96px; }
 .form-group .checkbox, .form-group .radio { display: inline-block; margin-right: 1em; }
 .form-group .checkbox label, .form-group .radio label { color: #555; font-size: 13px; line-height: 16px; }
-.form-group .checkbox input, .form-group .radio input { margin-right: 3px; width: auto; height: auto; font-size: 14px; line-height: 24px; }
+.form-group .checkbox input, .form-group .radio input { margin-right: 6px; width: auto; height: auto; font-size: 14px; line-height: 24px; }
 .form-group .note { color: #888; font-size: 12px; line-height: 16px; margin: 3px 0 0; }
 .form-group.success .form-group-title { color: #468847; }
 .form-group.success input, .form-group.success textarea { border-color: #468847 rgba(70, 136, 71, 0.4) rgba(70, 136, 71, 0.35) rgba(70, 136, 71, 0.35); }
 .form-group.error .form-group-title { color: #aa0000; }
 .form-group.error input, .form-group.error textarea, .form-group.error select { border-color: #aa0000 rgba(170, 0, 0, 0.4) rgba(170, 0, 0, 0.35) rgba(170, 0, 0, 0.35); }
+.form-group.error .checkbox label, .form-group.error .radio label { color: rgba(170, 0, 0, 0.65); }
 
-.form-horizontal .form-group-title { float: left; width: 4em; text-align: right; }
-.form-horizontal .form-group-content { overflow: hidden; padding-left: 12px; }
+.form-text { margin-top: 24px; margin-bottom: 24px; border-top-style: solid; border-top-width: 1px; padding-top: 11px; border-bottom-style: solid; border-bottom-width: 1px; padding-bottom: 11px; border-color: #ccc; }
+.form-text p { margin: 0; }
 
-.split-line { height: 1px; margin: 0 auto; background-image: -webkit-gradient(radial, 100% 100%, 0, 100% 100%, 65, color-stop(50%, rgba(0, 0, 0, 0.125)), color-stop(65%, rgba(0, 0, 0, 0))); background-image: -webkit-radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); background-image: -moz-radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); background-image: -o-radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); background-image: radial-gradient(100% 100%, rgba(0, 0, 0, 0.125) 50%, rgba(0, 0, 0, 0) 65%); }
+.form-action { margin-top: 24px; }
+.form-action .alert { margin-left: 12px; font-size: 12px; line-height: 24px; }
+
+.split-line { height: 1px; background-color: #ccc; }
+
+.split-line-with-text { padding-top: 12px; padding-bottom: 12px; position: relative; text-align: center; }
+.split-line-with-text span { position: relative; z-index: 2; padding: 0 6px; font-size: 13px; line-height: 24px; background-color: white; }
+.split-line-with-text:before { content: ""; display: block; position: absolute; z-index: 1; top: 50%; left: 0; right: 0; margin-top: -0.5px; height: 1px; background-color: #ccc; }
+
+.social-link a.button { margin-right: 12px; }
 
 .nav .nav-inner { padding-top: 84px; }
 .nav .nav-inner:after { content: ""; display: table; clear: both; }
@@ -329,3 +329,23 @@ button.disable, a.button.disable { background-color: #ccc; color: #888; }
 .event.sold-out .item-link { opacity: .5; -webkit-transition: opacity 0.3s; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; transition: opacity 0.3s; }
 .event.sold-out .item-link .item-title { -webkit-transition: none; -moz-transition: none; -o-transition: none; transition: none; background: rgba(0, 0, 0, 0.3); }
 .event.sold-out .item-link:hover { opacity: 1; }
+
+.main-title { margin-bottom: 24px; font-size: 28px; line-height: 71px; border-bottom: 1px solid #ccc; }
+.main-title .alert { margin-left: 6px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; font-size: 16px; line-height: 24px; color: #999; }
+
+.main-block-title { margin-bottom: 6px; font-size: 16px; line-height: 24px; }
+
+.product-detail { padding-top: 72px; width: 66.19718%; float: left; margin-right: 1.40845%; }
+.product-detail img { max-width: 100%; display: block; margin-bottom: 24px; }
+.product-detail p { font-size: 13px; line-height: 24px; margin-bottom: 24px; }
+
+.sidebar { position: relative; padding-top: 72px; width: 32.39437%; float: right; margin-right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-left: 2.95775%; }
+.sidebar p { margin: 0; }
+.sidebar .product-title { font-size: 16px; line-height: 24px; font-weight: bold; }
+.sidebar .product-number { font-size: 12px; line-height: 24px; color: rgba(0, 0, 0, 0.85); }
+.sidebar .product-price { margin-top: 24px; font-size: 16px; line-height: 24px; margin-bottom: 24px; }
+.sidebar .timer { margin-top: 96px; }
+.sidebar .timer .d, .sidebar .timer .h, .sidebar .timer .m { display: block; font-size: 48px; line-height: 60px; font-family: "AvenirNext-UltraLight", "Avenir-Light", "Helvetica", "Arial", sans-serif; font-weight: 100; color: rgba(0, 0, 0, 0.85); letter-spacing: -.1em; }
+.sidebar .timer .unit { font-size: 12px; line-height: 24px; margin-left: 1em; letter-spacing: 2px; }
+.sidebar .sidebar-inner.affix { position: fixed; }
+@media (max-height: 640px) { .sidebar .sidebar-inner.affix { position: static; } }
