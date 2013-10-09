@@ -1,0 +1,53 @@
+.main-inner-container
+  h2.main-title
+    |訂單列表
+    span.alert 未處理、處理中訂單，可更改收件者資訊。
+  .main-block
+    h3.main-block-title 未付款訂單
+    ul.order
+      li.order-title
+        .order-number.col-1 訂單編號
+        .product.col-2 產品名稱
+        .date.col-1 訂購時間
+        .quantity.col-1 數量
+        .price.col-1-omega 價錢
+      - ( rand(5) + 2 ).times do
+        li: a href="#"
+          .order-number.col-1= rand(10000) + 1000000
+          .product.col-2= zh_lorem_words( rand(4) + 4)
+          .date.col-1= lorem_date("%Y/%m/%d")
+          .quantity.col-1= rand(10) + 1
+          .price.col-1-omega
+            span.unit NT$
+            = rand(20000) + 5000
+
+  .main-block
+    h3.main-block-title 處理中訂單
+    ul.order
+      li.order-title
+        .order-number.col-1 訂單編號
+        .product.col-2 產品名稱
+        .date.col-1 訂購時間
+        .quantity.col-1 數量
+        .price.col-1-omega 價錢
+      - ( rand(5) + 2 ).times do
+        li: a href="#"
+          .order-number.col-1= rand(10000) + 1000000
+          .product.col-2= zh_lorem_words( rand(4) + 4)
+          .date.col-1= lorem_date("%Y/%m/%d")
+          .quantity.col-1= rand(10) + 1
+          .price.col-1-omega
+            span.unit NT$
+            = rand(20000) + 5000
+
+  .main-block
+    h3.main-block-title 已出貨訂單
+    ul.order
+      li.order-title
+        .order-number.col-1 訂單編號
+        .product.col-2 產品名稱
+        .date.col-1 出貨時間
+        .quantity.col-1 數量
+        .price.col-1-omega 價錢
+      li
+        .alert 目前尚未有已出貨訂單
