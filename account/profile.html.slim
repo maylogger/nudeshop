@@ -1,5 +1,12 @@
-form.main-inner-container
-  h2.main-title 編輯個人資料
+form.main-inner-container.col-8
+  h2.main-title
+    |會員中心
+
+  ul.pills
+    li: a href="/account/orders.html" 我的訂單
+    li.active: a href="/account/profile.html" 編輯個人資料
+    li: a href="/issues/new.html" 聯繫客服
+
   .main-block
     h3.main-block-title 帳號基本資料
     .form-group
@@ -56,9 +63,7 @@ form.main-inner-container
     .form-group
       label.form-group-title 收件地址
       .form-group-content
-        input type="text" placeholder="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓"
-
-  .split-line
+        input.full-width type="text" placeholder="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓"
 
   .form-action
     button.action type="submit" 儲存

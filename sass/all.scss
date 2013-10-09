@@ -30,10 +30,12 @@ $page-container: ".page";
 @import "component/form";
 @import "component/split-line";
 @import "component/social-link";
+@import "component/pills";
 // ----------------------------
 @import "partials/nav";
 @import "partials/events";
 @import "partials/main";
+@import "partials/list";
 
 // pages
 @import "pages";

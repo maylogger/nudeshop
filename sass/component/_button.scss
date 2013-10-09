@@ -29,8 +29,8 @@ button, a.button {
     color: #999;
   }
   &.active {
-    background-color: #eee;
-    color: #888;
+    background-color: $wall-white;
+    color: #333;
     cursor: default;
   }
 

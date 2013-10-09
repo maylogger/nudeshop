@@ -1,3 +1,9 @@
+.main {
+  .button-group {
+    @include trailer(.75);
+  }
+}
+
 .main-title {
   @include trailer(1);
   font-size: 28px;
@@ -12,8 +18,9 @@
 }
 
 
+
 .main-block {
-  // @include trailing-border(1px);
+
 }
 
 .main-block-title {

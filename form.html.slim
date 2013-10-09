@@ -16,6 +16,7 @@ form.form-demo
   .split-line
 
   h3 form-vertical
+  / input
   .form-group
     label.form-group-title= zh_lorem_words( rand(3) + 2 )
     .form-group-content
@@ -34,6 +35,7 @@ form.form-demo
       input type="text" placeholder="this is input"
     p.note= lorem_sentences(2)
 
+  / textarea
   .form-group
     label.form-group-title= zh_lorem_words( rand(3) + 2 )
     .form-group-content
@@ -47,6 +49,7 @@ form.form-demo
     .form-group-content
       textarea placeholder="I'm text area."
 
+  / select
   .form-group
     label.form-group-title= zh_lorem_words( rand(3) + 2 )
     .form-group-content
@@ -64,25 +67,64 @@ form.form-demo
         option value="item2" item2
         option value="" ...
 
+  / checkbox
   .form-group
     label.form-group-title= zh_lorem_words( rand(3) + 2 )
     .form-group-content
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
+      .checkbox-group
+        .checkbox
+          label
+            input type="checkbox"
+            = zh_lorem_words( rand(3) + 2 )
+        .checkbox
+          label
+            input type="checkbox"
+            = zh_lorem_words( rand(3) + 2 )
+        .checkbox
+          label
+            input type="checkbox"
+            = zh_lorem_words( rand(3) + 2 )
 
+
+  / radio
   .form-group
     label.form-group-title= zh_lorem_words( rand(3) + 2 )
     .form-group-content
+      .radio-group
+        .radio
+          label
+            input type="radio" name="group" checked="checked"
+            = zh_lorem_words( rand(3) + 2 )
+        .radio
+          label
+            input type="radio" name="group"
+            = zh_lorem_words( rand(3) + 2 )
+        .radio
+          label
+            input type="radio" name="group"
+            = zh_lorem_words( rand(3) + 2 )
+
+.form-group.error
+    label.form-group-title= zh_lorem_words( rand(3) + 2 )
+    .form-group-content
+      .checkbox-group
+        .checkbox
+          label
+            input type="checkbox"
+            = zh_lorem_words( rand(3) + 2 )
+        .checkbox
+          label
+            input type="checkbox"
+            = zh_lorem_words( rand(3) + 2 )
+        .checkbox
+          label
+            input type="checkbox"
+            = zh_lorem_words( rand(3) + 2 )
+
+.form-group.error
+  label.form-group-title= zh_lorem_words( rand(3) + 2 )
+  .form-group-content
+    .radio-group
       .radio
         label
           input type="radio" name="group" checked="checked"
@@ -96,115 +138,84 @@ form.form-demo
           input type="radio" name="group"
           = zh_lorem_words( rand(3) + 2 )
 
-.form-group.error
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
+/   .split-line
 
-.form-group.error
-  label.form-group-title= zh_lorem_words( rand(3) + 2 )
-  .form-group-content
-    .radio
-      label
-        input type="radio" name="group" checked="checked"
-        = zh_lorem_words( rand(3) + 2 )
-    .radio
-      label
-        input type="radio" name="group"
-        = zh_lorem_words( rand(3) + 2 )
-    .radio
-      label
-        input type="radio" name="group"
-        = zh_lorem_words( rand(3) + 2 )
+/ h3 form-horizontal
+/ .form-horizontal
+/   .form-group
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       input type="text" placeholder="this is input"
+/   .form-group.success
+/       label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/       .form-group-content
+/         input type="text" placeholder="this is input"
+/   .form-group.error
+/       label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/       .form-group-content
+/         input type="text" placeholder="this is input"
 
-  .split-line
+/   .form-group
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       textarea placeholder="I'm text area."
+/   .form-group.success
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       textarea placeholder="I'm text area."
+/   .form-group.error
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       textarea placeholder="I'm text area."
 
-h3 form-horizontal
-.form-horizontal
-  .form-group
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      input type="text" placeholder="this is input"
-  .form-group.success
-      label.form-group-title= zh_lorem_words( rand(3) + 2 )
-      .form-group-content
-        input type="text" placeholder="this is input"
-  .form-group.error
-      label.form-group-title= zh_lorem_words( rand(3) + 2 )
-      .form-group-content
-        input type="text" placeholder="this is input"
+/   .form-group
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       select
+/         option value="item" item
+/         option value="item1" item1
+/         option value="item2" item2
+/         option value="" ...
+/   .form-group.error
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       select
+/         option value="item" item
+/         option value="item1" item1
+/         option value="item2" item2
+/         option value="" ...
 
-  .form-group
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      textarea placeholder="I'm text area."
-  .form-group.success
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      textarea placeholder="I'm text area."
-  .form-group.error
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      textarea placeholder="I'm text area."
+/   .form-group
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       .checkbox-group
+/         .checkbox
+/           label
+/             input type="checkbox"
+/             = zh_lorem_words( rand(3) + 2 )
+/         .checkbox
+/           label
+/             input type="checkbox"
+/             = zh_lorem_words( rand(3) + 2 )
+/         .checkbox
+/           label
+/             input type="checkbox"
+/             = zh_lorem_words( rand(3) + 2 )
 
-  .form-group
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      select
-        option value="item" item
-        option value="item1" item1
-        option value="item2" item2
-        option value="" ...
-  .form-group.error
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      select
-        option value="item" item
-        option value="item1" item1
-        option value="item2" item2
-        option value="" ...
-
-  .form-group
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
-      .checkbox
-        label
-          input type="checkbox"
-          = zh_lorem_words( rand(3) + 2 )
-
-
-  .form-group
-    label.form-group-title= zh_lorem_words( rand(3) + 2 )
-    .form-group-content
-      .radio
-        label
-          input type="radio" name="group1" checked="checked"
-          = zh_lorem_words( rand(3) + 2 )
-      .radio
-        label
-          input type="radio" name="group1"
-          = zh_lorem_words( rand(3) + 2 )
-      .radio
-        label
-          input type="radio" name="group1"
-          = zh_lorem_words( rand(3) + 2 )
+/   .form-group
+/     label.form-group-title= zh_lorem_words( rand(3) + 2 )
+/     .form-group-content
+/       .radio-group
+/         .radio
+/           label
+/             input type="radio" name="group1" checked="checked"
+/             = zh_lorem_words( rand(3) + 2 )
+/         .radio
+/           label
+/             input type="radio" name="group1"
+/             = zh_lorem_words( rand(3) + 2 )
+/         .radio
+/           label
+/             input type="radio" name="group1"
+/             = zh_lorem_words( rand(3) + 2 )
 
