@@ -1,0 +1,22 @@
+.main-title {
+  @include trailer(1);
+  font-size: 28px;
+  line-height: $base-line-height * 3 - 1;
+  border-bottom: 1px solid #ccc;
+  .alert {
+    margin-left: 6px;
+    @include ellipsis;
+    @include adjust-font-size-to(16px);
+    color: #999;
+  }
+}
+
+
+.main-block {
+  // @include trailing-border(1px);
+}
+
+.main-block-title {
+  @include trailer(.25);
+  @include adjust-font-size-to(16px);
+}

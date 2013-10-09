@@ -41,3 +41,10 @@ $main-width: $total-columns - $nav-width;
 .main {
   @include span-columns($main-width omega);
 }
+
+.main-inner-container {
+  @include padding-leader(3.25);
+  @include span-columns(6, $main-width);
+  @include pre(1, $main-width);
+  min-height: 300px;
+}

@@ -1,0 +1,31 @@
+.split-line {
+  height: 1px;
+  background-color: #ccc;
+}
+
+.split-line-with-text {
+  @include padding-leader(.5);
+  @include padding-trailer(.5);
+  position: relative;
+  text-align: center;
+  span {
+    position: relative;
+    z-index: 2;
+    padding: 0 6px;
+    @include adjust-font-size-to(13px);
+    background-color: $white;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: - 0.5px;
+    height: 1px;
+    background-color: #ccc;
+  }
+
+}

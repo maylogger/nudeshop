@@ -31,8 +31,12 @@ body {
   @extend %helvetica-light;
 }
 
+h4 {
+  @include adjust-font-size-to(16px);
+}
+
 a {
-  @include link-colors(blue);
+  @include link-colors(#369);
   @include hover-link;
 }
 

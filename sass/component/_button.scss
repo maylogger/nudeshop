@@ -1,0 +1,39 @@
+button, a.button {
+  text-align: center;
+  padding: 0 24px;
+  border: none;
+  background-color: #444;
+  background-image: none;
+  color: #ddd;
+  text-shadow: none;
+  @include adjust-font-size-to(13px);
+  font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  @extend %subpixel;
+
+  @include border-radius(0);
+
+  // 狀態
+  &.action {
+    background-color: black;
+  }
+  &.danger {
+    background-color: $red;
+  }
+  &.disable {
+    background-color: #ccc;
+    color: #888;
+  }
+  &:hover {
+    background-image: none;
+    color: #999;
+  }
+  &.active {
+    background-color: #eee;
+    color: #888;
+    cursor: default;
+  }
+
+}
+
+

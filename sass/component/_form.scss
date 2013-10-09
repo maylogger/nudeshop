@@ -1,0 +1,110 @@
+// 垂直排列
+
+.form-group {
+  @include trailer(.5);
+
+  .form-group-title {
+    @include adjust-font-size-to(13px);
+    font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+    .required {
+      color: $red;
+      margin-left: 6px;
+    }
+    .alert {
+      color: #888;
+      margin-left: 6px;
+    }
+  }
+
+
+  .form-group-content {
+    display: block;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    height: $base-line-height;
+    @include adjust-font-size-to(13px, 2/3);
+    font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+  }
+
+  textarea {
+    min-height: $base-line-height * 4;
+  }
+
+  .checkbox, .radio {
+    display: inline-block;
+    margin-right: 1em;
+    label {
+      color: #555;
+      @include adjust-font-size-to(13px, 2/3);
+    }
+    input {
+      margin-right: 6px;
+      width: auto;
+      height: auto;
+      @include adjust-font-size-to(14px);
+    }
+  }
+
+  .note {
+    color: #888;
+    @include adjust-font-size-to(12px, 2/3);
+    margin: 3px 0 0;
+  }
+
+  &.success {
+    .form-group-title {
+      color: $green;
+    }
+    input, textarea {
+      border-color: $green rgba($green, .4) rgba($green, .35) rgba($green, .35);
+    }
+  }
+
+  &.error {
+    .form-group-title {
+      color: $red;
+    }
+    input, textarea, select {
+      border-color: $red rgba($red, .4) rgba($red, .35) rgba($red, .35);
+    }
+    .checkbox label, .radio label {
+      color: rgba($red, .65);
+    }
+  }
+
+}
+
+.form-text {
+  @include leader(1);
+  @include trailer(1);
+  @include leading-border(1px, .5);
+  @include trailing-border(1px, .5);
+  border-color: #ccc;
+  p {
+    margin: 0;
+  }
+}
+
+.form-action {
+  @include leader(1);
+  .alert {
+    margin-left: 12px;
+    @include adjust-font-size-to(12px);
+  }
+}
+
+// 水平排列
+// .form-horizontal {
+//   .form-group-title {
+//     float: left;
+//     width: 4em;
+//     text-align: right;
+//   }
+
+//   .form-group-content {
+//     overflow: hidden;
+//     padding-left: 12px;
+//   }
+// }

@@ -1,0 +1,28 @@
+form.main-inner-container
+  h2.main-title
+    |登入
+    span.alert 會員登入後，才能進行購買動作。
+  .main-block
+    h3.main-block-title 快速登入
+    = render "/partials/component/social-link"
+  .split-line-with-text: span 或
+  .main-block
+    h3.main-block-title 登入
+    .form-group
+      label.form-group-title 帳號
+      .form-group-content
+        input type="text"
+
+    .form-group
+      label.form-group-title
+        |密碼
+        span.alert
+          |(
+          a href="/users/password/new.html" 忘記密碼
+          |)
+      .form-group-content
+        input type="password"
+
+    .form-action
+      button.action type="submit" 登入
+      a.alert href="/users/sign_up.html" 尚未註冊？

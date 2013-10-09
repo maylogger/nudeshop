@@ -1,0 +1,17 @@
+.button-group {
+  display: inline-block;
+  button, a.button {
+    float: left;
+    @include border-radius(0);
+    &:first-child {
+      @include border-radius(4px 0 0 4px);
+    }
+    &:last-child {
+      @include border-radius(0 4px 4px 0);
+    }
+  }
+  button + button, a.button + a.button {
+    border-left: 1px solid #666;
+  }
+
+}
