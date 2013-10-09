@@ -1,0 +1,63 @@
+.order {
+  list-style: none;
+  @include reset-box-model;
+  @include trailer(1);
+  @include adjust-font-size-to(13px);
+
+  li {
+    @include pie-clearfix;
+    border-bottom: 1px solid #eee;
+  }
+  .order-title {
+    padding: 0 0 3px ;
+    border-bottom: 1px solid #ccc;
+  }
+
+  li > a {
+    @include pie-clearfix;
+    display: block;
+    padding: 3px;
+    color: #333;
+  }
+  li > a:hover {
+    background-color: #ffffef;
+  }
+
+  .alert {
+    padding: 6px 0;
+    text-align: center;
+  }
+
+  .product {
+    @include ellipsis;
+  }
+  .quantity {
+    text-align: right;
+  }
+  .price {
+    text-align: right;
+    .unit {
+      color: #999;
+    }
+  }
+
+  // order-columns
+  .col-1 {
+    @include span-columns(1, $main-inner-container-width);
+  }
+  .col-2 {
+    @include span-columns(2, $main-inner-container-width);
+  }
+  .col-3 {
+    @include span-columns(3, $main-inner-container-width);
+  }
+  .col-1-omega {
+    @include span-columns(1 omega, $main-inner-container-width);
+  }
+  .col-2-omega {
+    @include span-columns(2 omega, $main-inner-container-width);
+  }
+  .col-3-omega {
+    @include span-columns(3 omega, $main-inner-container-width);
+  }
+}
