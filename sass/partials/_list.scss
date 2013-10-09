@@ -1,7 +1,7 @@
 .list {
   width: 100%;
   text-align: left;
-  @include trailer(1);
+  @include trailer(2);
   border-bottom: 1px solid black;
   @include adjust-font-size-to(13px);
 

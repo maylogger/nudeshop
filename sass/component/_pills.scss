@@ -1,16 +1,17 @@
 .pills {
+  @extend %subpixel;
   @include pie-clearfix;
   display: inline-block;
   @include reset-box-model;
   list-style: none;
   @include trailer(1);
-  border: 1px solid #999;
+  border: 1px solid $black;
   li {
     float: left;
     // margin-right: 1em;
   }
   li + li {
-    border-left: 1px solid #999;
+    border-left: 1px solid $black;
   }
   li a {
     display: block;
@@ -23,7 +24,7 @@
     }
   }
   li.active a {
-    background-color: #555;
+    background-color: $black;
     color: white;
   }
 }

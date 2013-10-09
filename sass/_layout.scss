@@ -20,7 +20,7 @@ body {
 #{$page-container} {
   @include container($total-columns, static);
   background: white;
-  min-height: 1600px;
+  min-height: 800px;
   max-width: none;
   width: 950px;
   transition: width .3s;
@@ -33,7 +33,7 @@ body {
 
 $nav-width: 3;
 $main-width: $total-columns - $nav-width;
-$main-inner-container-width: 8;
+$main-inner-container-width: 7;
 
 .nav {
   @include span-columns($nav-width);
@@ -46,8 +46,8 @@ $main-inner-container-width: 8;
 .main-inner-container {
   @include padding-leader(3.25);
   @include span-columns($main-inner-container-width, $main-width);
-  // @include pre(1, $main-width);
-  min-height: 300px;
+  @include pre(1, $main-width);
+  // min-height: 300px;
   // &.col-8 {
   //   @include span-columns(8, $main-width);
   //   margin-left: 0;
