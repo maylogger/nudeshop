@@ -1,3 +1,9 @@
+.main {
+  .button-group {
+    @include trailer(.75);
+  }
+}
+
 .main-title {
   @include trailer(1);
   font-size: 28px;
@@ -9,14 +15,20 @@
     @include adjust-font-size-to(16px);
     color: #999;
   }
+  .pills {
+    margin: 0;
+    position: relative;
+    top: 3px;
+    left: 10px;
+  }
 }
+
 
 
 .main-block {
-  // @include trailing-border(1px);
+
 }
 
 .main-block-title {
-  @include trailer(.25);
-  @include adjust-font-size-to(16px);
+  @include adjust-font-size-to(24px);
 }

@@ -1,6 +1,8 @@
 .split-line {
+  @include leader(1);
+  @include trailer(1);
   height: 1px;
-  background-color: #ccc;
+  background-color: $wall-white;
 }
 
 .split-line-with-text {
@@ -25,7 +27,7 @@
     right: 0;
     margin-top: - 0.5px;
     height: 1px;
-    background-color: #ccc;
+    background-color: $wall-white;
   }
 
 }

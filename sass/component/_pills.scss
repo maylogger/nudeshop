@@ -1,0 +1,30 @@
+.pills {
+  @extend %subpixel;
+  @include pie-clearfix;
+  display: inline-block;
+  @include reset-box-model;
+  list-style: none;
+  @include trailer(1);
+  border: 1px solid $black;
+  li {
+    float: left;
+    // margin-right: 1em;
+  }
+  li + li {
+    border-left: 1px solid $black;
+  }
+  li a {
+    display: block;
+    padding: 0px 24px;
+    @include adjust-font-size-to(13px);
+    color: #333;
+    &:hover {
+      color: #666;
+      text-decoration: none;
+    }
+  }
+  li.active a {
+    background-color: $black;
+    color: white;
+  }
+}

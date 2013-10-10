@@ -1,0 +1,79 @@
+.list {
+  width: 100%;
+  text-align: left;
+  @include trailer(2);
+  border-bottom: 1px solid black;
+  @include adjust-font-size-to(13px);
+
+  thead {
+    // border-bottom: 1px solid #ccc;
+  }
+  td {
+    padding: 3px 0;
+    a {
+      display: block;
+      color: black;
+      &:hover {
+        text-decoration: none;
+        color: #777;
+      }
+    }
+  }
+  .order {
+    td {
+      border-top: 1px solid black;
+    }
+  }
+
+  .total {
+    td {
+      border-top: 1px solid #ccc;
+    }
+  }
+
+  .alert {
+    td {
+      border-top: 1px solid black;
+      padding: 6px 0;
+      text-align: center;
+    }
+
+  }
+  .order-number {
+    vertical-align: top;
+  }
+  .date {
+    vertical-align: top;
+  }
+  .product {
+    @include adjust-font-size-to(13px, 2/3);
+  }
+  .quantity {
+    vertical-align: top;
+    text-align: right;
+  }
+  .price {
+    text-align: right;
+    .unit {
+      color: #999;
+    }
+  }
+
+
+  // order-columns
+  .col-1 {
+    // width: columns(1, $main-inner-container-width);
+    width: 10%;
+  }
+  .col-2 {
+    width: 15%;
+    // width: columns(2, $main-inner-container-width);
+  }
+  .col-3 {
+    width: 45%;
+    // width: columns(3, $main-inner-container-width);
+  }
+  .col-4 {
+    // width: 40%;
+  }
+}

@@ -1,0 +1,30 @@
+form.main-inner-container
+  h2.main-title
+    |會員中心
+    ul.pills
+      li: a href="/account/orders.html" 我的訂單
+      li: a href="/account/profile.html" 編輯個人資料
+      li.active: a href="/issues/new.html" 聯繫客服
+
+  .form-group
+    label.form-group-title 問題分類
+    .form-group-content
+      select
+        option value="item" 建議
+        option value="item1" 換貨
+        option value="item2" 退貨
+        option value="" ...
+
+  .form-group
+    label.form-group-title 訂單編號
+    .form-group-content
+      input type="text"
+    p.note 若問題分類選擇退貨或換貨，請務必填寫訂單編號以加快作業。
+
+  .form-group
+      label.form-group-title 內容
+      .form-group-content
+        textarea.full-width placeholder="#{zh_lorem_paragraph}"
+
+  .form-action
+    button.action type="submit" 寄出

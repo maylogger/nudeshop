@@ -1,0 +1,127 @@
+.main-inner-container.col-8
+  h2.main-title
+    |會員中心
+    ul.pills
+      li.active: a href="/account/orders.html" 我的訂單
+      li: a href="/account/profile.html" 編輯個人資料
+      li: a href="/issues/new.html" 聯繫客服
+
+
+
+  .main-block
+    h3.main-block-title 未付款訂單
+    table.list
+      thead
+        tr
+          th.order-number.col-2  訂單編號
+          th.date.col-2 訂購時間
+          th.product.col-3 商品
+          th.quantity.col-1 數量
+          th.price.col-2 價錢
+      tbody
+        tr.order
+          td.order-number: a href="#"= rand(10000) + 1000000
+          td.date= lorem_date("%Y/%m/%d")
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr.order
+          td.order-number rowspan="4": a href="#"= rand(10000) + 1000000
+          td.date rowspan="4"= lorem_date("%Y/%m/%d")
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr.total
+          td colspan="2" 小計
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+
+
+  .main-block
+    h3.main-block-title 已付款訂單
+    table.list
+      thead
+        tr
+          th.order-number.col-2  訂單編號
+          th.date.col-2 訂購時間
+          th.product.col-3 商品
+          th.quantity.col-1 數量
+          th.price.col-2 價錢
+      tbody
+        tr.order
+          td.order-number: a href="#"= rand(10000) + 1000000
+          td.date= lorem_date("%Y/%m/%d")
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr.order
+          td.order-number rowspan="4": a href="#"= rand(10000) + 1000000
+          td.date rowspan="4"= lorem_date("%Y/%m/%d")
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr.total
+          td colspan="2" 小計
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr.order
+          td.order-number: a href="#"= rand(10000) + 1000000
+          td.date= lorem_date("%Y/%m/%d")
+          td.product: a href="#"= zh_lorem_words( rand(10) + 6)
+          td.quantity= rand(10) + 1
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+
+
+  .main-block
+    h3.main-block-title 已出貨訂單
+    table.list
+      thead
+        tr
+          th.order-number.col-2  訂單編號
+          th.date.col-2 訂購時間
+          th.product.col-3 商品
+          th.quantity.col-1 數量
+          th.price.col-2 價錢
+      tbody
+        tr.alert
+          td colspan="5" 尚未有已出貨訂單
+
+
+
+

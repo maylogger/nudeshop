@@ -22,16 +22,22 @@
   }
 
   input, textarea, select {
-    width: 100%;
+    min-width: 175px;
+    width: 35%;
     height: $base-line-height;
     @include adjust-font-size-to(13px, 2/3);
     font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+    &.full-width {
+      width: 100%;
+    }
   }
 
   textarea {
-    min-height: $base-line-height * 4;
+    min-height: $base-line-height * 6;
   }
-
+  .radio-group {
+    padding-left: 3px;
+  }
   .checkbox, .radio {
     display: inline-block;
     margin-right: 1em;
@@ -81,7 +87,7 @@
   @include trailer(1);
   @include leading-border(1px, .5);
   @include trailing-border(1px, .5);
-  border-color: #ccc;
+  border-color: $wall-white;
   p {
     margin: 0;
   }
