@@ -24,9 +24,65 @@
 
 
 .main-block {
-
+  @include trailer(2);
 }
 
 .main-block-title {
   @include adjust-font-size-to(24px);
+  button, a.button {
+    position: relative;
+    top: 11px;
+    left: 12px;
+  }
+}
+
+
+.main-list {
+  @include reset-box-model;
+  list-style: none;
+  @include adjust-font-size-to(13px);
+  li {
+    @include pie-clearfix;
+  }
+  .title {
+    float: left;
+    margin-right: 1em;
+    width: 5em;
+    text-align: right;
+  }
+  .content {
+    float: left;
+  }
+}
+
+
+
+.paper-style {
+  .main-title {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  .main-block {
+    margin-bottom: 0;
+    border: 1px solid #eee;
+    border-bottom: 1px transparent;
+    padding: 2em;
+    @include background-image(linear-gradient(white, #fcfcfc));
+    &.last-main-block {
+      border-bottom: 1px solid #eee;
+    }
+  }
+  .main-block + .main-block {
+    border-top: 1px dashed #eee;
+  }
+  .main-block-title {
+    button, a.button {
+      left: 0;
+      float: right;
+    }
+  }
+  .form-action {
+    float: right;
+  }
+
 }
