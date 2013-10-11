@@ -340,7 +340,7 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 .event.sold-out .item-link .item-title { -webkit-transition: none; -moz-transition: none; -o-transition: none; transition: none; background: rgba(0, 0, 0, 0.3); }
 .event.sold-out .item-link:hover { opacity: 1; }
 
-.main .button-group { margin-bottom: 18px; }
+.main { margin-bottom: 72px; }
 
 .main-title { margin-bottom: 24px; font-size: 28px; line-height: 71px; border-bottom: 1px solid #ccc; }
 .main-title .alert { margin-left: 6px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; font-size: 16px; line-height: 24px; color: #999; }

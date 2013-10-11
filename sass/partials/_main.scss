@@ -1,7 +1,5 @@
 .main {
-  .button-group {
-    @include trailer(.75);
-  }
+  @include trailer(3);
 }
 
 .main-title {
