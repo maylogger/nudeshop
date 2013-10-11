@@ -1,0 +1,126 @@
+form.main-inner-container.paper-style
+  h2.main-title
+    |訂單資訊
+    span.alert
+      |訂單編號
+      = rand(10000) + 1000000
+
+  .main-block
+    .main-block-title 訂單明細
+    table.list
+      thead
+        tr
+          th.date.col-1 訂購時間
+          th.product.col-4 商品
+          th.quantity.col-1 數量
+          th.price.col-1 價錢
+      tbody
+        tr.order
+          td.date rowspan="3"= lorem_date("%Y/%m/%d")
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}" disabled="disabled"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}" disabled="disabled"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}" disabled="disabled"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td
+          td colspan="2" 運費
+          td.price
+            span.unit NT$
+            |80
+        tr.total
+          td
+          td colspan="2" 小計
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+
+  .main-block
+    .main-block-title 購買者資訊
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名" disabled="disabled"
+    .form-group
+      label.form-group-title 性別
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="sex" checked="checked" disabled="disabled"
+              |先生
+          .radio
+            label
+              input type="radio" name="sex" disabled="disabled"
+              |女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input type="tel" value="0911168168" disabled="disabled"
+    .form-group
+      label.form-group-title 收件地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+
+  .main-block
+    .main-block-title 收貨人資訊
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名" disabled="disabled"
+    .form-group
+      label.form-group-title 性別
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="sex1" checked="checked" disabled="disabled"
+              |先生
+          .radio
+            label
+              input type="radio" name="sex1" disabled="disabled"
+              |女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input type="tel" value="0911168168" disabled="disabled"
+    .form-group
+      label.form-group-title 收件地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+
+  .main-block
+    .main-block-title 付款資訊
+    ul.main-list
+      li
+        .title 付款方式：
+        .content ATM 轉帳
+      li
+        .title 轉入銀行：
+        .content ＸＸ銀行 ＸＸ分行
+      li
+        .title 帳號：
+        .content 009
+      li
+        .title 戶名：
+        .content 301039202942
+      li
+        .title 應付金額：
+        .content
+          span.unit NT$
+          |303
