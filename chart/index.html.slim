@@ -1,0 +1,54 @@
+form.main-inner-container.paper-style
+  h2.main-title
+    |購物車
+  .main-block.last-main-block
+    table.list
+      thead
+        tr
+          th.product.col-4 商品
+          th.quantity.col-1 數量
+          th.price.col-1 價錢
+          th.edit.col-1 變更
+      tbody
+        tr.order
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+          td.edit
+            a href="#" 取消
+        tr
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+          td.edit
+            a href="#" 取消
+        tr
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+          td.edit
+            a href="#" 取消
+        tr.shipping-costs
+          td colspan="2" 運費
+          td.price
+            span.unit NT$
+            |80
+          td
+        tr.total
+          td 小計
+          td.price colspan="2"
+            span.unit NT$
+            = rand(20000) + 5000
+          td
+
+  .form-action
+    a.button.action href="/account/orders/check.html" 結帳

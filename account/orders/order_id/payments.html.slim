@@ -1,0 +1,126 @@
+form.main-inner-container.paper-style
+  h2.main-title
+    |3.付款方式
+    ul.breadcrumb
+      li 確認商品與數量
+      li 填寫寄件資訊
+      li.active 選擇付款方式
+
+  .main-block
+    .main-block-title
+      |購買明細
+      a.button href="/account/orders/check.html" 編輯
+    table.list
+      thead
+        tr
+          th.product.col-5 商品
+          th.quantity.col-1 數量
+          th.price.col-1 價錢
+      tbody
+        tr.order
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}" disabled="disabled"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}" disabled="disabled"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr
+          td.product: a href="/events/products/"= zh_lorem_words( rand(10) + 6)
+          td.quantity
+            input type="text" value="#{rand(10) + 1}" disabled="disabled"
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+        tr.shipping-costs
+          td colspan="2" 運費
+          td.price
+            span.unit NT$
+            |80
+        tr.total
+          td 小計
+          td.price colspan="2"
+            span.unit NT$
+            = rand(20000) + 5000
+
+  .main-block
+    .main-block-title
+      |購買者資訊
+      a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名" disabled="disabled"
+    .form-group
+      label.form-group-title 性別
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="sex" checked="checked" disabled="disabled"
+              |先生
+          .radio
+            label
+              input type="radio" name="sex" disabled="disabled"
+              |女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input type="tel" value="0911168168" disabled="disabled"
+    .form-group
+      label.form-group-title 收件地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+
+  .main-block
+    .main-block-title
+      |收件者資訊
+      a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名" disabled="disabled"
+    .form-group
+      label.form-group-title 性別
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="sex1" checked="checked" disabled="disabled"
+              |先生
+          .radio
+            label
+              input type="radio" name="sex1" disabled="disabled"
+              |女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input type="tel" value="0911168168" disabled="disabled"
+    .form-group
+      label.form-group-title 收件地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+
+  .main-block.last-main-block#payments
+    .main-block-title 付款方式
+    .form-group
+      .radio-group
+        .radio
+          label
+            input type="radio" name="payments" checked="checked"
+            |ATM 轉帳
+        .radio
+          label
+            input type="radio" name="payments"
+            |信用卡付款
+
+  .form-action
+    a.button href="/account/orders/order_id/edit.html#consumer-info" 上一步
+    button.action 完成
+
