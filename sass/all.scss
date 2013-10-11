@@ -23,14 +23,15 @@ $page-container: ".page";
 @import "layout";
 
 // import component and partial
-@import "component/add-cart";
 @import "component/formalize";
+@import "component/add-cart";
 @import "component/button";
 @import "component/button-group";
 @import "component/form";
 @import "component/split-line";
 @import "component/social-link";
 @import "component/pills";
+@import "component/breadcrumb";
 // ----------------------------
 @import "partials/nav";
 @import "partials/events";

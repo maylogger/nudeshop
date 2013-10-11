@@ -31,7 +31,6 @@
       width: 100%;
     }
   }
-
   textarea {
     min-height: $base-line-height * 6;
   }
@@ -98,6 +97,9 @@
   .alert {
     margin-left: 12px;
     @include adjust-font-size-to(12px);
+  }
+  button, a.button {
+    margin-right: 1em;
   }
 }
 
