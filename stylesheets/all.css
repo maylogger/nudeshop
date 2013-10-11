@@ -159,10 +159,6 @@ body { background: #eeeeef; min-width: 950px; }
 
 .main-inner-container { padding-top: 78px; width: 77.46479%; float: left; margin-right: 1.40845%; margin-left: 11.26761%; }
 
-.add-cart { font-size: 15px; line-height: 24px; color: black; border: 1px solid black; padding: 5px 10px; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
-.add-cart:hover { color: white; }
-.add-cart:hover { background: #aa0000; border-color: #aa0000; text-decoration: none; }
-
 .input_tiny { width: 50px; }
 
 .input_small { width: 100px; }
@@ -233,7 +229,11 @@ optgroup::-moz-focus-inner { border: 0; padding: 0; }
 
 .ie6_input_disabled { background: #eeeeee; }
 
-button, a.button { text-align: center; padding: 0 24px; border: none; background-color: #444; background-image: none; color: #ddd; text-shadow: none; font-size: 13px; line-height: 24px; font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; font-weight: 300; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
+.add-cart { font-size: 15px; line-height: 24px; color: black; border: 1px solid black; padding: 5px 10px; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
+.add-cart:hover { color: white; }
+.add-cart:hover { background: #aa0000; border-color: #aa0000; text-decoration: none; }
+
+button, a.button { text-align: center; padding: 0 24px; border: none; background-color: #666; background-image: none; color: #eee; text-shadow: none; font-size: 13px; line-height: 24px; font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif; font-weight: 300; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
 button.action, a.button.action { background-color: black; }
 button.danger, a.button.danger { background-color: #aa0000; }
 button.disable, a.button.disable { background-color: #ccc; color: #888; }
@@ -270,6 +270,7 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 
 .form-action { margin-top: 24px; }
 .form-action .alert { margin-left: 12px; font-size: 12px; line-height: 24px; }
+.form-action button, .form-action a.button { margin-right: 1em; }
 
 .split-line { margin-top: 24px; margin-bottom: 24px; height: 1px; background-color: #efefed; }
 
@@ -286,6 +287,11 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 .pills li a { display: block; padding: 0px 24px; font-size: 13px; line-height: 24px; color: #333; }
 .pills li a:hover { color: #666; text-decoration: none; }
 .pills li.active a { background-color: #252525; color: white; }
+
+.breadcrumb { display: inline-block; margin: 0; padding: 0; border: 0; list-style: none; margin: 0 0 0 6px; font-size: 13px; line-height: 24px; vertical-align: text-bottom; }
+.breadcrumb li { float: left; color: #999; }
+.breadcrumb li + li:before { content: "/"; margin: 0 6px; color: #aaa; }
+.breadcrumb .active { color: #252525; }
 
 .nav .nav-inner { padding-top: 84px; }
 .nav .nav-inner:after { content: ""; display: table; clear: both; }
@@ -346,24 +352,46 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 .main-title .alert { margin-left: 6px; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; font-size: 16px; line-height: 24px; color: #999; }
 .main-title .pills { margin: 0; position: relative; top: 3px; left: 10px; }
 
-.main-block-title { font-size: 24px; line-height: 48px; }
+.main-block { margin-bottom: 48px; }
 
-.list { width: 100%; text-align: left; margin-bottom: 48px; border-bottom: 1px solid black; font-size: 13px; line-height: 24px; }
+.main-block-title { font-size: 24px; line-height: 48px; }
+.main-block-title button, .main-block-title a.button { position: relative; top: 11px; left: 12px; }
+
+.main-list { margin: 0; padding: 0; border: 0; list-style: none; font-size: 13px; line-height: 24px; }
+.main-list li:after { content: ""; display: table; clear: both; }
+.main-list .title { float: left; margin-right: 1em; width: 5em; text-align: right; }
+.main-list .content { float: left; }
+
+.paper-style .main-title { margin-bottom: 0; border-bottom: none; }
+.paper-style .main-block { margin-bottom: 0; border: 1px solid #eee; border-bottom: 1px transparent; padding: 2em; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #fcfcfc)); background-image: -webkit-linear-gradient(#ffffff, #fcfcfc); background-image: -moz-linear-gradient(#ffffff, #fcfcfc); background-image: -o-linear-gradient(#ffffff, #fcfcfc); background-image: linear-gradient(#ffffff, #fcfcfc); }
+.paper-style .main-block.last-main-block { border-bottom: 1px solid #eee; }
+.paper-style .main-block + .main-block { border-top: 1px dashed #eee; }
+.paper-style .main-block-title button, .paper-style .main-block-title a.button { left: 0; float: right; }
+.paper-style .form-action { float: right; }
+
+.list { width: 100%; text-align: left; font-size: 13px; line-height: 24px; }
 .list td { padding: 3px 0; }
 .list td a { display: block; color: black; }
-.list td a:hover { text-decoration: none; color: #777; }
+.list td a:hover { text-decoration: none; color: #aa0000; }
 .list .order td { border-top: 1px solid black; }
-.list .total td { border-top: 1px solid #ccc; }
+.list .shipping-costs td { border-top: 1px solid #dedede; }
+.list .total td { border-top: 1px solid black; }
 .list .alert td { border-top: 1px solid black; padding: 6px 0; text-align: center; }
 .list .order-number { vertical-align: top; }
 .list .date { vertical-align: top; }
 .list .product { font-size: 13px; line-height: 16px; }
 .list .quantity { vertical-align: top; text-align: right; }
+.list .quantity input { text-align: right; width: 100%; }
 .list .price { text-align: right; }
 .list .price .unit { color: #999; }
-.list .col-1 { width: 10%; }
-.list .col-2 { width: 15%; }
-.list .col-3 { width: 45%; }
+.list .edit { text-align: center; }
+.list .col-1 { width: 12.72727%; }
+.list .col-2 { width: 27.27273%; }
+.list .col-3 { width: 41.81818%; }
+.list .col-4 { width: 56.36364%; }
+.list .col-5 { width: 70.90909%; }
+.list .col-6 { width: 85.45455%; }
+.list .col-7 { width: 100%; }
 
 .product-detail { padding-top: 72px; width: 66.19718%; float: left; margin-right: 1.40845%; }
 .product-detail img { max-width: 100%; display: block; margin-bottom: 24px; }
