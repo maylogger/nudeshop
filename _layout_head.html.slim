@@ -5,8 +5,7 @@ meta name="viewport" content="width=950"
   = yield :title
 - else
   title= data["site-title"]
-
-= stylesheet_link_tag "all"
+= stylesheet_link_tag "all", "/vender/bootstrap/css/bootstrap-glyphicons.css"
 /[if IE]
   = stylesheet_link_tag "ie"
 /[if lt IE 9]
