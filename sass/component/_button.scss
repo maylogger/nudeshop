@@ -2,9 +2,9 @@ button, a.button {
   text-align: center;
   padding: 0 24px;
   border: none;
-  background-color: #666;
+  background-color: #eee;
   background-image: none;
-  color: #eee;
+  color: #444;
   text-shadow: none;
   @include adjust-font-size-to(13px);
   font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
@@ -14,8 +14,18 @@ button, a.button {
   @include border-radius(0);
 
   // 狀態
+  &:hover {
+    background-image: none;
+    background-color: #ccc;
+    color: #444;
+  }
   &.action {
     background-color: black;
+    color: white;
+    &:hover {
+      background-color: $red;
+      color: white;
+    }
   }
   &.danger {
     background-color: $red;
@@ -23,10 +33,6 @@ button, a.button {
   &.disable {
     background-color: #ccc;
     color: #888;
-  }
-  &:hover {
-    background-image: none;
-    color: #999;
   }
   &.active {
     background-color: $wall-white;

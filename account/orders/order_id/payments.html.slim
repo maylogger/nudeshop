@@ -1,114 +1,85 @@
 form.main-inner-container.paper-style
-  h2.main-title
-    |3.付款方式
-    ul.breadcrumb
-      li 確認商品與數量
-      li 填寫寄件資訊
-      li.active 選擇付款方式
-
+  h2.main-title 結帳
   .main-block
     .main-block-title
-      |購買明細
+      |1.確認數量明細
+      span class="glyphicon glyphicon-ok"
       a.button href="/account/orders/check.html" 編輯
     table.list
       thead
         tr
-          th.product.col-5 商品
-          th.quantity.col-1 數量
-          th.price.col-1 價錢
+          th.product.col-12 商品
+          th.quantity.col-3 單價
+          th.quantity.col-2 數量
+          th.price.col-3 價錢
       tbody
-        tr.order
-          td.product= zh_lorem_words( rand(10) + 6)
-          td.quantity
-            input type="text" value="#{rand(10) + 1}" disabled="disabled"
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr
-          td.product= zh_lorem_words( rand(10) + 6)
-          td.quantity
-            input type="text" value="#{rand(10) + 1}" disabled="disabled"
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr
-          td.product= zh_lorem_words( rand(10) + 6)
-          td.quantity
-            input type="text" value="#{rand(10) + 1}" disabled="disabled"
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
+        - 3.times do
+          tr
+            td.product= zh_lorem_words( rand(10) + 6)
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
+            td.quantity
+              input type="number" value="#{rand(10) + 1}" disabled="disabled"
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
+
         tr.shipping-costs
-          td colspan="2" 運費
+          td colspan="3" 運費
           td.price
             span.unit NT$
             |80
         tr.total
-          td 小計
-          td.price colspan="2"
+          td colspan="3" 小計
+          td.price
             span.unit NT$
             = rand(20000) + 5000
 
-  .main-block
+  .main-block#consumer-info
     .main-block-title
-      |購買者資訊
+      |2.填寫收件資訊
+      span class="glyphicon glyphicon-ok"
       a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
+    .main-block-sub-title 購買人
     .form-group
       label.form-group-title 姓名
       .form-group-content
         input type="text" value="王小名" disabled="disabled"
-    .form-group
-      label.form-group-title 性別
-      .form-group-content
-        .radio-group
-          .radio
-            label
-              input type="radio" name="sex" checked="checked" disabled="disabled"
-              |先生
-          .radio
-            label
-              input type="radio" name="sex" disabled="disabled"
-              |女士
+        .radio
+          label: input disabled="disabled" type="radio" name="sex" checked="checked" 先生
+        .radio
+          label: input disabled="disabled" type="radio" name="sex" 女士
     .form-group
       label.form-group-title 聯絡電話
       .form-group-content
-        input type="tel" value="0911168168" disabled="disabled"
+        input disabled="disabled" type="tel" value="0911168168"
     .form-group
       label.form-group-title 收件地址
       .form-group-content
         input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
 
-  .main-block
-    .main-block-title
-      |收件者資訊
-      a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
+
+    .main-block-sub-title 收貨人
     .form-group
       label.form-group-title 姓名
       .form-group-content
         input type="text" value="王小名" disabled="disabled"
-    .form-group
-      label.form-group-title 性別
-      .form-group-content
-        .radio-group
-          .radio
-            label
-              input type="radio" name="sex1" checked="checked" disabled="disabled"
-              |先生
-          .radio
-            label
-              input type="radio" name="sex1" disabled="disabled"
-              |女士
+        .radio
+          label: input disabled="disabled" type="radio" name="sex1" checked="checked" 先生
+        .radio
+          label: input disabled="disabled" type="radio" name="sex1" 女士
     .form-group
       label.form-group-title 聯絡電話
       .form-group-content
-        input type="tel" value="0911168168" disabled="disabled"
+        input disabled="disabled" type="tel" value="0911168168"
     .form-group
       label.form-group-title 收件地址
       .form-group-content
         input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
 
-  .main-block.last-main-block#payments
-    .main-block-title 付款方式
+  .main-block.last-main-block#payments.current
+    .main-block-title 3.選擇付款方式
     .form-group
       .radio-group
         .radio
@@ -122,5 +93,5 @@ form.main-inner-container.paper-style
 
   .form-action
     a.button href="/account/orders/order_id/edit.html#consumer-info" 上一步
-    button.action 完成
+    a.button.action 完成
 

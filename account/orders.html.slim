@@ -1,4 +1,4 @@
-.main-inner-container.col-8
+.main-inner-container
   h2.main-title
     |會員中心
     ul.pills
@@ -19,39 +19,15 @@
           th.quantity.col-1 數量
           th.price.col-1 價錢
       tbody
-        tr.order
-          td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
-          td.date= lorem_date("%Y/%m/%d")
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr.order
-          td.order-number rowspan="4": a href="/account/orders/order_id/"= rand(10000) + 1000000
-          td.date rowspan="4"= lorem_date("%Y/%m/%d")
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr.total
-          td colspan="2" 小計
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
+        - 5.times do
+          tr.order
+            td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
+            td.date= lorem_date("%Y/%m/%d")
+            td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
+            td.quantity= rand(10) + 1
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
 
 
   .main-block
@@ -65,48 +41,15 @@
           th.quantity.col-1 數量
           th.price.col-1 價錢
       tbody
-        tr.order
-          td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
-          td.date= lorem_date("%Y/%m/%d")
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr.order
-          td.order-number rowspan="4": a href="/account/orders/order_id/"= rand(10000) + 1000000
-          td.date rowspan="4"= lorem_date("%Y/%m/%d")
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr.total
-          td colspan="2" 小計
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-        tr.order
-          td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
-          td.date= lorem_date("%Y/%m/%d")
-          td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-          td.quantity= rand(10) + 1
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-
+        - 3.times do
+          tr.order
+            td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
+            td.date= lorem_date("%Y/%m/%d")
+            td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
+            td.quantity= rand(10) + 1
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
 
   .main-block
     h3.main-block-title 已出貨訂單

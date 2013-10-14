@@ -1,60 +1,42 @@
 form.main-inner-container.paper-style
-  h2.main-title
-    |1.確認數量
-    ul.breadcrumb
-      li.active 確認數量
-      li 填寫寄件資訊
-      li 選擇付款方式
-  .main-block.last-main-block
-    .main-block-title 購買明細
+  h2.main-title 結帳
+  .main-block.last-main-block.current
+    .main-block-title 1.確認數量明細
     table.list
       thead
         tr
-          th.product.col-4 商品
-          th.quantity.col-1 數量
-          th.price.col-1 價錢
-          th.edit.col-1 變更
+          th.product.col-10 商品
+          th.quantity.col-3 單價
+          th.quantity.col-2 數量
+          th.price.col-3 價錢
+          th.edit.col-2 變更
       tbody
-        tr.order
-          td.product = zh_lorem_words( rand(10) + 6)
-          td.quantity
-            input type="text" value="#{rand(10) + 1}"
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-          td.edit
-            a href="#" 取消
-        tr
-          td.product = zh_lorem_words( rand(10) + 6)
-          td.quantity
-            input type="text" value="#{rand(10) + 1}"
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-          td.edit
-            a href="#" 取消
-        tr
-          td.product = zh_lorem_words( rand(10) + 6)
-          td.quantity
-            input type="text" value="#{rand(10) + 1}"
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
-          td.edit
-            a href="#" 取消
+        - 3.times do
+          tr
+            td.product= zh_lorem_words( rand(10) + 6)
+            td.price
+              span.unit NT$
+              = rand(2000) + 5000
+            td.quantity
+              input type="number" value="#{rand(10) + 1}" disabled="disabled"
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
+            td.edit
+              a href="#" 取消
         tr.shipping-costs
-          td colspan="2" 運費
+          td colspan="3" 運費
           td.price
             span.unit NT$
             |80
           td
         tr.total
-          td 小計
-          td.price colspan="2"
+          td colspan="3" 小計
+          td.price
             span.unit NT$
             = rand(20000) + 5000
           td
 
   .form-action
-    a.button.action href="/account/orders/new.html#consumer-info" 下一步
+    a.button.action href="/account/orders/new.html#consumer-info" 下一步：填寫收件資訊
 

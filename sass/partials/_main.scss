@@ -34,6 +34,25 @@
     top: 11px;
     left: 12px;
   }
+  .glyphicon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    @include border-radius(30px / 2);
+    margin: 0 .3em;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    text-indent: -1px;
+    color: white;
+    background-color: $green;
+  }
+}
+
+.main-block-sub-title {
+  @include adjust-font-size-to(18px);
+  @include leader(.5);
+  @include trailer(.5);
 }
 
 
@@ -67,9 +86,12 @@
     border: 1px solid #eee;
     border-bottom: 1px transparent;
     padding: 2em;
-    @include background-image(linear-gradient(white, #fcfcfc));
+    @include background-image( linear-gradient( rgba(black, 0), rgba(black, 0.02) ) );
     &.last-main-block {
       border-bottom: 1px solid #eee;
+    }
+    &.current {
+      background-color: #ffd;
     }
   }
   .main-block + .main-block {
@@ -83,6 +105,10 @@
   }
   .form-action {
     float: right;
+  }
+
+  .form-group + .main-block-sub-title {
+    @include leader(1.5);
   }
 
 }

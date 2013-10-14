@@ -23,7 +23,8 @@
 
   input, textarea, select {
     min-width: 175px;
-    width: 35%;
+    width: 30%;
+    margin-right: .7em;
     height: $base-line-height;
     @include adjust-font-size-to(13px, 2/3);
     font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
@@ -39,7 +40,7 @@
   }
   .checkbox, .radio {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: .7em;
     label {
       color: #555;
       @include adjust-font-size-to(13px, 2/3);
@@ -99,7 +100,10 @@
     @include adjust-font-size-to(12px);
   }
   button, a.button {
-    margin-right: 1em;
+    padding: 0.5em 3em;
+  }
+  button + button, a.button + a.button {
+    margin-left: 1em;
   }
 }
 
