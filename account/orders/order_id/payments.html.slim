@@ -8,10 +8,10 @@ form.main-inner-container.paper-style
     table.list
       thead
         tr
-          th.product.col-12 商品
-          th.quantity.col-3 單價
+          th.product.col-10 商品
+          th.price.col-4 單價
           th.quantity.col-2 數量
-          th.price.col-3 價錢
+          th.price.col-4 小計
       tbody
         - 3.times do
           tr
@@ -31,7 +31,7 @@ form.main-inner-container.paper-style
             span.unit NT$
             |80
         tr.total
-          td colspan="3" 小計
+          td colspan="3" 總金額
           td.price
             span.unit NT$
             = rand(20000) + 5000
@@ -41,42 +41,80 @@ form.main-inner-container.paper-style
       |2.填寫收件資訊
       span class="glyphicon glyphicon-ok"
       a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
+
     .main-block-sub-title 購買人
     .form-group
       label.form-group-title 姓名
       .form-group-content
         input type="text" value="王小名" disabled="disabled"
         .radio
-          label: input disabled="disabled" type="radio" name="sex" checked="checked" 先生
+          label: input  type="radio" name="sex" checked="checked" disabled="disabled" 先生
         .radio
-          label: input disabled="disabled" type="radio" name="sex" 女士
+          label: input  type="radio" name="sex" disabled="disabled" 女士
     .form-group
       label.form-group-title 聯絡電話
       .form-group-content
-        input disabled="disabled" type="tel" value="0911168168"
+        input type="tel" value="0911168168" disabled="disabled"
     .form-group
-      label.form-group-title 收件地址
+      label.form-group-title Email
       .form-group-content
-        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+        input type="email" value="xxx@gmail.com" disabled="disabled"
 
-
-    .main-block-sub-title 收貨人
+    .main-block-sub-title 收件人
     .form-group
       label.form-group-title 姓名
       .form-group-content
         input type="text" value="王小名" disabled="disabled"
         .radio
-          label: input disabled="disabled" type="radio" name="sex1" checked="checked" 先生
+          label: input  type="radio" name="sex1" checked="checked" disabled="disabled" 先生
         .radio
-          label: input disabled="disabled" type="radio" name="sex1" 女士
+          label: input  type="radio" name="sex1" disabled="disabled" 女士
     .form-group
       label.form-group-title 聯絡電話
       .form-group-content
-        input disabled="disabled" type="tel" value="0911168168"
+        input type="tel" value="0911168168" disabled="disabled"
+    .form-group
+      label.form-group-title Email
+      .form-group-content
+        input type="email" value="xxx@gmail.com" disabled="disabled"
+
+    .form-group
+      label.form-group-title 運送方式
+      .form-group-content
+        select disabled="disabled"
+          option value="宅配" 宅配
+          option value="面交" 面交
+          option value="超商取貨" 超商取貨
+
+    .main-block-sub-title 宅配
+    .form-group
+      label.form-group-title 郵遞區號
+      .form-group-content
+        input type="text" value="333" disabled="disabled"
     .form-group
       label.form-group-title 收件地址
       .form-group-content
         input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+
+    .main-block-sub-title 面交
+    .form-group
+      label.form-group-title 備註
+      .form-group-content
+        textarea.full-width placeholder="#{zh_lorem_paragraph}" value="#{zh_lorem_paragraph}" disabled="disabled"
+
+    .main-block-sub-title 超商取件
+    .form-group
+      label.form-group-title 超商名稱
+      .form-group-content
+        select disabled="disabled"
+          option value="7-11" 7-11
+          option value="全家" 全家
+          option value="OK" OK
+          option value="萊爾富" 萊爾富
+    .form-group
+      label.form-group-title 門市地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號" disabled="disabled"
 
   .main-block.last-main-block#payments.current
     .main-block-title 3.選擇付款方式

@@ -5,7 +5,7 @@
       li.active: a href="/account/orders.html" 我的訂單
       li: a href="/account/profile.html" 編輯個人資料
       li: a href="/issues/new.html" 聯繫客服
-
+  / .main-descript 未付款訂單 n 筆 / 已付款訂單 n 筆 / 已出貨訂單 n 筆
 
 
   .main-block
@@ -13,21 +13,19 @@
     table.list
       thead
         tr
-          th.order-number.col-1  訂單編號
           th.date.col-1 訂購時間
-          th.product.col-3 商品
-          th.quantity.col-1 數量
-          th.price.col-1 價錢
+          th.order-number.col-1  訂單編號
+          th.col-3 狀態
+          th.col-1 取貨方式
+          th.issue-link.col-1 客服連結
       tbody
         - 5.times do
           tr.order
-            td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
             td.date= lorem_date("%Y/%m/%d")
-            td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-            td.quantity= rand(10) + 1
-            td.price
-              span.unit NT$
-              = rand(20000) + 5000
+            td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
+            td= zh_lorem_words( rand(10) + 6)
+            td= zh_lorem_words( rand(2) + 2 )
+            td.issue-link: a href="/issues/new.html" 連結
 
 
   .main-block
@@ -35,32 +33,30 @@
     table.list
       thead
         tr
-          th.order-number.col-1  訂單編號
           th.date.col-1 訂購時間
-          th.product.col-3 商品
-          th.quantity.col-1 數量
-          th.price.col-1 價錢
+          th.order-number.col-1  訂單編號
+          th.col-3 狀態
+          th.col-1 取貨方式
+          th.issue-link.col-1 客服連結
       tbody
-        - 3.times do
+        - 5.times do
           tr.order
-            td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
             td.date= lorem_date("%Y/%m/%d")
-            td.product: a href="/account/orders/order_id/"= zh_lorem_words( rand(10) + 6)
-            td.quantity= rand(10) + 1
-            td.price
-              span.unit NT$
-              = rand(20000) + 5000
+            td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
+            td= zh_lorem_words( rand(10) + 6)
+            td= zh_lorem_words( rand(2) + 2 )
+            td.issue-link: a href="/issues/new.html" 連結
 
   .main-block
     h3.main-block-title 已出貨訂單
     table.list
       thead
         tr
-          th.order-number.col-1  訂單編號
           th.date.col-1 訂購時間
-          th.product.col-3 商品
-          th.quantity.col-1 數量
-          th.price.col-1 價錢
+          th.order-number.col-1  訂單編號
+          th.col-3 狀態
+          th.col-1 取貨方式
+          th.issue-link.col-1 客服連結
       tbody
         tr.alert
           td colspan="5" 尚未有已出貨訂單

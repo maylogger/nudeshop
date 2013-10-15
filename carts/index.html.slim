@@ -5,10 +5,10 @@ form.main-inner-container.paper-style
     table.list
       thead
         tr
-          th.product.col-10 商品
-          th.quantity.col-3 單價
+          th.product.col-8 商品
+          th.price.col-4 單價
           th.quantity.col-2 數量
-          th.price.col-3 價錢
+          th.price.col-4 小計
           th.edit.col-2 變更
       tbody
         - 3.times do
@@ -31,7 +31,7 @@ form.main-inner-container.paper-style
             |80
           td
         tr.total
-          td colspan="3" 小計
+          td colspan="3" 總金額
           td.price
             span.unit NT$
             = rand(20000) + 5000
