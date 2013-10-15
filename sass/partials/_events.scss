@@ -19,6 +19,54 @@ $grid-context: 9;
   }
 }
 
+.header {
+  text-align: center;
+  background: rgba(white,.85);
+  a {
+    @include padding-leader(2);
+    @include unstyled-link;
+    color: $black;
+  }
+  %line { display: block; }
+  .en, .zh {
+    @extend %line;
+    @include adjust-font-size-to(16px);
+  }
+  .only {
+    @extend %line;
+    @include adjust-font-size-to(13px);
+    @include leader(1.5);
+    @include trailer(1);
+  }
+  .count {
+    @extend %light;
+    @include adjust-font-size-to(72px);
+    letter-spacing: -.1em;
+    margin-right: .15em;
+    position: relative;
+    top: 2px;
+  }
+  .unit {
+    @include adjust-font-size-to(13px);
+  }
+  @include at-breakpoint($wide-screen) {
+    .en, .zh {
+      @include adjust-font-size-to(20px);
+    }
+    .only {
+      @include adjust-font-size-to(15px);
+      @include leader(2.5);
+      @include trailer(1.5);
+    }
+    .count {
+      @include adjust-font-size-to(96px);
+    }
+    .unit {
+      @include adjust-font-size-to(20px);
+    }
+  }
+}
+
 .event {
 
   @include pie-clearfix;
@@ -44,7 +92,7 @@ $grid-context: 9;
     overflow: hidden;
     float: left;
     margin: 0 $gutter-width $gutter-width 0;
-
+    outline: 1px solid white;
     // setting normal and w2 width
     @extend %item-size;
     &:nth-child(6n+1),
@@ -103,7 +151,7 @@ $grid-context: 9;
       height: 100%;
       text-align: center;
       // background: rgba(black, .5);
-      @include background-image(radial-gradient( rgba(#aaa,.5) 50px, rgba(black,.2) 250px));
+      @include background-image(radial-gradient( rgba(#aaa,.5) 50px, rgba(black,.1) 250px));
       color: white;
       text-decoration: none;
       @include transition(opacity .7s .2s);
@@ -141,7 +189,7 @@ $grid-context: 9;
       @include transition( transform .7s, -webkit-transform .7s);
     }
     &:hover .item-inner {
-      @include transition( transform 25s .7s ease-in-out, -webkit-transform 25s .7s ease-in-out);
+      @include transition( transform 20s .7s ease-in-out, -webkit-transform 20s .7s ease-in-out);
       @include transform( scale(1.25), true);
     }
   }
