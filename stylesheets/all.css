@@ -270,7 +270,7 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 .form-text p { margin: 0; }
 
 .form-action { margin-top: 24px; }
-.form-action .alert { margin-left: 12px; font-size: 12px; line-height: 24px; }
+.form-action .alert { margin-left: 12px; font-size: 12px; line-height: 36px; }
 .form-action button, .form-action a.button { padding: 0.5em 3em; }
 .form-action button + button, .form-action a.button + a.button { margin-left: 1em; }
 
@@ -305,7 +305,7 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 .nav .main-nav a { color: black; }
 .nav .main-nav .divider { width: 60%; opacity: .3; }
 .nav .main-nav .sp a { color: #aa0000; }
-.nav .shop-nav { float: left; padding: 12px 24px; padding-top: 48px; margin-top: 120px; background: rgba(0, 0, 0, 0.85); }
+.nav .shop-nav { float: left; padding: 12px 24px 15px; padding-top: 48px; margin-top: 120px; background: rgba(0, 0, 0, 0.85); }
 .nav .shop-nav a { color: white; }
 .nav .nav-inner.affix { position: fixed; width: 230px; }
 @media (min-width: 1280px) { .nav .nav-inner.affix { width: 290px; } }
@@ -362,10 +362,11 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 
 .main-block-sub-title { font-size: 18px; line-height: 24px; margin-top: 12px; margin-bottom: 12px; }
 
-.main-list { margin: 0; padding: 0; border: 0; list-style: none; font-size: 13px; line-height: 24px; }
+.main-list { margin: 0; padding: 0; border: 0; list-style: none; font-size: 13px; line-height: 24px; margin-bottom: 24px; }
 .main-list li:after { content: ""; display: table; clear: both; }
-.main-list .title { float: left; margin-right: 1em; width: 5em; text-align: right; }
+.main-list .title { float: left; margin-right: 10px; width: 5em; text-align: right; }
 .main-list .content { float: left; }
+.main-list .content .alert { margin-left: 0.5em; }
 
 .paper-style .main-title { margin-bottom: 0; border-bottom: none; }
 .paper-style .main-block { margin-bottom: 0; border: 1px solid #eee; border-bottom: 1px transparent; padding: 2em; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.02))); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)); background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)); background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.02)); }
@@ -381,19 +382,22 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 .list thead th + th { padding-left: 10px; }
 .list thead .edit { padding-left: 10px; padding-right: 0; text-align: right; }
 .list tbody tr:first-child td { padding-top: 10px; }
-.list td { padding: 0 0 10px; vertical-align: top; }
+.list td { padding-bottom: 10px; vertical-align: top; }
 .list td a { color: black; }
 .list td a:hover { text-decoration: none; color: #aa0000; }
 .list td + td { padding-left: 10px; }
-.list .order td { padding: 10px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+.list .order td { padding-top: 10px; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 .list .shipping-costs td { border-top: 1px solid rgba(0, 0, 0, 0.1); padding-top: 10px; }
 .list .total td { border-top: 1px solid black; padding-top: 10px; }
-.list .alert td { border-top: 1px solid black; padding: 6px 0; text-align: center; }
+.list .alert td { border-top: 1px solid black; padding: 10px 0; text-align: center; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+.list .order-number a { color: #369; }
+.list .issue-link { text-align: center; }
 .list .product { vertical-align: middle; font-size: 13px; line-height: 16px; }
 .list .quantity { text-align: right; }
 .list .quantity input { padding: 0; width: 3em; text-align: right; }
 .list .price { text-align: right; }
 .list .price .unit { color: #999; float: left; }
+@media (min-width: 1280px) { .list .price .unit { padding-left: 1.5em; } }
 .list .edit { text-align: right; }
 .list .col-1 { width: 5%; }
 .list .col-2 { width: 10%; }
