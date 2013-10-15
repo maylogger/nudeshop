@@ -105,6 +105,10 @@ $grid-context: 9;
       }
     }
 
+    &.space {
+      background: rgba(black,.05) image-url("space.gif") center center;
+    }
+
     // item padding-height
     height: columns(4, $grid-context, static);
     @include at-breakpoint($wide-screen) {

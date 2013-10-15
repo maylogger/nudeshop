@@ -338,6 +338,7 @@ button.active, a.button.active { background-color: #efefed; color: #333; cursor:
 .event .item { overflow: hidden; float: left; margin: 0 10px 10px 0; outline: 1px solid white; height: 310px; }
 .event .item:nth-child(6n+1), .event .item:nth-child(6n+5) { width: 470px; }
 @media (min-width: 1280px) { .event .item:nth-child(6n+1), .event .item:nth-child(6n+5) { width: 590px; } }
+.event .item.space { background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381848689') center center; }
 @media (min-width: 1280px) { .event .item { height: 390px; } }
 .event .item:nth-child(6n+1), .event .item:nth-child(6n+5) { height: 630px; }
 @media (min-width: 1280px) { .event .item:nth-child(6n+1), .event .item:nth-child(6n+5) { height: 790px; } }
