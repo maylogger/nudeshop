@@ -40,7 +40,7 @@
   .shop-nav {
     @extend %subpixel;
     float: left;
-    padding: rhythm(.5) rhythm(1);
+    padding: rhythm(.5) rhythm(1) 15px;
     @include padding-leader(2);
     @include leader(5);
     background: rgba(black, .85);

@@ -60,17 +60,21 @@
   @include reset-box-model;
   list-style: none;
   @include adjust-font-size-to(13px);
+  @include trailer(1);
   li {
     @include pie-clearfix;
   }
   .title {
     float: left;
-    margin-right: 1em;
+    margin-right: 10px;
     width: 5em;
     text-align: right;
   }
   .content {
     float: left;
+    .alert {
+      margin-left: 0.5em;
+    }
   }
 }
 

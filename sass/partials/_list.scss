@@ -24,9 +24,8 @@
     padding-top: 10px;
   }
 
-
   td {
-    padding: 0 0 10px;
+    padding-bottom: 10px;
     vertical-align: top;
     a {
       color: black;
@@ -40,9 +39,10 @@
     padding-left: 10px;
   }
 
+
   .order {
     td {
-      padding: 10px 0;
+      padding-top: 10px;
       border-bottom: 1px solid rgba(black,.1);
     }
   }
@@ -62,21 +62,27 @@
   .alert {
     td {
       border-top: 1px solid black;
-      padding: 6px 0;
+      padding: 10px 0;
       text-align: center;
+      border-bottom: 1px solid rgba(black,.1);
     }
   }
 
   .order-number {
-
+    a {
+      color: #369;
+    }
   }
-  .date {
 
+  .issue-link {
+    text-align: center;
   }
+
   .product {
     vertical-align: middle;
     @include adjust-font-size-to(13px, 2/3);
   }
+
   .quantity {
     text-align: right;
     input {
@@ -85,13 +91,18 @@
       text-align: right;
     }
   }
+
   .price {
     text-align: right;
     .unit {
       color: #999;
       float: left;
+      @include at-breakpoint($wide-screen) {
+        padding-left: 1.5em;
+      }
     }
   }
+
   .edit {
     text-align: right;
   }

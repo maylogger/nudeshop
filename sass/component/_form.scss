@@ -97,7 +97,7 @@
   @include leader(1);
   .alert {
     margin-left: 12px;
-    @include adjust-font-size-to(12px);
+    @include adjust-font-size-to(12px, 1.5);
   }
   button, a.button {
     padding: 0.5em 3em;
