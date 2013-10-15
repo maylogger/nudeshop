@@ -46,3 +46,8 @@ p {
   @include leader(1);
   @include trailer(1);
 }
+
+%light {
+  font-family: "AvenirNext-UltraLight", "Avenir-Light", "Helvetica", "Arial", sans-serif;
+  font-weight: 100;
+}
