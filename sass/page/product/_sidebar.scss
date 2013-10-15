@@ -33,8 +33,7 @@ $product-page-context: 9;
     .d,.h,.m {
       display: block;
       @include adjust-font-size-to(48px, 2.5);
-      font-family: "AvenirNext-UltraLight", "Avenir-Light", "Helvetica", "Arial", sans-serif;
-      font-weight: 100;
+      @extend %light;
       color: rgba(black,.85);
       letter-spacing: -.1em;
     }
