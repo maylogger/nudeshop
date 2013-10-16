@@ -1,13 +1,13 @@
 .product
-  .product-detail
-    a.photo href="#{lorem_image('900x1350')}": img src="#{lorem_image('900x1350')}"
+  .product-detail.gallery
+    a.gallery-photo href="#{lorem_image('900x1350')}": img src="#{lorem_image('900x1350')}"
     p= lorem_sentences rand(7) + 3
     p= lorem_sentences rand(7) + 3
-    a.photo href="#{lorem_image('900x1350')}": img src="#{lorem_image('900x1350')}"
-    a.photo href="#{lorem_image('900x1350')}": img src="#{lorem_image('900x1350')}"
-    a.photo href="#{lorem_image('900x1350')}": img src="#{lorem_image('900x1350')}"
-    a.photo href="#{lorem_image('900x1350')}": img src="#{lorem_image('900x1350')}"
-    a.photo href="#{lorem_image('900x1350')}": img src="#{lorem_image('900x1350')}"
+    a.gallery-photo href="#{lorem_image('901x1350')}": img src="#{lorem_image('900x1350')}"
+    a.gallery-photo href="#{lorem_image('902x1350')}": img src="#{lorem_image('900x1350')}"
+    a.gallery-photo href="#{lorem_image('903x1350')}": img src="#{lorem_image('900x1350')}"
+    a.gallery-photo href="#{lorem_image('904x1350')}": img src="#{lorem_image('900x1350')}"
+    a.gallery-photo href="#{lorem_image('905x1350')}": img src="#{lorem_image('900x1350')}"
   .sidebar
     h2.product-title= "#{zh_lorem_words (rand(2) + 1)}#{zh_lorem_name}套裝+#{rand(10)}"
     p.product-number 商品編號 1234
@@ -99,7 +99,7 @@
             li: a.color-black href="#"
             li: a.color-red href="#"
       .buy-product
-        .title 購買數量
+        .product-sub-title 購買數量
         .content
           input.count type="number" placeholder="1" value="1" 件
 

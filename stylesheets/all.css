@@ -396,7 +396,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-button, a.button, .pills, .nav .shop-nav, .message {
+button, a.button, .pills, .nav .shop-nav, .nav .active a, .message {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -1249,12 +1249,14 @@ button.active, a.button.active {
 }
 .nav .main-nav a {
   color: black;
+  margin-left: -10px;
+  padding: 0 10px;
 }
 .nav .main-nav .divider {
   width: 60%;
   opacity: .3;
 }
-.nav .main-nav .sp a {
+.nav .main-nav a.sp {
   color: #aa0000;
 }
 .nav .shop-nav {
@@ -1280,6 +1282,10 @@ button.active, a.button.active {
   .nav .nav-inner.affix {
     position: static;
   }
+}
+.nav .active a {
+  background: #eeeeef;
+  padding: 3px 10px;
 }
 
 .grid-sizer, .item {
@@ -1674,6 +1680,50 @@ button.active, a.button.active {
   width: 100%;
 }
 
+.mfp-figure:after {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.mfp-bg {
+  background-color: #ededed;
+  opacity: 1;
+}
+
+.mfp-close {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: black;
+}
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+  color: black;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  text-align: center;
+}
+
+.mfp-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.125);
+}
+.mfp-arrow:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
+  border-color: transparent;
+}
+
+.mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
+  border-color: transparent;
+}
+
 .product-detail {
   padding-top: 72px;
   width: 66.19718%;
@@ -2032,4 +2082,8 @@ button.active, a.button.active {
 .event .item:nth-child(6n+1) .item-title .price, .event .item:nth-child(6n+5) .item-title .price {
   font-size: 18px;
   line-height: 24px;
+}
+
+.shop .header a {
+  padding-top: 166px;
 }

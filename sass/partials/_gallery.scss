@@ -1,0 +1,50 @@
+.mfp-image-holder .mfp-content {
+  // width: 100%;
+}
+
+
+.mfp-figure:after {
+  @include box-shadow(none);
+  background-color: transparent;
+}
+
+.mfp-bg {
+  background-color: #ededed;
+  opacity: 1;
+}
+
+.mfp-close {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: black;
+
+}
+
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+  color: black;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  text-align: center;
+  // background-color: rgba(black, 0.075);
+}
+
+
+.mfp-arrow {
+  // background-color: rgba(black, 0.125) !important;
+  &:hover {
+    background-color: rgba(black, 0.125);
+  }
+  &:focus {
+    @include box-shadow(none);
+  }
+}
+
+.mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
+  border-color: transparent;
+}
+
+.mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
+  border-color: transparent;
+}
