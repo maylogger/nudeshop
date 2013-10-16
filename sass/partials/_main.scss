@@ -2,6 +2,12 @@
   @include padding-trailer(5);
 }
 
+$main-context: 9;
+
+.main-content {
+  @include span-columns(6, $main-context);
+}
+
 .main-title {
   @include trailer(1);
   font-size: 28px;

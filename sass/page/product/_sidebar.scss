@@ -17,6 +17,10 @@ $product-page-context: 9;
   .product-title {
     @include adjust-font-size-to(16px);
     font-weight: bold;
+    a {
+      @include link-colors($red);
+      border-bottom: 1px solid $black;
+    }
   }
   .product-sub-title {
     @include adjust-font-size-to(14px);
