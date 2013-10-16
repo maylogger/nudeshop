@@ -11,13 +11,18 @@ function isMobile(){
 
 // 如果不是手持裝置
 if(!isMobile()) {
+
   $(".nav-inner").affix();
-  $(".sidebar-affix").affix({
-    offset: {
-      top: $(".sidebar-affix").offset().top - 24
-    }
-  });
-}
+
+  if ( $(".sidebar-affix").length != 0 ) {
+      $(".sidebar-affix").affix({
+        offset: {
+          top: $(".sidebar-affix").offset().top - 24
+        }
+      });
+  }
+
+} // if mobile end
 
 $('.event').each(function(){
 
