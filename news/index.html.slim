@@ -1,30 +1,31 @@
 .news
-  .article
-    h2 最新消息
-    .post-group
-      - 5.times do
-        .post
-          .post-header
-            h3.post-title= zh_lorem_sentence
-            .post-date= lorem_date("%Y/%m/%d")
-          .post-body
-            img src="#{lorem_image('600x300')}"
-            p= zh_lorem_paragraphs(2)
-            ul
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-            p= zh_lorem_paragraphs(2)
-          .post-footer
-            a.read-more href="#" Read more →
-    ul.pagination
-      li: a.disable href="#" «
-      li: a.active href="#" 1
-      - (rand(1)+2).times do |i|
-        li: a href="#"= ( i+2 )
-      li: a.more href="#" …
-      li: a href="#" »
+  .main-content
+    .article
+      h2 最新消息
+      .post-group
+        - 5.times do
+          .post
+            .post-header
+              h2.post-title: a href="post.html"= zh_lorem_sentence
+              .post-date= lorem_date("%Y/%m/%d")
+            .post-body
+              img src="#{lorem_image('600x300')}"
+              p= zh_lorem_paragraphs(2)
+              ul
+                li= zh_lorem_sentence
+                li= zh_lorem_sentence
+                li= zh_lorem_sentence
+                li= zh_lorem_sentence
+              p= zh_lorem_paragraphs(2)
+            .post-footer
+              a.read-more href="post.html" Read more →
+      ul.pagination
+        li: a.disable href="#" «
+        li: a.active href="#" 1
+        - (rand(1)+2).times do |i|
+          li: a href="#"= ( i+2 )
+        li: a.more href="#" …
+        li: a href="#" »
 
   .sidebar
     .sidebar-affix

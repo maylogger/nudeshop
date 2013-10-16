@@ -5,6 +5,7 @@
 $main-context: 9;
 
 .main-content {
+  @include padding-leader(3);
   @include span-columns(6, $main-context);
 }
 

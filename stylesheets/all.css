@@ -1453,6 +1453,7 @@ button.active, a.button.active {
 }
 
 .main-content {
+  padding-top: 72px;
   width: 66.19718%;
   float: left;
   margin-right: 1.40845%;
@@ -2112,7 +2113,7 @@ button.active, a.button.active {
   text-align: right;
 }
 .sidebar .timer {
-  margin-top: 72px;
+  margin-top: 24px;
 }
 .sidebar .timer .d, .sidebar .timer .h, .sidebar .timer .m {
   display: block;
@@ -2292,22 +2293,6 @@ button.active, a.button.active {
   }
 }
 
-.about .article {
-  padding-top: 72px;
-}
-.about .timer {
-  margin-top: 24px;
-}
-
-.news .article {
-  padding-top: 72px;
-  width: 66.19718%;
-  float: left;
-  margin-right: 1.40845%;
-}
-.news .timer {
-  margin-top: 0px;
-}
 .news .post {
   margin-bottom: 48px;
 }
@@ -2315,9 +2300,22 @@ button.active, a.button.active {
   margin-bottom: 6px;
 }
 .news .post-header .post-title {
-  margin-bottom: 0;
+  margin-bottom: 3px;
+}
+.news .post-header .post-title a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  color: #252525;
+}
+.news .post-header .post-title a:active, .news .post-header .post-title a:focus {
+  outline: none;
+}
+.news .post-header .post-title a:hover {
+  color: #aa0000;
 }
 .news .post-header .post-date {
+  margin-bottom: 3px;
   font-size: 13px;
   line-height: 24px;
   color: #999;
@@ -2333,23 +2331,4 @@ button.active, a.button.active {
 .news .post-footer .read-more:hover {
   text-decoration: none;
   color: #aa0000;
-}
-
-.post-page .article {
-  padding-top: 72px;
-}
-.post-page .post-title {
-  margin-bottom: 3px;
-}
-.post-page .post-date {
-  margin-bottom: 3px;
-  font-size: 13px;
-  line-height: 24px;
-  color: #999;
-}
-.post-page .post-sub-title {
-  margin-top: 48px;
-}
-.post-page .timer {
-  margin-top: 0px;
 }

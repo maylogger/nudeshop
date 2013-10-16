@@ -163,7 +163,7 @@ $product-page-context: 9;
 
   // timer
   .timer {
-    @include leader(3);
+    @include leader(1);
     .d,.h,.m {
       display: block;
       @include adjust-font-size-to(48px, 2.5);

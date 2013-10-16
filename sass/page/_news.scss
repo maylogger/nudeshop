@@ -1,11 +1,4 @@
 .news {
-  .article {
-    @include padding-leader(3);
-    @include span-columns(6, $about-page-context);
-  }
-  .timer {
-    @include leader(0);
-  }
 
   .post {
     @include trailer(2);
@@ -14,9 +7,14 @@
   .post-header {
     @include trailer(.25);
     .post-title {
-      margin-bottom: 0;
+      margin-bottom: 3px;
+      a {
+        @include unstyled-link;
+        @include link-colors($black, $red);
+      }
     }
     .post-date {
+      margin-bottom: 3px;
       @include adjust-font-size-to(13px);
       color: #999;
     }
