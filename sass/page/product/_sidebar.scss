@@ -5,7 +5,8 @@ $product-page-context: 9;
   @include padding-leader(3);
   @include span-columns(3 omega, $product-page-context);
   @include box-sizing(border-box);
-  padding-left: columns(.3, $product-page-context);
+  $sidebar-padding: columns(.3, $product-page-context, static);
+  padding-left: $sidebar-padding;
 
   // space adjust
   p {
@@ -17,6 +18,9 @@ $product-page-context: 9;
     @include adjust-font-size-to(16px);
     font-weight: bold;
   }
+  .product-sub-title {
+    @include adjust-font-size-to(14px);
+  }
   .product-number {
     @include adjust-font-size-to(12px);
     color: rgba(black,.85);
@@ -26,10 +30,135 @@ $product-page-context: 9;
     @include adjust-font-size-to(16px);
     @include trailer(1);
   }
+  .product-size {
+    @include trailer(1);
+    .size-group {
+      display: block;
+      list-style: none;
+      @include reset-box-model;
+      @include pie-clearfix;
+      > li {
+        display: block;
+        float: left;
+        margin: 0 2px 2px 0;
+        position: relative;
+      }
+    }
+    a.size {
+      @include adjust-font-size-to(12px);
+      display: block;
+      border: 1px solid transparent;
+      padding: 1px;
+      span {
+        width: 1.5em;
+        text-align: center;
+        display: block;
+        position: relative;
+        z-index: 1;
+        color: black;
+        padding: 0 6px;
+        background: #eee;
+      }
+      &:hover {
+        padding: 0;
+        border: 1px solid rgba(black, 0.25);
+        border-bottom-color: white;
+        text-decoration: none;
+        span {
+          z-index: 3;
+          padding: 1px 7px;
+          background: white;
+        }
+      }
+      &.current {
+        border-color: $black;
+        span {
+          background-color: #ddd;
+        }
+        &:hover {
+          border-color: rgba(black, 0.25);
+        }
+        &:hover span {
+          background-color: white;
+        }
+      }
+    }
+    .size-hover-message {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 2;
+      list-style: none;
+      margin: -3px 0 0 0;
+      border: 1px solid rgba(black, 0.25);
+      padding: 12px 24px;
+      background-color: white;
+      @include box-shadow( 2px 2px 2px rgba(black,.1) );
+      & > li {
+        // padding: 2px 0;
+        @include adjust-font-size-to(12px);
+        color: #666;
+        white-space: nowrap;
+      }
+    }
+    .size:hover .size-hover-message {
+      display: block;
+    }
+  }
+  .product-fabric {
+    @include trailer(1);
+    .fabric-group {
+      list-style: none;
+      @include reset-box-model;
+    }
+  }
+  .product-color {
+    @include trailer(1);
+    .color-group {
+      @include pie-clearfix;
+      list-style: none;
+      @include reset-box-model;
+    }
+    li {
+      margin: 0 3px 3px 0;
+      float: left;
+      border: 1px solid transparent;
+      padding: 1px;
+      a {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+      &.current {
+        border-color: black;
+      }
+    }
+    .color-red {
+      background-color: $red;
+    }
+    .color-gray {
+      background-color: $gray;
+    }
+    .color-black {
+      background-color: black;
+    }
+  }
+
+  .buy-product {
+    margin-bottom: rhythm(1) + 3px;
+    .title {
+      @include trailer(.125);
+    }
+    .count {
+      width: 3em;
+      text-align: right;
+    }
+  }
 
   // timer
   .timer {
-    @include leader(4);
+    @include leader(3);
     .d,.h,.m {
       display: block;
       @include adjust-font-size-to(48px, 2.5);
@@ -46,10 +175,19 @@ $product-page-context: 9;
 
 
   // for affix
-  .sidebar-inner.affix {
+  .sidebar-affix.affix {
     position: fixed;
+    top: 24px;
+    width: columns(3, 12, static) - $sidebar-padding;
+    @include at-breakpoint($wide-screen) {
+      @include with-grid-settings(12,90px,10px,0) {
+        width: columns(3, 12, static) - $sidebar-padding;
+      }
+    }
     @media (max-height: 640px) {
       position: static;
     }
   }
-}
+
+
+} // sidebar end
