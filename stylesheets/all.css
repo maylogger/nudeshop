@@ -2236,7 +2236,16 @@ button.active, a.button.active {
 }
 
 .shop .header a {
-  padding-top: 166px;
+  padding-top: 135px;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+}
+@media (min-width: 1280px) {
+  .shop .header a {
+    padding-top: 166px;
+  }
 }
 
 .about .article {

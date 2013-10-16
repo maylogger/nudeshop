@@ -1,5 +1,10 @@
 .shop {
   .header a {
-    padding-top: 166px;
+    padding-top: 135px;
+    @include transition(padding .3s);
+
+    @include at-breakpoint($wide-screen) {
+      padding-top: 166px;
+    }
   }
 }
