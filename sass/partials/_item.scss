@@ -95,7 +95,7 @@ $item-context: 9;
     @include transition( transform .7s, -webkit-transform .7s);
   }
   &:hover .item-inner {
-    @include transition( transform 20s .7s ease-in-out, -webkit-transform 20s .7s ease-in-out);
+    @include transition( transform 20s .7s ease-out, -webkit-transform 20s .7s ease-out);
     @include transform( scale(1.25), true);
   }
 }
