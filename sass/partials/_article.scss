@@ -1,0 +1,53 @@
+.article {
+  color: #444;
+  h1 {
+    @include adjust-font-size-to(24px,1);
+    @include trailer(1);
+  }
+  h2 {
+    @include adjust-font-size-to(24px,1);
+    @include trailer(1);
+  }
+  h3 {
+    @include adjust-font-size-to(18px,1);
+    @include trailer(1);
+  }
+  h4 {
+    @include adjust-font-size-to(13px,1);
+    @include trailer(1);
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    @include trailer(1);
+    max-width: 100%;
+  }
+  p {
+    @include adjust-font-size-to(13px);
+    @include trailer(1);
+  }
+  ul, ol {
+    @include leader(1);
+    @include trailer(1);
+    @include adjust-font-size-to(13px);
+  }
+  blockquote {
+    margin: rhythm(1) rhythm(2);
+    // padding: rhythm(1) rhythm(2);
+    @include adjust-font-size-to(13px);
+    // background-color: $wall-white;
+  }
+  pre {
+    margin: rhythm(1) 0;
+    padding: rhythm(1) rhythm(2);
+    @include adjust-font-size-to(13px);
+  }
+  code {
+    @include adjust-font-size-to(13px);
+  }
+  .divider {
+    @include leader(2);
+    @include trailer(2);
+    border-top: 1px solid #ccc;
+  }
+}
