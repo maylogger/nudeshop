@@ -54,6 +54,7 @@
   }
 
   .note {
+    @extend %subpixel;
     color: #888;
     @include adjust-font-size-to(12px, 2/3);
     margin: 3px 0 0;

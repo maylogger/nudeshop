@@ -396,7 +396,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-button, a.button, .pills, .nav .shop-nav, .nav .active a, .message {
+button, a.button, .form-group .note, .pills, .nav .shop-nav, .nav .active a, .message {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -1902,8 +1902,14 @@ button.active, a.button.active {
   font-weight: bold;
 }
 .sidebar .product-title a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
   color: #aa0000;
   border-bottom: 1px solid #252525;
+}
+.sidebar .product-title a:active, .sidebar .product-title a:focus {
+  outline: none;
 }
 .sidebar .product-sub-title {
   font-size: 14px;
