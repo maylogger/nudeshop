@@ -1,0 +1,12 @@
+.events
+  = render "/events/event"
+  .soldout-overlay
+    .soldout-content
+      h2.title 深感抱歉
+      h3.description 本月連線商品全部售罄
+      .button-group
+        a.button href="/shop/" 店內特價商品
+        a.button href="/events/" 連線庫存商品
+.shop
+  .message ↓ 超可惜！你錯過的衣服 ↓
+  = render "/events/event-sold-out"

@@ -11,7 +11,7 @@
 }
 
 .events,.shop {
-  background: white;
+  position: relative;
   @include pie-clearfix;
   width: 720px;
   @include at-breakpoint($wide-screen) {
