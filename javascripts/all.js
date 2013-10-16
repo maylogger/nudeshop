@@ -35,8 +35,10 @@ $('.event').each(function(){
 
 
 // light-box
-$('.product-detail').magnificPopup({
-  delegate: 'a.photo', // child items selector, by clicking on it popup will open
-  type: 'image'
-  // other options
+$('.gallery').each(function() { // the containers for all your galleries should have the class gallery
+    $(this).magnificPopup({
+        delegate: '.gallery-photo', // the container for each your gallery items
+        type: 'image',
+        gallery:{enabled:true}
+    });
 });
