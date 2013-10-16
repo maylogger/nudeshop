@@ -12,10 +12,13 @@ $wide-screen: 1280px 12;
 // debug
 @import "layout-debug";
 
+html, body {
+  background: #e6e6e6;
+}
+
 body {
   min-width: 960px;
-  background: #fafafa;
-  @include background( linear-gradient( rgba(black, .02) , rgba(black, .1) ) ); // multiple: comma-delimited
+  @include background( linear-gradient( #fafafa , #e6e6e6 ) repeat-x ); // multiple: comma-delimited
 }
 
 #{$page-container} {

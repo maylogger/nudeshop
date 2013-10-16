@@ -488,14 +488,17 @@ p {
   background-position: left top;
 }
 
+html, body {
+  background: #e6e6e6;
+}
+
 body {
   min-width: 960px;
-  background: #fafafa;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.02)), color-stop(100%, rgba(0, 0, 0, 0.1)));
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
-  background: -moz-linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
-  background: linear-gradient(rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.1));
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #e6e6e6)) repeat-x;
+  background: -webkit-linear-gradient(#fafafa, #e6e6e6) repeat-x;
+  background: -moz-linear-gradient(#fafafa, #e6e6e6) repeat-x;
+  background: -o-linear-gradient(#fafafa, #e6e6e6) repeat-x;
+  background: linear-gradient(#fafafa, #e6e6e6) repeat-x;
 }
 
 .page {
@@ -1301,7 +1304,6 @@ button.active, a.button.active {
   overflow: hidden;
   float: left;
   margin: 0 10px 10px 0;
-  outline: 1px solid white;
   height: 310px;
 }
 .item.space {

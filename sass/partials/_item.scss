@@ -21,7 +21,6 @@ $item-context: 9;
   overflow: hidden;
   float: left;
   margin: 0 $gutter-width $gutter-width 0;
-  outline: 1px solid white;
   // setting normal and w2 width
   @extend %item-size;
 
