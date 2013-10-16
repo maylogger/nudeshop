@@ -1,13 +1,13 @@
-$item-context: 9;
-
 .message {
   text-align: center;
-  @include adjust-font-size-to(20px);
-  margin: 0 gutter($item-context) gutter($item-context) 0;
+  @include adjust-font-size-to(15px);
+  @extend %subpixel;
+  margin: 0 10px 10px 0;
   @include padding-leader(1);
   @include padding-trailer(1);
   background: black;
   color: white;
+  clear: both;
 }
 
 .events {

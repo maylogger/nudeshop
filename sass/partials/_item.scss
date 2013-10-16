@@ -17,6 +17,7 @@ $item-context: 9;
 }
 
 .item {
+  position: relative;
   overflow: hidden;
   float: left;
   margin: 0 $gutter-width $gutter-width 0;
