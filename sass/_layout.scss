@@ -13,8 +13,10 @@ $wide-screen: 1280px 12;
 @import "layout-debug";
 
 body {
-  background: #eeeeef;
-  min-width: 950px;
+  min-width: 960px;
+  background: #fafafa;
+  @include background( linear-gradient( rgba(black, .02) , rgba(black, .1) ) ); // multiple: comma-delimited
+
 }
 
 #{$page-container} {
@@ -29,6 +31,9 @@ body {
       @include set-container-width(12, static);
     };
   }
+  @include clearfix;
+  // @include box-shadow(0px 0px 20px rgba(black,.05) );
+  padding-right: 10px;
 }
 
 $nav-width: 3;
