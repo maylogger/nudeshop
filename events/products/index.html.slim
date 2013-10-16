@@ -93,11 +93,10 @@
       .product-color
         .product-sub-title 選擇顏色
         ul.color-group
-          li.current: a.color-red href="#"
-          - 7.times do
-            li: a.color-gray href="#"
-            li: a.color-black href="#"
-            li: a.color-red href="#"
+          li.current: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
+          li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
+          li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
+          li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
       .buy-product
         .title 購買數量
         .content
