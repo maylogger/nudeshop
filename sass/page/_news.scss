@@ -1,0 +1,42 @@
+.news {
+  .article {
+    @include padding-leader(3);
+    @include span-columns(6, $about-page-context);
+  }
+  .timer {
+    @include leader(0);
+  }
+
+  .post {
+    @include trailer(2);
+  }
+
+  .post-header {
+    @include trailer(.25);
+    .post-title {
+      margin-bottom: 0;
+    }
+    .post-date {
+      @include adjust-font-size-to(13px);
+      color: #999;
+    }
+  }
+
+  .post-body {
+
+  }
+
+  .post-footer {
+    border-top: 1px solid #ccc;
+    text-align: right;
+    .read-more {
+      @include adjust-font-size-to(13px);
+      &:hover {
+        text-decoration: none;
+        color: $red;
+      }
+    }
+  }
+
+}
+

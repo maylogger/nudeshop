@@ -1206,6 +1206,50 @@ button.active, a.button.active {
   color: #252525;
 }
 
+.pagination {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-align: center;
+}
+.pagination:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.pagination li {
+  display: inline-block;
+  margin: 0 0.125em;
+}
+.pagination li a {
+  color: #252525;
+  text-align: center;
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  background-color: #efefed;
+  cursor: pointer;
+}
+.pagination li a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #aa0000;
+}
+.pagination li a.more {
+  padding: 0.25em 0.5em;
+}
+.pagination li a.disable {
+  cursor: default;
+  background-color: #eee;
+}
+.pagination li a.disable:hover {
+  color: #252525;
+}
+.pagination li a.active {
+  color: white;
+  background-color: #252525;
+}
+
 .nav .nav-inner {
   padding-top: 84px;
 }
@@ -2253,4 +2297,59 @@ button.active, a.button.active {
 }
 .about .timer {
   margin-top: 24px;
+}
+
+.news .article {
+  padding-top: 72px;
+  width: 66.19718%;
+  float: left;
+  margin-right: 1.40845%;
+}
+.news .timer {
+  margin-top: 0px;
+}
+.news .post {
+  margin-bottom: 48px;
+}
+.news .post-header {
+  margin-bottom: 6px;
+}
+.news .post-header .post-title {
+  margin-bottom: 0;
+}
+.news .post-header .post-date {
+  font-size: 13px;
+  line-height: 24px;
+  color: #999;
+}
+.news .post-footer {
+  border-top: 1px solid #ccc;
+  text-align: right;
+}
+.news .post-footer .read-more {
+  font-size: 13px;
+  line-height: 24px;
+}
+.news .post-footer .read-more:hover {
+  text-decoration: none;
+  color: #aa0000;
+}
+
+.post-page .article {
+  padding-top: 72px;
+}
+.post-page .post-title {
+  margin-bottom: 3px;
+}
+.post-page .post-date {
+  margin-bottom: 3px;
+  font-size: 13px;
+  line-height: 24px;
+  color: #999;
+}
+.post-page .post-sub-title {
+  margin-top: 48px;
+}
+.post-page .timer {
+  margin-top: 0px;
 }

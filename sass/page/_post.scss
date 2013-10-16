@@ -1,0 +1,20 @@
+.post-page {
+  .article {
+    @include padding-leader(3);
+  }
+  .post-title {
+    margin-bottom: 3px;
+  }
+  .post-date {
+    margin-bottom: 3px;
+    @include adjust-font-size-to(13px);
+    color: #999;
+  }
+  .post-sub-title {
+    @include leader(2);
+  }
+  .timer {
+    @include leader(0);
+  }
+
+}

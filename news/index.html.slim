@@ -1,9 +1,30 @@
 .news
   .article
-    h2 品牌介紹
-    img src="#{lorem_image('600x400')}"
-    p # n u d e 代 表 著 色 號 中 的 ” 裸 色 ”, 給 人 乾 淨 舒 適 的 形 象 , 主 張 沒 有 過 多 的 華 麗 裝 飾 。 品 牌 中 的 # 字 號 透過特殊的前後編織設計,象徵織品。
-    p # n u d e 秉 持 著「E L E G A N T & P U R E」的 理 念,並 實 踐 於 自 家 品 牌 當 中,營 造 極 簡 俐 落 且 優 雅 的 風 格,表 現出自主都會女性的特質。我們也堅持提供兼具質感與 實搭性的單品,讓學生、上班族,都能夠輕鬆的刻畫出適合自己的穿衣風格,與我們一同感受純淨 優雅的穿著品味。
+    h2 最新消息
+    .post-group
+      - 5.times do
+        .post
+          .post-header
+            h3.post-title= zh_lorem_sentence
+            .post-date= lorem_date("%Y/%m/%d")
+          .post-body
+            img src="#{lorem_image('600x300')}"
+            p= zh_lorem_paragraphs(2)
+            ul
+              li= zh_lorem_sentence
+              li= zh_lorem_sentence
+              li= zh_lorem_sentence
+              li= zh_lorem_sentence
+            p= zh_lorem_paragraphs(2)
+          .post-footer
+            a.read-more href="#" Read more →
+    ul.pagination
+      li: a.disable href="#" «
+      li: a.active href="#" 1
+      - (rand(1)+2).times do |i|
+        li: a href="#"= ( i+2 )
+      li: a.more href="#" …
+      li: a href="#" »
 
   .sidebar
     .sidebar-affix
