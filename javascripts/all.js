@@ -41,7 +41,8 @@ if ( $('.product-detail').length != 0 ) {
         $(this).magnificPopup({
             delegate: '.gallery-photo', // the container for each your gallery items
             type: 'image',
-            gallery:{enabled:true}
+            gallery:{enabled:true},
+            closeOnBgClick: false
         });
     });
 

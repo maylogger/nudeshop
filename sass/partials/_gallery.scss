@@ -1,7 +1,6 @@
-.mfp-image-holder .mfp-content {
-  // width: 100%;
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: default;
 }
-
 
 .mfp-figure:after {
   @include box-shadow(none);
@@ -9,7 +8,7 @@
 }
 
 .mfp-bg {
-  background-color: #ededed;
+  background-color: white;
   opacity: 1;
 }
 
@@ -17,22 +16,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  color: black;
+  color: $black;
 
 }
 
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
-  color: black;
+  color: $black;
   width: 44px;
   height: 44px;
   padding: 0;
   text-align: center;
+  opacity: 1;
   // background-color: rgba(black, 0.075);
 }
 
 
 .mfp-arrow {
-  // background-color: rgba(black, 0.125) !important;
+  opacity: 1;
   &:hover {
     background-color: rgba(black, 0.125);
   }
@@ -44,7 +44,17 @@
 .mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
   border-color: transparent;
 }
-
+.mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
+  border-left: 27px solid $black;
+}
 .mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
   border-color: transparent;
+}
+.mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
+  border-right: 27px solid $black;
+}
+
+
+.mfp-counter {
+  color: $black;
 }
