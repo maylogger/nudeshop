@@ -1,0 +1,14 @@
+$about-page-context: 9;
+
+.about {
+  .article {
+    @include padding-leader(3);
+    @include span-columns(6, $about-page-context);
+  }
+
+  .timer {
+    @include leader(0);
+  }
+
+
+}

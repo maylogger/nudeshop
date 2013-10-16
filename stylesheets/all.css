@@ -1776,6 +1776,67 @@ button.active, a.button.active {
   border-color: transparent;
 }
 
+.article {
+  color: #444;
+}
+.article h1 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.article h2 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.article h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.article h4 {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.article img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  max-width: 100%;
+}
+.article p {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.article ul, .article ol {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  line-height: 24px;
+}
+.article blockquote {
+  margin: 24px 48px;
+  font-size: 13px;
+  line-height: 24px;
+}
+.article pre {
+  margin: 24px 0;
+  padding: 24px 48px;
+  font-size: 13px;
+  line-height: 24px;
+}
+.article code {
+  font-size: 13px;
+  line-height: 24px;
+}
+.article .divider {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  border-top: 1px solid #ccc;
+}
+
 .product-detail {
   padding-top: 72px;
   width: 66.19718%;
@@ -2138,4 +2199,14 @@ button.active, a.button.active {
 
 .shop .header a {
   padding-top: 166px;
+}
+
+.about .article {
+  padding-top: 72px;
+  width: 66.19718%;
+  float: left;
+  margin-right: 1.40845%;
+}
+.about .timer {
+  margin-top: 0px;
 }
