@@ -1,11 +1,11 @@
-$product-page-context: 9;
+$sidebar-context: 9;
 
 .sidebar {
   position: relative;
   @include padding-leader(3);
-  @include span-columns(3 omega, $product-page-context);
+  @include span-columns(3 omega, $sidebar-context);
   @include box-sizing(border-box);
-  $sidebar-padding: columns(.3, $product-page-context, static);
+  $sidebar-padding: columns(.3, $sidebar-context, static);
   padding-left: $sidebar-padding;
 
   // space adjust
@@ -14,7 +14,12 @@ $product-page-context: 9;
   }
 
   // title and meta description...
-  .product-title {
+
+  .sidebar-block {
+    @include trailer(1);
+    @include adjust-font-size-to(12px);
+  }
+  .sidebar-title {
     @include adjust-font-size-to(16px);
     font-weight: bold;
     a {
@@ -23,9 +28,11 @@ $product-page-context: 9;
       border-bottom: 1px solid $black;
     }
   }
-  .product-sub-title {
+  .sidebar-sub-title {
     @include adjust-font-size-to(14px);
   }
+
+  // 商品描述樣式
   .product-number {
     @include adjust-font-size-to(12px);
     color: rgba(black,.85);
@@ -35,19 +42,17 @@ $product-page-context: 9;
     @include adjust-font-size-to(16px);
     @include trailer(1);
   }
+
   .product-size {
-    @include trailer(1);
-    .size-group {
+    display: block;
+    list-style: none;
+    @include reset-box-model;
+    @include pie-clearfix;
+    > li {
       display: block;
-      list-style: none;
-      @include reset-box-model;
-      @include pie-clearfix;
-      > li {
-        display: block;
-        float: left;
-        margin: 0 2px 2px 0;
-        position: relative;
-      }
+      float: left;
+      margin: 0 2px 2px 0;
+      position: relative;
     }
     a.size {
       @include adjust-font-size-to(12px);
@@ -119,12 +124,9 @@ $product-page-context: 9;
     }
   }
   .product-color {
-    @include trailer(1);
-    .color-group {
-      @include pie-clearfix;
-      list-style: none;
-      @include reset-box-model;
-    }
+    @include pie-clearfix;
+    list-style: none;
+    @include reset-box-model;
     li {
       margin: 0 3px 3px 0;
       float: left;
@@ -138,15 +140,6 @@ $product-page-context: 9;
       &.current {
         border-color: black;
       }
-    }
-    .color-red {
-      background-color: $red;
-    }
-    .color-gray {
-      background-color: $gray;
-    }
-    .color-black {
-      background-color: black;
     }
   }
 
@@ -164,6 +157,7 @@ $product-page-context: 9;
   // timer
   .timer {
     @include leader(1);
+    @include trailer(1);
     .d,.h,.m {
       display: block;
       @include adjust-font-size-to(48px, 2.5);
@@ -175,6 +169,27 @@ $product-page-context: 9;
       @include adjust-font-size-to(12px);
       margin-left: 1em;
       letter-spacing: 2px;
+    }
+  }
+
+  .sidebar-list {
+    @include adjust-font-size-to(13px);
+    @include reset-box-model;
+    padding-right: $sidebar-padding;
+    list-style: none;
+    li {
+      @include ellipsis;
+      padding: 3px 0;
+    }
+    li + li {
+      border-top: 1px solid #eee;
+    }
+    a {
+      color: $black;
+      &:hover {
+        text-decoration: none;
+        color: $red;
+      }
     }
   }
 
