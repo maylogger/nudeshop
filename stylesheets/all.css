@@ -1800,48 +1800,76 @@ button.active, a.button.active {
   opacity: 1;
 }
 
-.mfp-close {
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   color: #252525;
-}
-
-.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
-  color: #252525;
-  width: 44px;
-  height: 44px;
+  width: 66px;
+  height: 66px;
   padding: 0;
   text-align: center;
   opacity: 1;
 }
+.mfp-image-holder .mfp-close:hover, .mfp-iframe-holder .mfp-close:hover {
+  color: white;
+  background-color: #252525;
+}
 
 .mfp-arrow {
+  width: 66px;
+  height: 66px;
   opacity: 1;
+  margin-top: -33px;
 }
 .mfp-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.125);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .mfp-arrow:focus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
+.mfp-arrow:active {
+  margin-top: -33px;
+}
+
+.mfp-arrow:before, .mfp-arrow:after, .mfp-arrow .mfp-b, .mfp-arrow .mfp-a {
+  margin: 0;
+  top: 50%;
+  margin-top: -8px;
+}
 
 .mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
-  border-color: transparent;
+  border: none;
 }
 
 .mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
-  border-left: 27px solid #252525;
+  left: 50%;
+  right: auto;
+  margin-left: -4px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #252525;
+}
+
+.mfp-arrow-right:hover:before, .mfp-arrow-right:hover .mfp-b {
+  border-color: transparent transparent transparent white;
 }
 
 .mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
-  border-color: transparent;
+  border: none;
 }
 
 .mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
-  border-right: 27px solid #252525;
+  left: auto;
+  right: 50%;
+  margin-right: -4px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #252525 transparent transparent;
+}
+
+.mfp-arrow-left:hover:before, .mfp-arrow-left:hover .mfp-b {
+  border-color: transparent white transparent transparent;
 }
 
 .mfp-counter {
@@ -2336,21 +2364,20 @@ button.active, a.button.active {
   line-height: 24px;
   color: #999;
 }
-.news .post-footer {
-  border-bottom: 1px solid #ccc;
-}
-.news .post-footer .read-more {
+.news .read-more {
+  position: relative;
+  top: -24px;
   font-size: 13px;
   line-height: 24px;
+  white-space: nowrap;
 }
-.news .post-footer .read-more:hover {
+.news .read-more:hover {
   text-decoration: none;
   color: #aa0000;
 }
 .news .post-group .post {
   margin-top: 48px;
   margin-bottom: 48px;
-}
-.news .post-group .post-footer {
-  text-align: right;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
 }
