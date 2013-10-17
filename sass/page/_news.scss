@@ -1,7 +1,6 @@
 .news {
 
   .post {
-    @include trailer(2);
   }
 
   .post-header {
@@ -20,19 +19,26 @@
     }
   }
 
-  .post-body {
-
-  }
-
   .post-footer {
-    border-top: 1px solid #ccc;
-    text-align: right;
+    border-bottom: 1px solid #ccc;
     .read-more {
       @include adjust-font-size-to(13px);
       &:hover {
         text-decoration: none;
         color: $red;
       }
+    }
+  }
+
+  .post-group {
+    .post {
+      @include leader(2);
+      @include trailer(2);
+    }
+    .post-footer {
+
+      text-align: right;
+      // margin-top: -12px;
     }
   }
 
