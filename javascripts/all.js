@@ -35,9 +35,9 @@ $('.event').each(function(){
 
 
 // light-box
-if ( $('.product-detail').length != 0 ) {
+if ( $('#gallery').length != 0 ) {
 
-    $('.product-detail').each(function() { // the containers for all your galleries should have the class gallery
+    $('#gallery').each(function() { // the containers for all your galleries should have the class gallery
         $(this).magnificPopup({
             delegate: '.gallery-photo', // the container for each your gallery items
             type: 'image',

@@ -1,25 +1,30 @@
 .product
-  .product-detail
-    a.gallery-photo href="#{lorem_image('900x1350', :text => "1")}": img src="#{lorem_image('900x1350')}"
-    p= lorem_sentences rand(7) + 3
-    p= lorem_sentences rand(7) + 3
-    a.gallery-photo href="#{lorem_image('900x1350', :text => "2")}": img src="#{lorem_image('900x1350')}"
-    a.gallery-photo href="#{lorem_image('900x1350', :text => "3")}": img src="#{lorem_image('900x1350')}"
-    a.gallery-photo href="#{lorem_image('900x1350', :text => "4")}": img src="#{lorem_image('900x1350')}"
-    a.gallery-photo href="#{lorem_image('900x1350', :text => "5")}": img src="#{lorem_image('900x1350')}"
-    a.gallery-photo href="#{lorem_image('900x1350', :text => "6")}": img src="#{lorem_image('900x1350')}"
+
+  .main-content#gallery
+    .article
+      a.gallery-photo href="#{lorem_image('900x1350', :text => "1")}": img src="#{lorem_image('900x1350')}"
+      p= lorem_sentences rand(7) + 3
+      p= lorem_sentences rand(7) + 3
+      a.gallery-photo href="#{lorem_image('900x1350', :text => "2")}": img src="#{lorem_image('900x1350')}"
+      a.gallery-photo href="#{lorem_image('900x1350', :text => "3")}": img src="#{lorem_image('900x1350')}"
+      a.gallery-photo href="#{lorem_image('900x1350', :text => "4")}": img src="#{lorem_image('900x1350')}"
+      a.gallery-photo href="#{lorem_image('900x1350', :text => "5")}": img src="#{lorem_image('900x1350')}"
+      a.gallery-photo href="#{lorem_image('900x1350', :text => "6")}": img src="#{lorem_image('900x1350')}"
+
   .sidebar
-    h2.product-title= "#{zh_lorem_words (rand(2) + 1)}#{zh_lorem_name}套裝+#{rand(10)}"
-    p.product-number 商品編號 1234
-    p.product-price NT$ 12000.
-    .product-fabric
-      .product-sub-title 商品材質
-      ul.fabric-group
-        li 100% Wool
+    .sidebar-block
+      h2.sidebar-title= "#{zh_lorem_words (rand(2) + 1)}#{zh_lorem_name}套裝+#{rand(10)}"
+      p.product-number 商品編號 1234
+      p.product-price NT$ 12000.
+    .sidebar-block
+      .product-fabric
+        .sidebar-sub-title 商品材質
+        ul.fabric-group
+          li 100% Wool
     form.sidebar-affix
-      .product-size
-        .product-sub-title 選擇尺寸
-        ul.size-group
+      .sidebar-block
+        .sidebar-sub-title 選擇尺寸
+        ul.product-size
           li
             a.size href="#"
               span XS
@@ -90,20 +95,20 @@
                 li= "後衣長: " + "#{rand(20) + 20}"
                 li= "肩寬: " + "#{rand(20) + 20}"
                 li= "袖長: " + "#{rand(20) + 20}"
-      .product-color
-        .product-sub-title 選擇顏色
-        ul.color-group
+      .sidebar-block
+        .sidebar-sub-title 選擇顏色
+        ul.product-color
           li.current: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
           li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
           li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
           li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
-      .buy-product
-        .product-sub-title 購買數量
-        .content
+      .sidebar-block
+        .buy-product
+          .sidebar-sub-title 購買數量
           input.count type="number" placeholder="1" value="1" 件
+        .form-action
+          a.button.action href="#" 加入購物車
 
-      .form-action
-        a.button.action href="#" 加入購物車
       p.timer
         | 剩餘
         span.d
