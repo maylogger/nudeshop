@@ -173,13 +173,13 @@ $sidebar-context: 9;
   }
 
   .sidebar-list {
-    @include adjust-font-size-to(13px);
+    @include adjust-font-size-to(13px, 2/3);
     @include reset-box-model;
     padding-right: $sidebar-padding;
     list-style: none;
     li {
-      @include ellipsis;
-      padding: 3px 0;
+      // @include ellipsis;
+      padding: .5em 0;
     }
     li + li {
       border-top: 1px solid #eee;

@@ -122,4 +122,9 @@ $main-context: 9;
     @include leader(1.5);
   }
 
+  // 單一訂單頁使用
+  .link-to-issue {
+    padding: 0.5em 3em;
+  }
+
 }

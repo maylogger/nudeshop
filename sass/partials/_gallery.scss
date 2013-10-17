@@ -1,4 +1,4 @@
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+.mfp-zoom-out-cur {
   cursor: default;
 }
 
@@ -62,7 +62,7 @@ $mfp-arrow-width: 8px;
   left: 50%;
   right: auto;
   margin-left: -$mfp-arrow-width / 2;
-  border-width: $mfp-arrow-width 0 $mfp-arrow-width $mfp-arrow-width * 2;
+  border-width: $mfp-arrow-width 0 $mfp-arrow-width $mfp-arrow-width * 1.5;
   border-color: transparent transparent transparent $black;
 }
 .mfp-arrow-right:hover:before, .mfp-arrow-right:hover .mfp-b {
@@ -77,7 +77,7 @@ $mfp-arrow-width: 8px;
   left: auto;
   right: 50%;
   margin-right: -$mfp-arrow-width / 2;
-  border-width: $mfp-arrow-width $mfp-arrow-width * 2 $mfp-arrow-width 0;
+  border-width: $mfp-arrow-width $mfp-arrow-width * 1.5 $mfp-arrow-width 0;
   border-color: transparent $black transparent transparent;
 }
 .mfp-arrow-left:hover:before, .mfp-arrow-left:hover .mfp-b {

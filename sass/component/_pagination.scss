@@ -18,19 +18,18 @@
         color: $white;
         background-color: $red;
       }
-      &.more {
-        padding: 0.25em 0.5em;
-      }
+
       &.active {
         color: $white;
         background-color: $black;
       }
     }
+    .more {
+      padding: 0.25em 0.5em;
+    }
     .disable {
       padding: 0.25em 0.75em;
-      display: inline-block;
-      cursor: not-allowed;
-      background-color: $wall-white;
+      color: #999;
     }
   }
 

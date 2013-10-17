@@ -1235,18 +1235,16 @@ button.active, a.button.active {
   color: white;
   background-color: #aa0000;
 }
-.pagination li a.more {
-  padding: 0.25em 0.5em;
-}
 .pagination li a.active {
   color: white;
   background-color: #252525;
 }
+.pagination li .more {
+  padding: 0.25em 0.5em;
+}
 .pagination li .disable {
   padding: 0.25em 0.75em;
-  display: inline-block;
-  cursor: not-allowed;
-  background-color: #efefed;
+  color: #999;
 }
 
 .nav .nav-inner {
@@ -1581,6 +1579,9 @@ button.active, a.button.active {
 .paper-style .form-group + .main-block-sub-title {
   margin-top: 36px;
 }
+.paper-style .link-to-issue {
+  padding: 0.5em 3em;
+}
 
 .list {
   table-layout: fixed;
@@ -1784,7 +1785,7 @@ button.active, a.button.active {
   border-radius: 0;
 }
 
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+.mfp-zoom-out-cur {
   cursor: default;
 }
 
@@ -1848,7 +1849,7 @@ button.active, a.button.active {
   left: 50%;
   right: auto;
   margin-left: -4px;
-  border-width: 8px 0 8px 16px;
+  border-width: 8px 0 8px 12px;
   border-color: transparent transparent transparent #252525;
 }
 
@@ -1864,7 +1865,7 @@ button.active, a.button.active {
   left: auto;
   right: 50%;
   margin-right: -4px;
-  border-width: 8px 16px 8px 0;
+  border-width: 8px 12px 8px 0;
   border-color: transparent #252525 transparent transparent;
 }
 
@@ -2131,7 +2132,7 @@ button.active, a.button.active {
 }
 .sidebar .sidebar-list {
   font-size: 13px;
-  line-height: 24px;
+  line-height: 16px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -2139,12 +2140,7 @@ button.active, a.button.active {
   list-style: none;
 }
 .sidebar .sidebar-list li {
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  padding: 3px 0;
+  padding: .5em 0;
 }
 .sidebar .sidebar-list li + li {
   border-top: 1px solid #eee;
