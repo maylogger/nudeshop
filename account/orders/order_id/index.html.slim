@@ -148,6 +148,9 @@ form.main-inner-container.paper-style
         .title 付款方式：
         .content ATM 轉帳
       li
+        .title 付款到期日：
+        .content= lorem_date("%Y/%m/%d")
+      li
         .title 轉入銀行：
         .content ＸＸ銀行 ＸＸ分行
       li
@@ -163,3 +166,20 @@ form.main-inner-container.paper-style
           |303
     button.action 前往付款
 
+  .main-block
+    .main-block-title 客服訊息
+    .issue-group
+      - 3.times do
+        .issue
+          .issue-type
+            |問題類型：退貨
+          .issue-content
+            .title 問題內容：
+            p
+              = zh_lorem_paragraph
+              spna.date= lorem_date("%Y/%m/%d")
+          .issue-content
+            .title 客服回覆：
+            p
+              = zh_lorem_paragraph
+              span.date= lorem_date("%Y/%m/%d")
