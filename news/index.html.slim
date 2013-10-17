@@ -1,7 +1,7 @@
 .news
   .main-content
+    h2.main-title 最新消息
     .article
-      h2 最新消息
       .post-group
         - 5.times do
           .post
@@ -9,35 +9,11 @@
               h2.post-title: a href="post.html"= zh_lorem_sentence
               .post-date= lorem_date("%Y/%m/%d")
             .post-body
-              img src="#{lorem_image('600x300')}"
-              p= zh_lorem_paragraphs(2)
-              ul
-                li= zh_lorem_sentence
-                li= zh_lorem_sentence
-                li= zh_lorem_sentence
-                li= zh_lorem_sentence
+              = image_tag lorem_image("#{rand(200)+400}x#{rand(200)+200}")
               p= zh_lorem_paragraphs(2)
             .post-footer
               a.read-more href="post.html" Read more →
-      ul.pagination
-        li: a.disable href="#" «
-        li: a.active href="#" 1
-        - (rand(1)+2).times do |i|
-          li: a href="#"= ( i+2 )
-        li: a.more href="#" …
-        li: a href="#" »
+      = render "/partials/component/pagination"
 
   .sidebar
-    .sidebar-affix
-      .sidebar-title 九月連線
-      p.timer
-        | 剩餘
-        span.d
-          = rand(30)
-          span.unit 天
-        span.h
-          = rand(24)
-          span.unit 小時
-        span.m
-          = rand(60)
-          span.unit 分
+    = render "/partials/news-sidebar"
