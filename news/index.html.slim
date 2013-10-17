@@ -10,9 +10,11 @@
               .post-date= lorem_date("%Y/%m/%d")
             .post-body
               = image_tag lorem_image("#{rand(200)+400}x#{rand(200)+200}")
-              p= zh_lorem_paragraphs(2)
-            .post-footer
+              p
+                = zh_lorem_paragraphs(2)
               a.read-more href="post.html" Read more →
+
+
       = render "/partials/component/pagination"
 
   .sidebar

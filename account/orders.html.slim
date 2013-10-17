@@ -17,7 +17,7 @@
           th.order-number.col-1  訂單編號
           th.col-3 狀態
           th.col-1 取貨方式
-          th.issue-link.col-1 客服連結
+          th.issue-link.col-1
       tbody
         - 5.times do
           tr.order
@@ -25,7 +25,7 @@
             td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
             td= zh_lorem_words( rand(10) + 6)
             td= zh_lorem_words( rand(2) + 2 )
-            td.issue-link: a href="/issues/new.html" 連結
+            td.issue-link: a href="/issues/new.html" 聯繫客服
 
 
   .main-block
@@ -37,7 +37,7 @@
           th.order-number.col-1  訂單編號
           th.col-3 狀態
           th.col-1 取貨方式
-          th.issue-link.col-1 客服連結
+          th.issue-link.col-1
       tbody
         - 5.times do
           tr.order
@@ -45,7 +45,7 @@
             td.order-number: a href="/account/orders/order_id/"= rand(10000) + 1000000
             td= zh_lorem_words( rand(10) + 6)
             td= zh_lorem_words( rand(2) + 2 )
-            td.issue-link: a href="/issues/new.html" 連結
+            td.issue-link: a href="/issues/new.html" 聯繫客服
 
   .main-block
     h3.main-block-title 已出貨訂單
@@ -56,7 +56,7 @@
           th.order-number.col-1  訂單編號
           th.col-3 狀態
           th.col-1 取貨方式
-          th.issue-link.col-1 客服連結
+          th.issue-link.col-1
       tbody
         tr.alert
           td colspan="5" 尚未有已出貨訂單
