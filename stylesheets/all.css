@@ -1238,16 +1238,15 @@ button.active, a.button.active {
 .pagination li a.more {
   padding: 0.25em 0.5em;
 }
-.pagination li a.disable {
-  cursor: default;
-  background-color: #eee;
-}
-.pagination li a.disable:hover {
-  color: #252525;
-}
 .pagination li a.active {
   color: white;
   background-color: #252525;
+}
+.pagination li .disable {
+  padding: 0.25em 0.75em;
+  display: inline-block;
+  cursor: not-allowed;
+  background-color: #efefed;
 }
 
 .nav .nav-inner {
@@ -1271,12 +1270,12 @@ button.active, a.button.active {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('/images/logo.png?1380123996');
+  background-image: url('/images/logo.png?1380606257');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 130px;
   height: 48px;
-  background-image: none, url('/images/logo.svg?1380376821');
+  background-image: none, url('/images/logo.svg?1380606257');
 }
 .nav h2 {
   display: none;
@@ -1351,7 +1350,7 @@ button.active, a.button.active {
   height: 310px;
 }
 .item.space {
-  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381848689') center center;
+  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381899163') center center;
 }
 @media (min-width: 1280px) {
   .item {
@@ -1538,7 +1537,7 @@ button.active, a.button.active {
 .main-list .title {
   float: left;
   margin-right: 10px;
-  width: 5em;
+  width: 8.25em;
   text-align: right;
 }
 .main-list .content {
@@ -1910,23 +1909,6 @@ button.active, a.button.active {
   border-top: 1px solid #ccc;
 }
 
-.product-detail {
-  padding-top: 72px;
-  width: 66.19718%;
-  float: left;
-  margin-right: 1.40845%;
-}
-.product-detail img {
-  max-width: 100%;
-  display: block;
-  margin-bottom: 24px;
-}
-.product-detail p {
-  font-size: 13px;
-  line-height: 24px;
-  margin-bottom: 24px;
-}
-
 .sidebar {
   position: relative;
   padding-top: 72px;
@@ -1941,22 +1923,27 @@ button.active, a.button.active {
 .sidebar p {
   margin: 0;
 }
-.sidebar .product-title {
+.sidebar .sidebar-block {
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 24px;
+}
+.sidebar .sidebar-title {
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
 }
-.sidebar .product-title a {
+.sidebar .sidebar-title a {
   color: inherit;
   text-decoration: inherit;
   cursor: inherit;
   color: #aa0000;
   border-bottom: 1px solid #252525;
 }
-.sidebar .product-title a:active, .sidebar .product-title a:focus {
+.sidebar .sidebar-title a:active, .sidebar .sidebar-title a:focus {
   outline: none;
 }
-.sidebar .product-sub-title {
+.sidebar .sidebar-sub-title {
   font-size: 14px;
   line-height: 24px;
 }
@@ -1972,21 +1959,18 @@ button.active, a.button.active {
   margin-bottom: 24px;
 }
 .sidebar .product-size {
-  margin-bottom: 24px;
-}
-.sidebar .product-size .size-group {
   display: block;
   list-style: none;
   margin: 0;
   padding: 0;
   border: 0;
 }
-.sidebar .product-size .size-group:after {
+.sidebar .product-size:after {
   content: "";
   display: table;
   clear: both;
 }
-.sidebar .product-size .size-group > li {
+.sidebar .product-size > li {
   display: block;
   float: left;
   margin: 0 2px 2px 0;
@@ -2066,15 +2050,12 @@ button.active, a.button.active {
   border: 0;
 }
 .sidebar .product-color {
-  margin-bottom: 24px;
-}
-.sidebar .product-color .color-group {
   list-style: none;
   margin: 0;
   padding: 0;
   border: 0;
 }
-.sidebar .product-color .color-group:after {
+.sidebar .product-color:after {
   content: "";
   display: table;
   clear: both;
@@ -2093,15 +2074,6 @@ button.active, a.button.active {
 .sidebar .product-color li.current {
   border-color: black;
 }
-.sidebar .product-color .color-red {
-  background-color: #aa0000;
-}
-.sidebar .product-color .color-gray {
-  background-color: #c9cbca;
-}
-.sidebar .product-color .color-black {
-  background-color: black;
-}
 .sidebar .buy-product {
   margin-bottom: 27px;
 }
@@ -2114,6 +2086,7 @@ button.active, a.button.active {
 }
 .sidebar .timer {
   margin-top: 24px;
+  margin-bottom: 24px;
 }
 .sidebar .timer .d, .sidebar .timer .h, .sidebar .timer .m {
   display: block;
@@ -2127,6 +2100,33 @@ button.active, a.button.active {
   line-height: 24px;
   margin-left: 1em;
   letter-spacing: 2px;
+}
+.sidebar .sidebar-list {
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  padding-right: 21px;
+  list-style: none;
+}
+.sidebar .sidebar-list li {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  padding: 3px 0;
+}
+.sidebar .sidebar-list li + li {
+  border-top: 1px solid #eee;
+}
+.sidebar .sidebar-list a {
+  color: #252525;
+}
+.sidebar .sidebar-list a:hover {
+  text-decoration: none;
+  color: #aa0000;
 }
 .sidebar .sidebar-affix.affix {
   position: fixed;
@@ -2142,6 +2142,25 @@ button.active, a.button.active {
   .sidebar .sidebar-affix.affix {
     position: static;
   }
+}
+
+.issue-group {
+  font-size: 13px;
+  line-height: 24px;
+}
+.issue-group .issue + .issue {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #ccc;
+}
+.issue-group .issue-type {
+  font-weight: bold;
+}
+.issue-group .issue-content p {
+  margin-top: 0;
+}
+.issue-group .issue-content .date {
+  color: #999;
 }
 
 .message {
@@ -2293,9 +2312,6 @@ button.active, a.button.active {
   }
 }
 
-.news .post {
-  margin-bottom: 48px;
-}
 .news .post-header {
   margin-bottom: 6px;
 }
@@ -2321,8 +2337,7 @@ button.active, a.button.active {
   color: #999;
 }
 .news .post-footer {
-  border-top: 1px solid #ccc;
-  text-align: right;
+  border-bottom: 1px solid #ccc;
 }
 .news .post-footer .read-more {
   font-size: 13px;
@@ -2331,4 +2346,11 @@ button.active, a.button.active {
 .news .post-footer .read-more:hover {
   text-decoration: none;
   color: #aa0000;
+}
+.news .post-group .post {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+.news .post-group .post-footer {
+  text-align: right;
 }
