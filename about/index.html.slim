@@ -18,15 +18,5 @@
 
   .sidebar
     .sidebar-affix
-      .sidebar-title: a href="/events/" 九月連線商品正夯
-      p.timer
-        | 剩餘
-        span.d
-          = rand(30)
-          span.unit 天
-        span.h
-          = rand(24)
-          span.unit 小時
-        span.m
-          = rand(60)
-          span.unit 分
+      = render "/partials/sidebar-timer"
+

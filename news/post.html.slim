@@ -7,7 +7,6 @@
 
       .post-body
         img src="#{lorem_image('600x300&text=photo')}"
-
         p= zh_lorem_paragraphs(2)
         - rand(2).times do
           ul
@@ -40,4 +39,6 @@
 
 
   .sidebar
-    = render "/partials/news-sidebar"
+    .sidebar-list
+      = render "/partials/sidebar-timer"
+      = render "/partials/sidebar-list"
