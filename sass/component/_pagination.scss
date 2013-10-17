@@ -3,7 +3,6 @@
   @include reset-box-model;
   list-style: none;
   text-align: center;
-
   li {
     display: inline-block;
     margin: 0 0.125em;
@@ -22,17 +21,16 @@
       &.more {
         padding: 0.25em 0.5em;
       }
-      &.disable {
-        cursor: default;
-        background-color: #eee;
-        &:hover {
-          color: $black;
-        }
-      }
       &.active {
         color: $white;
         background-color: $black;
       }
+    }
+    .disable {
+      padding: 0.25em 0.75em;
+      display: inline-block;
+      cursor: not-allowed;
+      background-color: $wall-white;
     }
   }
 
