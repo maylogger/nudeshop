@@ -1,8 +1,5 @@
 .news {
 
-  .post {
-  }
-
   .post-header {
     @include trailer(.25);
     .post-title {
@@ -19,14 +16,14 @@
     }
   }
 
-  .post-footer {
-    border-bottom: 1px solid #ccc;
-    .read-more {
-      @include adjust-font-size-to(13px);
-      &:hover {
-        text-decoration: none;
-        color: $red;
-      }
+  .read-more {
+    position: relative;
+    top: - rhythm(1);
+    @include adjust-font-size-to(13px);
+    white-space: nowrap;
+    &:hover {
+      text-decoration: none;
+      color: $red;
     }
   }
 
@@ -34,11 +31,8 @@
     .post {
       @include leader(2);
       @include trailer(2);
-    }
-    .post-footer {
-
-      text-align: right;
-      // margin-top: -12px;
+      @include padding-trailer(1);
+      border-bottom: 1px solid #ddd;
     }
   }
 
