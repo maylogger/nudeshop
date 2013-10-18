@@ -1,10 +1,10 @@
 .news
   .main-content
     h2.main-title 最新消息
-    .post-group
-      - 5.times do
-        .post
-          .article
+    .article
+      .post-group
+        - 5.times do
+          .post
             .post-header
               h2.post-title: a href="post.html"= zh_lorem_sentence
               .post-date= lorem_date("%Y/%m/%d")

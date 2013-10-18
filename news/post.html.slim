@@ -1,42 +1,41 @@
 .news
   .main-content
-    .post
-      .article
-        .post-header
-          h2.post-title: a href="post.html"= zh_lorem_sentence
-          .post-date= lorem_date("%Y/%m/%d")
+    .article
+      .post-header
+        h2.post-title: a href="post.html"= zh_lorem_sentence
+        .post-date= lorem_date("%Y/%m/%d")
 
-        .post-body
+      .post-body
+        img src="#{lorem_image('600x300&text=photo')}"
+        p= zh_lorem_paragraphs(2)
+        - rand(2).times do
+          ul
+            li= zh_lorem_sentence
+            li= zh_lorem_sentence
+            li= zh_lorem_sentence
+            li= zh_lorem_sentence
+        h3.post-sub-title= zh_lorem_sentence
+        p= zh_lorem_paragraphs(2)
+        - rand(2).times do
+          ol
+            li= zh_lorem_sentence
+            li= zh_lorem_sentence
+            li= zh_lorem_sentence
+            li= zh_lorem_sentence
+        - rand(2).times do
           img src="#{lorem_image('600x300&text=photo')}"
-          p= zh_lorem_paragraphs(2)
-          - rand(2).times do
-            ul
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-          h3.post-sub-title= zh_lorem_sentence
-          p= zh_lorem_paragraphs(2)
-          - rand(2).times do
-            ol
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-              li= zh_lorem_sentence
-          - rand(2).times do
-            img src="#{lorem_image('600x300&text=photo')}"
-          p= zh_lorem_paragraphs(2)
-          h3.post-sub-title= zh_lorem_sentence
-          p= zh_lorem_paragraphs(2)
-          blockquote= zh_lorem_paragraphs(2)
-          p= zh_lorem_paragraphs(2)
-          h3.post-sub-title= zh_lorem_sentence
-          p
-            i= zh_lorem_sentence
-            b= zh_lorem_sentence
-            strong= zh_lorem_sentence
-            em= zh_lorem_sentence
-          p= zh_lorem_paragraphs(2)
+        p= zh_lorem_paragraphs(2)
+        h3.post-sub-title= zh_lorem_sentence
+        p= zh_lorem_paragraphs(2)
+        blockquote= zh_lorem_paragraphs(2)
+        p= zh_lorem_paragraphs(2)
+        h3.post-sub-title= zh_lorem_sentence
+        p
+          i= zh_lorem_sentence
+          b= zh_lorem_sentence
+          strong= zh_lorem_sentence
+          em= zh_lorem_sentence
+        p= zh_lorem_paragraphs(2)
 
 
   .sidebar
