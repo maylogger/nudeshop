@@ -27,10 +27,9 @@ $sidebar-context: 9;
     font-weight: bold;
     a {
       border-bottom: 1px solid $black;
-      color: $red;
-      &:hover {
-        text-decoration: none;
-      }
+      @include unstyled-link;
+      @include link-colors($red);
+      cursor: pointer;
     }
   }
   .sidebar-sub-title {

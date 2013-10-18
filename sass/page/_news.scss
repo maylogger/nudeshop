@@ -5,11 +5,9 @@
     .post-title {
       margin-bottom: 3px;
       a {
-        color: $black;
-        &:hover {
-          text-decoration: none;
-          color: $red;
-        }
+        @include unstyled-link;
+        @include link-colors($black, $red);
+        cursor: pointer;
       }
     }
     .post-date {

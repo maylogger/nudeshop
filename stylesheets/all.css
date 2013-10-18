@@ -1934,10 +1934,14 @@ button.active, a.button.active {
 }
 .sidebar .sidebar-title a {
   border-bottom: 1px solid #252525;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
   color: #aa0000;
+  cursor: pointer;
 }
-.sidebar .sidebar-title a:hover {
-  text-decoration: none;
+.sidebar .sidebar-title a:active, .sidebar .sidebar-title a:focus {
+  outline: none;
 }
 .sidebar .sidebar-sub-title {
   font-size: 14px;
@@ -2310,10 +2314,16 @@ button.active, a.button.active {
   margin-bottom: 3px;
 }
 .news .post-header .post-title a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
   color: #252525;
+  cursor: pointer;
+}
+.news .post-header .post-title a:active, .news .post-header .post-title a:focus {
+  outline: none;
 }
 .news .post-header .post-title a:hover {
-  text-decoration: none;
   color: #aa0000;
 }
 .news .post-header .post-date {
