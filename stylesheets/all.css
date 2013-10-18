@@ -910,26 +910,6 @@ optgroup::-moz-focus-inner {
   background: #eeeeee;
 }
 
-.add-cart {
-  font-size: 15px;
-  line-height: 24px;
-  color: black;
-  border: 1px solid black;
-  padding: 5px 10px;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.add-cart:hover {
-  color: white;
-}
-.add-cart:hover {
-  background: #aa0000;
-  border-color: #aa0000;
-  text-decoration: none;
-}
-
 button, a.button {
   text-align: center;
   padding: 0 24px;
@@ -1574,12 +1554,12 @@ button.active, a.button.active {
   float: right;
 }
 .paper-style .form-action {
-  float: right;
+  text-align: right;
 }
 .paper-style .form-group + .main-block-sub-title {
   margin-top: 36px;
 }
-.paper-style .link-to-issue {
+.paper-style button.action, .paper-style a.button.action {
   padding: 0.5em 3em;
 }
 
@@ -1879,26 +1859,28 @@ button.active, a.button.active {
 
 .article {
   color: #444;
-}
-.article h1 {
-  font-size: 24px;
-  line-height: 24px;
-  margin-bottom: 24px;
-}
-.article h2 {
-  font-size: 24px;
-  line-height: 24px;
-  margin-bottom: 24px;
-}
-.article h3 {
-  font-size: 18px;
-  line-height: 24px;
-  margin-bottom: 24px;
-}
-.article h4 {
   font-size: 13px;
   line-height: 24px;
+}
+.article h1 {
   margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.article h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.article h3 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.article h4 {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .article img {
   display: block;
@@ -1907,30 +1889,18 @@ button.active, a.button.active {
   max-width: 100%;
 }
 .article p {
-  font-size: 13px;
-  line-height: 24px;
   margin-bottom: 24px;
 }
 .article ul, .article ol {
   margin-top: 24px;
   margin-bottom: 24px;
-  font-size: 13px;
-  line-height: 24px;
 }
 .article blockquote {
   margin: 24px 48px;
-  font-size: 13px;
-  line-height: 24px;
 }
 .article pre {
   margin: 24px 0;
   padding: 24px 48px;
-  font-size: 13px;
-  line-height: 24px;
-}
-.article code {
-  font-size: 13px;
-  line-height: 24px;
 }
 .article .divider {
   margin-top: 48px;
@@ -1963,14 +1933,11 @@ button.active, a.button.active {
   font-weight: bold;
 }
 .sidebar .sidebar-title a {
-  color: inherit;
-  text-decoration: inherit;
-  cursor: inherit;
-  color: #aa0000;
   border-bottom: 1px solid #252525;
+  color: #aa0000;
 }
-.sidebar .sidebar-title a:active, .sidebar .sidebar-title a:focus {
-  outline: none;
+.sidebar .sidebar-title a:hover {
+  text-decoration: none;
 }
 .sidebar .sidebar-sub-title {
   font-size: 14px;
@@ -2343,15 +2310,10 @@ button.active, a.button.active {
   margin-bottom: 3px;
 }
 .news .post-header .post-title a {
-  color: inherit;
-  text-decoration: inherit;
-  cursor: inherit;
   color: #252525;
 }
-.news .post-header .post-title a:active, .news .post-header .post-title a:focus {
-  outline: none;
-}
 .news .post-header .post-title a:hover {
+  text-decoration: none;
   color: #aa0000;
 }
 .news .post-header .post-date {
