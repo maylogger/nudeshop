@@ -13,19 +13,24 @@ $sidebar-context: 9;
     margin: 0;
   }
 
-  // title and meta description...
-
   .sidebar-block {
     @include trailer(1);
     @include adjust-font-size-to(12px);
   }
+
+
+  // title and meta description...
+
+
   .sidebar-title {
     @include adjust-font-size-to(16px);
     font-weight: bold;
     a {
-      @include unstyled-link;
-      @include link-colors($red);
       border-bottom: 1px solid $black;
+      color: $red;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
   .sidebar-sub-title {
@@ -43,6 +48,7 @@ $sidebar-context: 9;
     @include trailer(1);
   }
 
+  // product-size
   .product-size {
     display: block;
     list-style: none;
@@ -115,7 +121,8 @@ $sidebar-context: 9;
     .size:hover .size-hover-message {
       display: block;
     }
-  }
+  } // product-size end
+
   .product-fabric {
     @include trailer(1);
     .fabric-group {
@@ -123,6 +130,7 @@ $sidebar-context: 9;
       @include reset-box-model;
     }
   }
+
   .product-color {
     @include pie-clearfix;
     list-style: none;

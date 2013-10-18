@@ -28,8 +28,6 @@ $main-context: 9;
   }
 }
 
-
-
 .main-block {
   @include trailer(2);
 }
@@ -86,7 +84,7 @@ $main-context: 9;
 }
 
 
-
+// 模擬紙張長相
 .paper-style {
   .main-title {
     margin-bottom: 0;
@@ -115,16 +113,13 @@ $main-context: 9;
     }
   }
   .form-action {
-    float: right;
+    text-align: right;
   }
-
   .form-group + .main-block-sub-title {
     @include leader(1.5);
   }
-
   // 單一訂單頁使用
-  .link-to-issue {
+  button.action, a.button.action {
     padding: 0.5em 3em;
   }
-
 }
