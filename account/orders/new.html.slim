@@ -1,6 +1,5 @@
 form.main-inner-container.paper-style
   h2.main-title 結帳
-
   .main-block
     .main-block-title
       |1.確認數量明細
@@ -25,7 +24,6 @@ form.main-inner-container.paper-style
             td.price
               span.unit NT$
               = rand(20000) + 5000
-
         tr.shipping-costs
           td colspan="3" 運費
           td.price
@@ -36,6 +34,7 @@ form.main-inner-container.paper-style
           td.price
             span.unit NT$
             = rand(20000) + 5000
+
 
   .main-block#consumer-info.last-main-block.current
     .main-block-title 2.填寫收件資訊
@@ -56,7 +55,6 @@ form.main-inner-container.paper-style
       label.form-group-title Email
       .form-group-content
         input type="email" value="xxx@gmail.com"
-
 
     .main-block-sub-title 收件人
     .form-group
@@ -81,7 +79,6 @@ form.main-inner-container.paper-style
       label.form-group-title Email
       .form-group-content
         input type="email" value="xxx@gmail.com"
-
     .form-group
       label.form-group-title 運送方式
       .form-group-content
@@ -96,18 +93,32 @@ form.main-inner-container.paper-style
       .form-group-content
         input type="text" value="333"
       a.note href="http://www.post.gov.tw/post/internet/f_searchzone/index.jsp" 若不知郵遞區號，請按此查詢。
-
     .form-group
       label.form-group-title 收件地址
       .form-group-content
         input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓"
+    .form-group
+      label.form-group-title 指定收件時間
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="collected_date" checked="checked" 不指定
+          .radio
+            label
+              input type="radio" name="collected_date" 08:00~12:00
+          .radio
+            label
+              input type="radio" name="collected_date" 12:00~17:00
+          .radio
+            label
+              input type="radio" name="collected_date" 17:00~20:00
 
     .main-block-sub-title 面交
     .form-group
       label.form-group-title 備註
       .form-group-content
         textarea.full-width placeholder="#{zh_lorem_paragraph}" value="#{zh_lorem_paragraph}"
-
     .main-block-sub-title 超商取件
     .form-group
       label.form-group-title 超商名稱
@@ -117,7 +128,6 @@ form.main-inner-container.paper-style
           option value="全家" 全家
           option value="OK" OK
           option value="萊爾富" 萊爾富
-
     .form-group
       label.form-group-title 門市地址
       .form-group-content

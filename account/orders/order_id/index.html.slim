@@ -1,6 +1,5 @@
 form.main-inner-container.paper-style
   h2.main-title 訂單資訊
-
   .main-block
     .main-block-title 訂單明細
     ul.main-list
@@ -48,6 +47,7 @@ form.main-inner-container.paper-style
             span.unit NT$
             = rand(20000) + 5000
 
+
   .main-block
     .main-block-title 購買者資訊
     .form-group
@@ -66,6 +66,8 @@ form.main-inner-container.paper-style
       label.form-group-title Email
       .form-group-content
         input disabled="disabled" type="email" value="xxx@gmail.com"
+
+
   .main-block
     .main-block-title
       |收件人資訊
@@ -86,7 +88,6 @@ form.main-inner-container.paper-style
       label.form-group-title Email
       .form-group-content
         input disabled="disabled" type="email" value="xxx@gmail.com"
-
     .form-group
       label.form-group-title 運送方式
       .form-group-content
@@ -110,16 +111,16 @@ form.main-inner-container.paper-style
         .radio-group
           .radio
             label
-              input type="radio" name="" 不指定
+              input type="radio" name="collected_date" disabled="disabled" checked="checked" 不指定
           .radio
             label
-              input type="radio" name="" 08:00~12:00
+              input type="radio" name="collected_date" disabled="disabled" 08:00~12:00
           .radio
             label
-              input type="radio" name="" 12:00~17:00
+              input type="radio" name="collected_date" disabled="disabled" 12:00~17:00
           .radio
             label
-              input type="radio" name="" 17:00~20:00
+              input type="radio" name="collected_date" disabled="disabled" 17:00~20:00
 
     .main-block-sub-title 面交
     .form-group
@@ -140,6 +141,7 @@ form.main-inner-container.paper-style
       label.form-group-title 門市地址
       .form-group-content
         input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號" disabled="disabled"
+
 
   .main-block
     .main-block-title 付款資訊
@@ -166,6 +168,7 @@ form.main-inner-container.paper-style
           |303
     button.action 前往付款
 
+
   .main-block
     .main-block-title 客服訊息
     .issue-group
@@ -183,4 +186,4 @@ form.main-inner-container.paper-style
             p
               = zh_lorem_paragraph
               span.date= lorem_date("%Y/%m/%d")
-      a.button.action.link-to-issue href="/issues/new.html" 聯繫客服
+    a.button.action href="/issues/new.html" 聯繫客服

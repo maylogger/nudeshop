@@ -36,12 +36,12 @@ form.main-inner-container.paper-style
             span.unit NT$
             = rand(20000) + 5000
 
+
   .main-block#consumer-info
     .main-block-title
       |2.填寫收件資訊
       span class="glyphicon glyphicon-ok"
       a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
-
     .main-block-sub-title 購買人
     .form-group
       label.form-group-title 姓名
@@ -77,7 +77,6 @@ form.main-inner-container.paper-style
       label.form-group-title Email
       .form-group-content
         input type="email" value="xxx@gmail.com" disabled="disabled"
-
     .form-group
       label.form-group-title 運送方式
       .form-group-content
@@ -95,6 +94,22 @@ form.main-inner-container.paper-style
       label.form-group-title 收件地址
       .form-group-content
         input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+    .form-group
+      label.form-group-title 指定收件時間
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" checked="checked" 不指定
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" 08:00~12:00
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" 12:00~17:00
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" 17:00~20:00
 
     .main-block-sub-title 面交
     .form-group
@@ -116,6 +131,7 @@ form.main-inner-container.paper-style
       .form-group-content
         input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號" disabled="disabled"
 
+
   .main-block.last-main-block#payments.current
     .main-block-title 3.選擇付款方式
     .form-group
@@ -128,6 +144,7 @@ form.main-inner-container.paper-style
           label
             input type="radio" name="payments"
             |信用卡付款
+
 
   .form-action
     a.button href="/account/orders/order_id/edit.html#consumer-info" 上一步
