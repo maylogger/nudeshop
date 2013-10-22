@@ -1,0 +1,125 @@
+.message {
+  text-align: center;
+  @include adjust-font-size-to(15px);
+  @extend %subpixel;
+  margin: 0 10px 10px 0;
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  background: black;
+  color: white;
+  clear: both;
+}
+
+.events,.shop {
+  position: relative;
+  @include pie-clearfix;
+  width: 720px;
+  @include at-breakpoint($wide-screen) {
+    width: 900px;
+  }
+}
+
+.header {
+  text-align: center;
+  background: rgba(white,.85);
+  a {
+    @include padding-leader(2);
+    @include unstyled-link;
+    color: $black;
+  }
+  %line { display: block; }
+  .en, .zh {
+    @extend %line;
+    @include adjust-font-size-to(16px);
+  }
+  .only {
+    @extend %line;
+    @include adjust-font-size-to(13px);
+    @include leader(1.5);
+    @include trailer(1);
+  }
+  .count {
+    @extend %light;
+    @include adjust-font-size-to(72px);
+    letter-spacing: -.1em;
+    margin-right: .15em;
+    position: relative;
+    top: 2px;
+  }
+  .unit {
+    @include adjust-font-size-to(13px);
+  }
+  @include at-breakpoint($wide-screen) {
+    .en, .zh {
+      @include adjust-font-size-to(20px);
+    }
+    .only {
+      @include adjust-font-size-to(15px);
+      @include leader(2.5);
+      @include trailer(1.5);
+    }
+    .count {
+      @include adjust-font-size-to(96px);
+    }
+    .unit {
+      @include adjust-font-size-to(20px);
+    }
+  }
+}
+
+
+
+// sold out event
+.sold-out {
+  .item-link {
+    opacity: .5;
+    @include transition(opacity .3s);
+    .item-title {
+      @include transition(none);
+      background: rgba(black, .3);
+    }
+  }
+  .item-link:hover {
+    opacity: 1;
+  }
+}
+
+
+// event only layout
+.event {
+
+  @include pie-clearfix;
+
+  .item {
+    &:nth-child(6n+1),
+    &:nth-child(6n+5) {
+      width: columns(6, $item-context, static);
+      @include at-breakpoint($wide-screen) {
+        @include with-grid-settings(12,90px,10px,0) {
+        width: columns(6, $item-context, static);
+        }
+      }
+    }
+    &:nth-child(6n+1),
+    &:nth-child(6n+5) {
+      height: columns(4, $item-context, static) * 2 + gutter($item-context, static);
+      @include at-breakpoint($wide-screen) {
+        @include with-grid-settings(12,90px,10px,0) {
+        height: columns(4, $item-context, static) * 2 + gutter($item-context, static);
+        }
+      }
+    }
+    &:nth-child(6n+1) .item-title,
+    &:nth-child(6n+5) .item-title {
+      .name {
+        margin-top: 60%;
+        @include adjust-font-size-to(32px);
+      }
+      .price {
+        @include adjust-font-size-to(18px);
+      }
+    }
+
+  } // item end
+
+} // event end

@@ -23,7 +23,6 @@ $page-container: ".page";
 @import "layout";
 
 // import component and partial
-@import "component/add-cart";
 @import "component/formalize";
 @import "component/button";
 @import "component/button-group";
@@ -31,11 +30,18 @@ $page-container: ".page";
 @import "component/split-line";
 @import "component/social-link";
 @import "component/pills";
+@import "component/breadcrumb";
+@import "component/pagination";
 // ----------------------------
 @import "partials/nav";
-@import "partials/events";
+@import "partials/item";
 @import "partials/main";
 @import "partials/list";
+@import "partials/soldout";
+@import "partials/gallery";
+@import "partials/article";
+@import "partials/sidebar";
+@import "partials/issue-group";
 
 // pages
 @import "pages";

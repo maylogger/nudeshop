@@ -1,0 +1,139 @@
+form.main-inner-container.paper-style
+  h2.main-title 結帳
+  .main-block
+    .main-block-title
+      |1.確認數量明細
+      span class="glyphicon glyphicon-ok"
+      a.button href="/account/orders/check.html" 編輯
+    table.list
+      thead
+        tr
+          th.product.col-10 商品
+          th.price.col-4 單價
+          th.quantity.col-2 數量
+          th.price.col-4 小計
+      tbody
+        - 3.times do
+          tr
+            td.product= zh_lorem_words( rand(10) + 6)
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
+            td.quantity
+              input type="number" value="#{rand(10) + 1}" disabled="disabled"
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
+        tr.shipping-costs
+          td colspan="3" 運費
+          td.price
+            span.unit NT$
+            |80
+        tr.total
+          td colspan="3" 總金額
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+
+
+  .main-block#consumer-info.last-main-block.current
+    .main-block-title 2.填寫收件資訊
+    .main-block-sub-title 購買人
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名"
+        .radio
+          label: input  type="radio" name="sex" checked="checked" 先生
+        .radio
+          label: input  type="radio" name="sex" 女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input type="tel" value="0911168168"
+    .form-group
+      label.form-group-title Email
+      .form-group-content
+        input type="email" value="xxx@gmail.com"
+
+    .main-block-sub-title 收件人
+    .form-group
+      .checkbox-group
+        .checkbox
+          label
+            input type="checkbox"
+            |同購買者
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名"
+        .radio
+          label: input type="radio" name="sex1" checked="checked" 先生
+        .radio
+          label: input type="radio" name="sex1" 女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input type="tel" value="0911168168"
+    .form-group
+      label.form-group-title Email
+      .form-group-content
+        input type="email" value="xxx@gmail.com"
+    .form-group
+      label.form-group-title 運送方式
+      .form-group-content
+        select
+          option value="宅配" 宅配
+          option value="面交" 面交
+          option value="超商取貨" 超商取貨
+
+    .main-block-sub-title 宅配
+    .form-group
+      label.form-group-title 郵遞區號
+      .form-group-content
+        input type="text" value="333"
+      a.note href="http://www.post.gov.tw/post/internet/f_searchzone/index.jsp" 若不知郵遞區號，請按此查詢。
+    .form-group
+      label.form-group-title 收件地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓"
+    .form-group
+      label.form-group-title 指定收件時間
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="collected_date" checked="checked" 不指定
+          .radio
+            label
+              input type="radio" name="collected_date" 08:00~12:00
+          .radio
+            label
+              input type="radio" name="collected_date" 12:00~17:00
+          .radio
+            label
+              input type="radio" name="collected_date" 17:00~20:00
+
+    .main-block-sub-title 面交
+    .form-group
+      label.form-group-title 備註
+      .form-group-content
+        textarea.full-width placeholder="#{zh_lorem_paragraph}" value="#{zh_lorem_paragraph}"
+    .main-block-sub-title 超商取件
+    .form-group
+      label.form-group-title 超商名稱
+      .form-group-content
+        select
+          option value="7-11" 7-11
+          option value="全家" 全家
+          option value="OK" OK
+          option value="萊爾富" 萊爾富
+    .form-group
+      label.form-group-title 門市地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號"
+
+  .form-action
+    a.button href="/account/orders/check.html" 上一步
+    a.button.action href="/account/orders/order_id/payments.html#payments" 下一步：選擇付款方式
+

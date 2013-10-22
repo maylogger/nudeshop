@@ -23,7 +23,8 @@
 
   input, textarea, select {
     min-width: 175px;
-    width: 35%;
+    width: 30%;
+    margin-right: .7em;
     height: $base-line-height;
     @include adjust-font-size-to(13px, 2/3);
     font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
@@ -31,7 +32,6 @@
       width: 100%;
     }
   }
-
   textarea {
     min-height: $base-line-height * 6;
   }
@@ -40,7 +40,7 @@
   }
   .checkbox, .radio {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: .7em;
     label {
       color: #555;
       @include adjust-font-size-to(13px, 2/3);
@@ -54,6 +54,7 @@
   }
 
   .note {
+    @extend %subpixel;
     color: #888;
     @include adjust-font-size-to(12px, 2/3);
     margin: 3px 0 0;
@@ -97,7 +98,13 @@
   @include leader(1);
   .alert {
     margin-left: 12px;
-    @include adjust-font-size-to(12px);
+    @include adjust-font-size-to(12px, 1.5);
+  }
+  button, a.button {
+    padding: 0.5em 3em;
+  }
+  button + button, a.button + a.button {
+    margin-left: 1em;
   }
 }
 

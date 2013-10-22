@@ -1,0 +1,41 @@
+.news {
+
+  .post-header {
+    @include trailer(.25);
+    .post-title {
+      margin-bottom: 3px;
+      a {
+        @include unstyled-link;
+        @include link-colors($black, $red);
+        cursor: pointer;
+      }
+    }
+    .post-date {
+      margin-bottom: 3px;
+      @include adjust-font-size-to(13px);
+      color: #999;
+    }
+  }
+
+  .read-more {
+    position: relative;
+    top: - rhythm(1);
+    @include adjust-font-size-to(13px);
+    white-space: nowrap;
+    &:hover {
+      text-decoration: none;
+      color: $red;
+    }
+  }
+
+  .post-group {
+    .post {
+      @include leader(2);
+      @include trailer(2);
+      @include padding-trailer(1);
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+}
+

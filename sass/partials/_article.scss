@@ -1,0 +1,47 @@
+.article {
+  color: #444;
+  @include adjust-font-size-to(13px);
+  h1 {
+    @include trailer(1);
+    @include adjust-font-size-to(24px,1);
+  }
+  h2 {
+    @include trailer(1);
+    @include adjust-font-size-to(24px,1);
+  }
+  h3 {
+    @include trailer(1);
+    @include adjust-font-size-to(20px,1);
+  }
+  h4 {
+    @include trailer(1);
+    @include adjust-font-size-to(16px,1);
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    @include trailer(1);
+    max-width: 100%;
+  }
+  p {
+    @include trailer(1);
+  }
+  ul, ol {
+    @include leader(1);
+    @include trailer(1);
+  }
+  blockquote {
+    margin: rhythm(1) rhythm(2);
+  }
+  pre {
+    margin: rhythm(1) 0;
+    padding: rhythm(1) rhythm(2);
+  }
+  code {
+  }
+  .divider {
+    @include leader(2);
+    @include trailer(2);
+    border-top: 1px solid #ccc;
+  }
+}

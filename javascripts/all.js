@@ -11,9 +11,18 @@ function isMobile(){
 
 // 如果不是手持裝置
 if(!isMobile()) {
-  $(".nav-inner").affix();
-  $(".sidebar-inner").affix();
-}
+
+  $('.nav-inner').affix();
+
+  if ( $('.sidebar-affix').length != 0 ) {
+      $('.sidebar-affix').affix({
+        offset: {
+          top: $('.sidebar-affix').offset().top - 24
+        }
+      });
+  }
+
+} // if mobile end
 
 $('.event').each(function(){
 
@@ -23,3 +32,18 @@ $('.event').each(function(){
   });
 
 });
+
+
+// light-box
+if ( $('#gallery').length != 0 ) {
+
+    $('#gallery').each(function() { // the containers for all your galleries should have the class gallery
+        $(this).magnificPopup({
+            delegate: '.gallery-photo', // the container for each your gallery items
+            type: 'image',
+            gallery:{enabled:true},
+            closeOnBgClick: false
+        });
+    });
+
+}

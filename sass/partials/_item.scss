@@ -1,0 +1,100 @@
+$item-context: 9;
+
+%item-size {
+  // @include transition( width .3s, height .3s );
+  width: columns(3, $item-context, static);
+  @include at-breakpoint($wide-screen) {
+    @include with-grid-settings(12,90px,10px,0) {
+    width: columns(3, $item-context, static);
+    }
+  }
+  margin-right: $gutter-width;
+}
+
+.grid-sizer{
+  @extend %item-size;
+  // height: 0px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin: 0 $gutter-width $gutter-width 0;
+  // setting normal and w2 width
+  @extend %item-size;
+
+  &.space {
+    background: rgba(black,.05) image-url("space.gif") center center;
+  }
+
+  // item padding-height
+  height: columns(4, $item-context, static);
+  @include at-breakpoint($wide-screen) {
+    @include with-grid-settings(12,90px,10px,0) {
+    height: columns(4, $item-context, static);
+    }
+  }
+
+  // inside objects and background
+  .item-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include background-size(cover);
+  }
+
+
+  // item color
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}n) .item-inner {
+      background-color: rgba(black, $i / 30 );
+    }
+    &:nth-child(3n+1) .item-inner {
+      background-color: rgba(black, 1 / 10 );
+    }
+  }
+
+  // item title
+  .item-title {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    // background: rgba(black, .5);
+    @include background-image(radial-gradient( rgba(#aaa,.5) 50px, rgba(black,.1) 250px));
+    color: white;
+    text-decoration: none;
+    @include transition(opacity .7s .2s);
+    .name {
+      margin-top: 59%;
+      @include adjust-font-size-to(20px);
+    }
+    .price {
+      @include adjust-font-size-to(13px);
+    }
+  }
+
+
+} // item
+
+
+
+.item-link:hover .item-title {
+  opacity: 1;
+}
+
+// hover item scale
+.item-link {
+  display: block;
+  .item-inner {
+    @include transition( transform .7s, -webkit-transform .7s);
+  }
+  &:hover .item-inner {
+    @include transition( transform 20s .7s ease-out, -webkit-transform 20s .7s ease-out);
+    @include transform( scale(1.25), true);
+  }
+}

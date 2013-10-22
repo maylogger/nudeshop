@@ -1,0 +1,28 @@
+.issue-group {
+  @include adjust-font-size-to(13px);
+  .issue {
+
+  }
+  .issue {
+
+  }
+  .issue + .issue {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #ccc;
+  }
+
+  .issue-type {
+    // @include adjust-font-size-to(16px);
+    font-weight: bold;
+  }
+  .issue-content {
+    p {
+      margin-top: 0;
+    }
+    .date {
+      color: #999;
+    }
+  }
+
+}

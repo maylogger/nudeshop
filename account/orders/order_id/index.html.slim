@@ -1,0 +1,189 @@
+form.main-inner-container.paper-style
+  h2.main-title 訂單資訊
+  .main-block
+    .main-block-title 訂單明細
+    ul.main-list
+      li
+        .title 訂單編號：
+        .content= rand(10000) + 1000000
+      li
+        .title 訂購日期：
+        .content= lorem_date("%Y/%m/%d")
+      li
+        .title 狀態：
+        .content= zh_lorem_words( rand(10) + 6)
+      li
+        .title 物流編號：
+        .content
+          = "Zh" + "#{rand(10000)}" + "#{1000000}"
+          a.alert href="#" (查詢貨物目前情況)
+    table.list
+      thead
+        tr
+          th.product.col-10 商品
+          th.quantity.col-4 單價
+          th.quantity.col-2 數量
+          th.price.col-4 小計
+      tbody
+        - 3.times do
+          tr
+            td.product: a href="/events/products"= zh_lorem_words( rand(10) + 6)
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
+            td.quantity
+              input type="number" value="#{rand(10) + 1}" disabled="disabled"
+            td.price
+              span.unit NT$
+              = rand(20000) + 5000
+        tr.shipping-costs
+          td colspan="3" 運費
+          td.price
+            span.unit NT$
+            |80
+        tr.total
+          td colspan="3" 總金額
+          td.price
+            span.unit NT$
+            = rand(20000) + 5000
+
+
+  .main-block
+    .main-block-title 購買者資訊
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名" disabled="disabled"
+        .radio
+          label: input disabled="disabled" type="radio" name="sex" checked="checked" 先生
+        .radio
+          label: input disabled="disabled" type="radio" name="sex" 女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input disabled="disabled" type="tel" value="0911168168"
+    .form-group
+      label.form-group-title Email
+      .form-group-content
+        input disabled="disabled" type="email" value="xxx@gmail.com"
+
+
+  .main-block
+    .main-block-title
+      |收件人資訊
+      button 編輯
+    .form-group
+      label.form-group-title 姓名
+      .form-group-content
+        input type="text" value="王小名" disabled="disabled"
+        .radio
+          label: input disabled="disabled" type="radio" name="sex1" checked="checked" 先生
+        .radio
+          label: input disabled="disabled" type="radio" name="sex1" 女士
+    .form-group
+      label.form-group-title 聯絡電話
+      .form-group-content
+        input disabled="disabled" type="tel" value="0911168168"
+    .form-group
+      label.form-group-title Email
+      .form-group-content
+        input disabled="disabled" type="email" value="xxx@gmail.com"
+    .form-group
+      label.form-group-title 運送方式
+      .form-group-content
+        select disabled="disabled"
+          option value="宅配" 宅配
+          option value="面交" 面交
+          option value="超商取貨" 超商取貨
+
+    .main-block-sub-title 宅配
+    .form-group
+      label.form-group-title 郵遞區號
+      .form-group-content
+        input type="text" value="333" disabled="disabled"
+    .form-group
+      label.form-group-title 收件地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號Ｏ樓" disabled="disabled"
+    .form-group
+      label.form-group-title 指定收件時間
+      .form-group-content
+        .radio-group
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" checked="checked" 不指定
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" 08:00~12:00
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" 12:00~17:00
+          .radio
+            label
+              input type="radio" name="collected_date" disabled="disabled" 17:00~20:00
+
+    .main-block-sub-title 面交
+    .form-group
+      label.form-group-title 備註
+      .form-group-content
+        textarea.full-width placeholder="#{zh_lorem_paragraph}" value="#{zh_lorem_paragraph}" disabled="disabled"
+
+    .main-block-sub-title 超商取件
+    .form-group
+      label.form-group-title 超商名稱
+      .form-group-content
+        select disabled="disabled"
+          option value="7-11" 7-11
+          option value="全家" 全家
+          option value="OK" OK
+          option value="萊爾富" 萊爾富
+    .form-group
+      label.form-group-title 門市地址
+      .form-group-content
+        input.full-width type="text" value="ＯＯ市ＸＸ區ＯＯ路ＸＸＸ號" disabled="disabled"
+
+
+  .main-block
+    .main-block-title 付款資訊
+    ul.main-list
+      li
+        .title 付款方式：
+        .content ATM 轉帳
+      li
+        .title 付款到期日：
+        .content= lorem_date("%Y/%m/%d")
+      li
+        .title 轉入銀行：
+        .content ＸＸ銀行 ＸＸ分行
+      li
+        .title 帳號：
+        .content 009
+      li
+        .title 戶名：
+        .content 301039202942
+      li
+        .title 應付金額：
+        .content
+          span.unit NT$
+          |303
+    button.action 前往付款
+
+
+  .main-block
+    .main-block-title 客服訊息
+    .issue-group
+      - 3.times do
+        .issue
+          .issue-type
+            |問題類型：退貨
+          .issue-content
+            .title 問題內容：
+            p
+              = zh_lorem_paragraph
+              spna.date= lorem_date("%Y/%m/%d")
+          .issue-content
+            .title 客服回覆：
+            p
+              = zh_lorem_paragraph
+              span.date= lorem_date("%Y/%m/%d")
+    a.button.action href="/issues/new.html" 聯繫客服

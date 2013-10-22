@@ -1,79 +1,118 @@
 .list {
+  table-layout: fixed;
   width: 100%;
   text-align: left;
-  @include trailer(2);
-  border-bottom: 1px solid black;
+  // @include trailer(1);
+  // border-bottom: 1px solid black;
   @include adjust-font-size-to(13px);
 
   thead {
-    // border-bottom: 1px solid #ccc;
+    th {
+      border-bottom: 1px solid black;
+    }
+    th + th {
+      padding-left: 10px;
+    }
+    .edit {
+      padding-left: 10px;
+      padding-right: 0;
+      text-align: right;
+    }
   }
+
+  tbody tr:first-child td {
+    padding-top: 10px;
+  }
+
   td {
-    padding: 3px 0;
+    padding-bottom: 10px;
+    vertical-align: top;
     a {
-      display: block;
       color: black;
       &:hover {
         text-decoration: none;
-        color: #777;
+        color: $red;
       }
     }
   }
+  td + td {
+    padding-left: 10px;
+  }
+
+
   .order {
     td {
-      border-top: 1px solid black;
+      padding-top: 10px;
+      border-bottom: 1px solid rgba(black,.1);
     }
   }
 
+  .shipping-costs {
+    td {
+      border-top: 1px solid rgba(black,.1);
+      padding-top: 10px;
+    }
+  }
   .total {
     td {
-      border-top: 1px solid #ccc;
+      border-top: 1px solid black;
+      padding-top: 10px;
     }
   }
-
   .alert {
     td {
       border-top: 1px solid black;
-      padding: 6px 0;
+      padding: 10px 0;
       text-align: center;
+      border-bottom: 1px solid rgba(black,.1);
     }
+  }
 
-  }
   .order-number {
-    vertical-align: top;
+    a {
+      color: #369;
+    }
   }
-  .date {
-    vertical-align: top;
+
+  .issue-link {
+    text-align: center;
   }
+
   .product {
+    vertical-align: middle;
     @include adjust-font-size-to(13px, 2/3);
   }
+
   .quantity {
-    vertical-align: top;
     text-align: right;
+    input {
+      padding: 0;
+      width: 3em;
+      text-align: right;
+    }
   }
+
   .price {
     text-align: right;
     .unit {
       color: #999;
+      float: left;
+      @include at-breakpoint($wide-screen) {
+        padding-left: 1.5em;
+      }
     }
   }
 
+  .edit {
+    text-align: right;
+  }
 
-  // order-columns
-  .col-1 {
-    // width: columns(1, $main-inner-container-width);
-    width: 10%;
+
+  // list-columns
+  @for $i from 1 through 20 {
+    .col-#{$i} {
+      width: $i * 5%;
+    }
   }
-  .col-2 {
-    width: 15%;
-    // width: columns(2, $main-inner-container-width);
-  }
-  .col-3 {
-    width: 45%;
-    // width: columns(3, $main-inner-container-width);
-  }
-  .col-4 {
-    // width: 40%;
-  }
+
 }

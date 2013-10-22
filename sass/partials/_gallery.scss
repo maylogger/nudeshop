@@ -1,0 +1,91 @@
+.mfp-zoom-out-cur {
+  cursor: default;
+}
+
+// bg-set
+.mfp-figure:after {
+  @include box-shadow(none);
+  background-color: transparent;
+}
+
+.mfp-bg {
+  background-color: white;
+  opacity: 1;
+}
+
+// close-button
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $black;
+  width: 66px;
+  height: 66px;
+  padding: 0;
+  text-align: center;
+  opacity: 1;
+  &:hover {
+    color: $white;
+    background-color: $black;
+  }
+}
+
+
+// btn-arrow
+.mfp-arrow {
+  width: 66px;
+  height: 66px;
+  opacity: 1;
+  margin-top: -33px;
+  &:hover {
+    background-color: rgba(black, 0.9);
+  }
+  &:focus {
+    @include box-shadow(none);
+  }
+  &:active {
+    margin-top: -33px;
+  }
+}
+
+$mfp-arrow-width: 8px;
+// btn-arrow-right
+.mfp-arrow:before, .mfp-arrow:after, .mfp-arrow .mfp-b, .mfp-arrow .mfp-a {
+  margin: 0;
+  top: 50%;
+  margin-top: -$mfp-arrow-width;
+}
+.mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
+  border: none;
+}
+.mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
+  left: 50%;
+  right: auto;
+  margin-left: -$mfp-arrow-width / 2;
+  border-width: $mfp-arrow-width 0 $mfp-arrow-width $mfp-arrow-width * 1.5;
+  border-color: transparent transparent transparent $black;
+}
+.mfp-arrow-right:hover:before, .mfp-arrow-right:hover .mfp-b {
+  border-color: transparent transparent transparent $white;
+}
+
+// btn-arrow-left
+.mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
+  border: none;
+}
+.mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
+  left: auto;
+  right: 50%;
+  margin-right: -$mfp-arrow-width / 2;
+  border-width: $mfp-arrow-width $mfp-arrow-width * 1.5 $mfp-arrow-width 0;
+  border-color: transparent $black transparent transparent;
+}
+.mfp-arrow-left:hover:before, .mfp-arrow-left:hover .mfp-b {
+  border-color: transparent $white transparent transparent;
+}
+
+
+// 圖片張數顯示
+.mfp-counter {
+  color: $black;
+}

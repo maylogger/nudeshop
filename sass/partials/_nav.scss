@@ -28,19 +28,21 @@
     padding-left: columns(1, 3) + gutter(3);
     a {
       @include link-colors(black);
+      margin-left: -10px;
+      padding: 0 10px;
     }
     .divider {
       width: 60%;
       opacity: .3;
     }
-    .sp a {
+    a.sp {
       @include link-colors(#a00);
     }
   }
   .shop-nav {
     @extend %subpixel;
     float: left;
-    padding: rhythm(.5) rhythm(1);
+    padding: rhythm(.5) rhythm(1) 15px;
     @include padding-leader(2);
     @include leader(5);
     background: rgba(black, .85);
@@ -61,5 +63,12 @@
       position: static;
     }
   }
-}
+
+  .active a {
+    @extend %subpixel;
+    background: $light-gray;
+    padding: 3px 10px;
+  }
+
+} // .nav end
 

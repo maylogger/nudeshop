@@ -3,17 +3,17 @@ h1.logo: a href="/" #nude
 nav.main-nav
   h2 Main Navigation
   ul
-    li: a href="/about/" 介紹
-    li: a href="/news/" 最新消息
-    li: a href="/events/" 連線現貨商品
-    li: a href="/shop/" 店內特價商品
-    li: a href="/contact/" 聯絡我們
+    = nav_link_to("介紹", "/about/")
+    = nav_link_to("最新消息", "/news/")
+    = nav_link_to("連線現貨商品", "/events/")
+    = nav_link_to("店內特價商品", "/shop/")
+    = nav_link_to("聯絡我們", "/contact/")
     li.divider
-    li.sp: a href="/sp/" 特別活動文字
+    = nav_link_to("特別活動文字", "/news/post.html", :class => "sp")
 nav.shop-nav
   h2 Shop Navigation
   ul
-    li: a href="#" 購物車 ( 0 )
+    li: a href="/carts" 購物車 ( 0 )
     li: a href="#" 購物需知
     li: a href="#" 購物流程
     li.divider
