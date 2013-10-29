@@ -5,11 +5,14 @@ nav.main-nav
   ul
     = nav_link_to("介紹", "/about/")
     = nav_link_to("最新消息", "/news/")
-    = nav_link_to("連線現貨商品", "/events/")
-    = nav_link_to("店內特價商品", "/shop/")
-    = nav_link_to("聯絡我們", "/contact/")
+    = nav_link_to("本月連線預購", "/events/")
+    = nav_link_to("過季連線商品", "/shop/", :style => "color: #999")
+    = nav_link_to("過季店內商品", "/shop/", :style => "color: #999")
     li.divider
-    = nav_link_to("特別活動文字", "/news/post.html", :class => "sp")
+    = nav_link_to("聯絡", "/contact/")
+    = nav_link_to("blog", "#")
+    = nav_link_to("Facebook", "http://fb.com")
+    = nav_link_to("special event", "/news/post.html", :class => "sp")
 nav.shop-nav
   h2 Shop Navigation
   ul
