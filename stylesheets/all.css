@@ -1003,9 +1003,7 @@ button.active, a.button.active {
   display: block;
 }
 .form-group input, .form-group textarea, .form-group select {
-  min-width: 175px;
-  width: 30%;
-  margin-right: .7em;
+  margin-right: 0;
   height: 24px;
   font-size: 13px;
   line-height: 16px;
