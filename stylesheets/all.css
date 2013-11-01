@@ -1463,6 +1463,21 @@ button.active, a.button.active {
 .main-block {
   margin-bottom: 48px;
 }
+.main-block .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-block-col-2 {
+  float: left;
+  width: 45.25%;
+}
+.main-block-col-2 + .main-block-col-2 {
+  margin-left: 4.5%;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  padding-left: 4.5%;
+}
 
 .main-block-title {
   font-size: 24px;
@@ -1496,6 +1511,10 @@ button.active, a.button.active {
   line-height: 24px;
   margin-top: 12px;
   margin-bottom: 12px;
+}
+.main-block-sub-title .form-group {
+  margin: 0 0 0 6px;
+  display: inline-block;
 }
 
 .main-list {

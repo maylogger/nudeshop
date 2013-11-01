@@ -30,7 +30,22 @@ $main-context: 9;
 
 .main-block {
   @include trailer(2);
+  .row {
+    @include pie-clearfix;
+  }
 }
+
+.main-block-col-2 {
+  float: left;
+  width: 45.25%;
+  & + & {
+    margin-left: 4.5%;
+    border-left: 1px solid rgba(black, 0.05);
+    padding-left: 4.5%;
+  }
+}
+
+
 
 .main-block-title {
   @include adjust-font-size-to(24px);
@@ -58,6 +73,10 @@ $main-context: 9;
   @include adjust-font-size-to(18px);
   @include leader(.5);
   @include trailer(.5);
+  .form-group {
+    margin: 0 0 0 6px;
+    display: inline-block;
+  }
 }
 
 
