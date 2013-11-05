@@ -1246,12 +1246,12 @@ button.active, a.button.active {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('/images/logo.png?1380606257');
+  background-image: url('/images/logo.png?1380123996');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 130px;
   height: 48px;
-  background-image: none, url('/images/logo.svg?1380606257');
+  background-image: none, url('/images/logo.svg?1380376821');
 }
 .nav h2 {
   display: none;
@@ -1326,7 +1326,7 @@ button.active, a.button.active {
   height: 310px;
 }
 .item.space {
-  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381899163') center center;
+  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381848689') center center;
 }
 @media (min-width: 1280px) {
   .item {
@@ -1374,11 +1374,7 @@ button.active, a.button.active {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 250, color-stop(20%, rgba(170, 170, 170, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.1)));
-  background-image: -webkit-radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
-  background-image: -moz-radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
-  background-image: -o-radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
-  background-image: radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   text-decoration: none;
   -webkit-transition: opacity 0.7s;
@@ -1945,7 +1941,7 @@ button.active, a.button.active {
   line-height: 24px;
 }
 .sidebar .sidebar-title {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: bold;
 }
@@ -1967,13 +1963,13 @@ button.active, a.button.active {
 .sidebar .product-number {
   font-size: 12px;
   line-height: 24px;
-  color: rgba(0, 0, 0, 0.85);
+  color: #999;
 }
 .sidebar .product-price {
-  margin-top: 24px;
+  margin-top: 12px;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 .sidebar .product-size {
   display: block;
