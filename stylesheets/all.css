@@ -1018,6 +1018,28 @@ button.active, a.button.active {
 .form-group .radio-group {
   padding-left: 3px;
 }
+.form-group .radio-group.radio-with-icon .radio {
+  text-align: center;
+  margin-right: 1em;
+}
+.form-group .radio-group.radio-with-icon label {
+  display: block;
+}
+.form-group .radio-group.radio-with-icon input {
+  margin: 3px 0 0;
+}
+.form-group .radio-group.radio-with-icon .radio-icon {
+  display: block;
+  width: 48px;
+  margin: 0 auto;
+}
+.form-group .radio-group.radio-with-icon .radio-icon.credit-card {
+  position: relative;
+  top: 6px;
+}
+.form-group .radio-group.radio-with-icon .radio-text {
+  display: block;
+}
 .form-group .checkbox, .form-group .radio {
   display: inline-block;
   margin-right: .7em;
@@ -1033,28 +1055,6 @@ button.active, a.button.active {
   height: auto;
   font-size: 14px;
   line-height: 24px;
-}
-.form-group .radio-with-icon {
-  text-align: center;
-  margin-right: 1em;
-}
-.form-group .radio-with-icon label {
-  display: block;
-}
-.form-group .radio-with-icon input {
-  margin: 3px 0 0;
-}
-.form-group .radio-with-icon .radio-icon {
-  display: block;
-  width: 48px;
-  margin: 0 auto;
-}
-.form-group .radio-with-icon .radio-icon.credit-card {
-  position: relative;
-  top: 6px;
-}
-.form-group .radio-with-icon .radio-text {
-  display: block;
 }
 .form-group .note {
   color: #888;
