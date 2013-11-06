@@ -146,14 +146,14 @@ form.main-inner-container.paper-style
   .main-block.last-main-block#payments.current
     .main-block-title 3.選擇付款方式
     .form-group
-      .radio-group
-        .radio.radio-with-icon
+      .radio-group.radio-with-icon
+        .radio
           label
             = image_tag "atm.png", :class => "radio-icon atm"
             span.radio-text ATM 轉帳
             input type="radio" name="payments" checked="checked"
 
-        .radio.radio-with-icon
+        .radio
           label
             = image_tag "credit_card.png", :class => "radio-icon credit-card"
             span.radio-text 信用卡付款
