@@ -1111,7 +1111,7 @@ button.active, a.button.active {
   margin-top: 24px;
   margin-bottom: 24px;
   height: 1px;
-  background-color: #efefed;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .split-line-with-text {
