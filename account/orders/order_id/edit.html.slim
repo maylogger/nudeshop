@@ -83,13 +83,16 @@ form.main-inner-container.paper-style
           label.form-group-title Email
           .form-group-content
             input.full-width type="email" value="xxx@gmail.com"
-        .form-group
-          label.form-group-title 運送方式
-          .form-group-content
-            select.full-width
-              option value="宅配" 宅配
-              option value="面交" 面交
-              option value="超商取貨" 超商取貨
+
+    .split-line
+    .main-block-sub-title 選擇運送方式
+    .form-group
+      .form-group-content
+        select
+          option value="" selected="selected"= "========== 請選擇 =========="
+          option value="宅配" 宅配
+          option value="面交" 面交
+          option value="超商取貨" 超商取貨
 
     .main-block-sub-title 宅配
     .form-group
