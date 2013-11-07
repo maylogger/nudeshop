@@ -16,7 +16,6 @@
     }
   }
 
-
   .form-group-content {
     display: block;
   }
@@ -33,9 +32,34 @@
   textarea {
     min-height: $base-line-height * 6;
   }
+
   .radio-group {
     padding-left: 3px;
-  }
+    &.radio-with-icon {
+      .radio {
+        text-align: center;
+        margin-right: 1em;
+      }
+      label {
+        display: block;
+      }
+      input {
+        margin: 3px 0 0;
+      }
+      .radio-icon {
+        display: block;
+        margin: 0 auto;
+        &.credit-card {
+          position: relative;
+          top: 6px;
+        }
+      }
+      .radio-text {
+        display: block;
+      }
+    } // radio-with-icon end
+  } // radio-group
+
   .checkbox, .radio {
     display: inline-block;
     margin-right: .7em;
@@ -49,7 +73,9 @@
       height: auto;
       @include adjust-font-size-to(14px);
     }
-  }
+  } // .checkbox, .radio end
+
+
 
   .note {
     @extend %subpixel;
