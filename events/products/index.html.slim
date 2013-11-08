@@ -13,17 +13,19 @@
 
   .sidebar
     .sidebar-block
-      h2.sidebar-title= "#{zh_lorem_words (rand(2) + 1)}#{zh_lorem_name}套裝+#{rand(10)}"
-      p.product-number 商品編號 1234
+      p.product-number #1234
+      h2.sidebar-title= "#{zh_lorem_words (rand(2) + 1)}#{zh_lorem_name}服"
       p.product-price NT$ 12000.
     .sidebar-block
       .product-fabric
-        .sidebar-sub-title 商品材質
+        .sidebar-sub-title Fabric
         ul.fabric-group
-          li 100% Wool
+          li 60% 羊毛
+          li 30% 化纖
+          li 10% 調和
     form.sidebar-affix
       .sidebar-block
-        .sidebar-sub-title 選擇尺寸
+        .sidebar-sub-title Size
         ul.product-size
           li
             a.size href="#"
@@ -53,50 +55,50 @@
                 li= "後衣長: " + "#{rand(20) + 20}"
                 li= "肩寬: " + "#{rand(20) + 20}"
                 li= "袖長: " + "#{rand(20) + 20}"
-          li
-            a.size href="#"
-              span M
-              ul.size-hover-message
-                li= "領口: " + "#{rand(20) + 20}"
-                li= "袖寬: " + "#{rand(20) + 20}"
-                li= "袖口寬: " + "#{rand(20) + 20}"
-                li= "下擺: " + "#{rand(20) + 20}"
-                li= "胸圍: " + "#{rand(20) + 20}"
-                li= "腰圍: " + "#{rand(20) + 20}"
-                li= "前衣長: " + "#{rand(20) + 20}"
-                li= "後衣長: " + "#{rand(20) + 20}"
-                li= "肩寬: " + "#{rand(20) + 20}"
-                li= "袖長: " + "#{rand(20) + 20}"
-          li
-            a.size href="#"
-              span L
-              ul.size-hover-message
-                li= "領口: " + "#{rand(20) + 20}"
-                li= "袖寬: " + "#{rand(20) + 20}"
-                li= "袖口寬: " + "#{rand(20) + 20}"
-                li= "下擺: " + "#{rand(20) + 20}"
-                li= "胸圍: " + "#{rand(20) + 20}"
-                li= "腰圍: " + "#{rand(20) + 20}"
-                li= "前衣長: " + "#{rand(20) + 20}"
-                li= "後衣長: " + "#{rand(20) + 20}"
-                li= "肩寬: " + "#{rand(20) + 20}"
-                li= "袖長: " + "#{rand(20) + 20}"
-          li
-            a.size href="#"
-              span XL
-              ul.size-hover-message
-                li= "領口: " + "#{rand(20) + 20}"
-                li= "袖寬: " + "#{rand(20) + 20}"
-                li= "袖口寬: " + "#{rand(20) + 20}"
-                li= "下擺: " + "#{rand(20) + 20}"
-                li= "胸圍: " + "#{rand(20) + 20}"
-                li= "腰圍: " + "#{rand(20) + 20}"
-                li= "前衣長: " + "#{rand(20) + 20}"
-                li= "後衣長: " + "#{rand(20) + 20}"
-                li= "肩寬: " + "#{rand(20) + 20}"
-                li= "袖長: " + "#{rand(20) + 20}"
+          / li
+          /   a.size href="#"
+          /     span M
+          /     ul.size-hover-message
+          /       li= "領口: " + "#{rand(20) + 20}"
+          /       li= "袖寬: " + "#{rand(20) + 20}"
+          /       li= "袖口寬: " + "#{rand(20) + 20}"
+          /       li= "下擺: " + "#{rand(20) + 20}"
+          /       li= "胸圍: " + "#{rand(20) + 20}"
+          /       li= "腰圍: " + "#{rand(20) + 20}"
+          /       li= "前衣長: " + "#{rand(20) + 20}"
+          /       li= "後衣長: " + "#{rand(20) + 20}"
+          /       li= "肩寬: " + "#{rand(20) + 20}"
+          /       li= "袖長: " + "#{rand(20) + 20}"
+          / li
+          /   a.size href="#"
+          /     span L
+          /     ul.size-hover-message
+          /       li= "領口: " + "#{rand(20) + 20}"
+          /       li= "袖寬: " + "#{rand(20) + 20}"
+          /       li= "袖口寬: " + "#{rand(20) + 20}"
+          /       li= "下擺: " + "#{rand(20) + 20}"
+          /       li= "胸圍: " + "#{rand(20) + 20}"
+          /       li= "腰圍: " + "#{rand(20) + 20}"
+          /       li= "前衣長: " + "#{rand(20) + 20}"
+          /       li= "後衣長: " + "#{rand(20) + 20}"
+          /       li= "肩寬: " + "#{rand(20) + 20}"
+          /       li= "袖長: " + "#{rand(20) + 20}"
+          / li
+          /   a.size href="#"
+          /     span XL
+          /     ul.size-hover-message
+          /       li= "領口: " + "#{rand(20) + 20}"
+          /       li= "袖寬: " + "#{rand(20) + 20}"
+          /       li= "袖口寬: " + "#{rand(20) + 20}"
+          /       li= "下擺: " + "#{rand(20) + 20}"
+          /       li= "胸圍: " + "#{rand(20) + 20}"
+          /       li= "腰圍: " + "#{rand(20) + 20}"
+          /       li= "前衣長: " + "#{rand(20) + 20}"
+          /       li= "後衣長: " + "#{rand(20) + 20}"
+          /       li= "肩寬: " + "#{rand(20) + 20}"
+          /       li= "袖長: " + "#{rand(20) + 20}"
       .sidebar-block
-        .sidebar-sub-title 選擇顏色
+        .sidebar-sub-title Color
         ul.product-color
           li.current: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
           li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
@@ -104,8 +106,9 @@
           li: a style="background-color: rgb( #{rand(180)}, #{rand(180)}, #{rand(180)} )" href="#"
       .sidebar-block
         .buy-product
-          .sidebar-sub-title 購買數量
-          input.count type="number" placeholder="1" value="1" 件
+          / .sidebar-sub-title 購買數量
+          / input.count type="number" placeholder="1" value="1"
+          / | &nbsp;&nbsp;件
         .form-action
           a.button.action href="#" 加入購物車
 

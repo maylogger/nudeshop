@@ -2,7 +2,7 @@
   @include leader(1);
   @include trailer(1);
   height: 1px;
-  background-color: $wall-white;
+  background-color: $split-line-color;
 }
 
 .split-line-with-text {

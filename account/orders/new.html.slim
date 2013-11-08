@@ -38,54 +38,62 @@ form.main-inner-container.paper-style
 
   .main-block#consumer-info.last-main-block.current
     .main-block-title 2.填寫收件資訊
-    .main-block-sub-title 購買人
-    .form-group
-      label.form-group-title 姓名
-      .form-group-content
-        input type="text" value="王小名"
-        .radio
-          label: input  type="radio" name="sex" checked="checked" 先生
-        .radio
-          label: input  type="radio" name="sex" 女士
-    .form-group
-      label.form-group-title 聯絡電話
-      .form-group-content
-        input type="tel" value="0911168168"
-    .form-group
-      label.form-group-title Email
-      .form-group-content
-        input type="email" value="xxx@gmail.com"
+    .row
+      .main-block-col-2
+        .main-block-sub-title 購買人
+        .form-group
+          label.form-group-title 姓名
+          .form-group-content
+            input.full-width type="text" value="王小名"
+            .radio
+              label: input type="radio" name="sex" checked="checked" 先生
+            .radio
+              label: input type="radio" name="sex" 女士
+        .form-group
+          label.form-group-title 聯絡電話
+          .form-group-content
+            input.full-width type="tel" value="0911168168"
+        .form-group
+          label.form-group-title Email
+          .form-group-content
+            input.full-width type="email" value="xxx@gmail.com"
+      .main-block-col-2
+        .main-block-sub-title
+          |收件人
+          .form-group
+            .checkbox-group
+              .checkbox
+                label
+                  input type="checkbox"
+                  |同購買人
 
-    .main-block-sub-title 收件人
+        .form-group
+          label.form-group-title 姓名
+          .form-group-content
+            input.full-width type="text" value="王小名"
+            .radio
+              label: input type="radio" name="sex1" checked="checked" 先生
+            .radio
+              label: input type="radio" name="sex1" 女士
+        .form-group
+          label.form-group-title 聯絡電話
+          .form-group-content
+            input.full-width type="tel" value="0911168168"
+        .form-group
+          label.form-group-title Email
+          .form-group-content
+            input.full-width type="email" value="xxx@gmail.com"
+
+    .split-line
+    .main-block-sub-title 選擇運送方式
     .form-group
-      .checkbox-group
-        .checkbox
-          label
-            input type="checkbox"
-            |同購買者
-    .form-group
-      label.form-group-title 姓名
-      .form-group-content
-        input type="text" value="王小名"
-        .radio
-          label: input type="radio" name="sex1" checked="checked" 先生
-        .radio
-          label: input type="radio" name="sex1" 女士
-    .form-group
-      label.form-group-title 聯絡電話
-      .form-group-content
-        input type="tel" value="0911168168"
-    .form-group
-      label.form-group-title Email
-      .form-group-content
-        input type="email" value="xxx@gmail.com"
-    .form-group
-      label.form-group-title 運送方式
       .form-group-content
         select
+          option value="" selected="selected"= "========== 請選擇 =========="
           option value="宅配" 宅配
           option value="面交" 面交
           option value="超商取貨" 超商取貨
+
 
     .main-block-sub-title 宅配
     .form-group

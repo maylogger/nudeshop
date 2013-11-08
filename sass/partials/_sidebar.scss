@@ -23,7 +23,7 @@ $sidebar-context: 9;
 
 
   .sidebar-title {
-    @include adjust-font-size-to(16px);
+    @include adjust-font-size-to(20px);
     font-weight: bold;
     a {
       border-bottom: 1px solid $black;
@@ -39,12 +39,12 @@ $sidebar-context: 9;
   // 商品描述樣式
   .product-number {
     @include adjust-font-size-to(12px);
-    color: rgba(black,.85);
+    color: #999;
   }
   .product-price {
-    @include leader(1);
+    @include leader(.5);
     @include adjust-font-size-to(16px);
-    @include trailer(1);
+    @include trailer(2);
   }
 
   // product-size

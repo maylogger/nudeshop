@@ -1003,9 +1003,7 @@ button.active, a.button.active {
   display: block;
 }
 .form-group input, .form-group textarea, .form-group select {
-  min-width: 175px;
-  width: 30%;
-  margin-right: .7em;
+  margin-right: 0;
   height: 24px;
   font-size: 13px;
   line-height: 16px;
@@ -1019,6 +1017,27 @@ button.active, a.button.active {
 }
 .form-group .radio-group {
   padding-left: 3px;
+}
+.form-group .radio-group.radio-with-icon .radio {
+  text-align: center;
+  margin-right: 1em;
+}
+.form-group .radio-group.radio-with-icon label {
+  display: block;
+}
+.form-group .radio-group.radio-with-icon input {
+  margin: 3px 0 0;
+}
+.form-group .radio-group.radio-with-icon .radio-icon {
+  display: block;
+  margin: 0 auto;
+}
+.form-group .radio-group.radio-with-icon .radio-icon.credit-card {
+  position: relative;
+  top: 6px;
+}
+.form-group .radio-group.radio-with-icon .radio-text {
+  display: block;
 }
 .form-group .checkbox, .form-group .radio {
   display: inline-block;
@@ -1092,7 +1111,7 @@ button.active, a.button.active {
   margin-top: 24px;
   margin-bottom: 24px;
   height: 1px;
-  background-color: #efefed;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .split-line-with-text {
@@ -1248,12 +1267,12 @@ button.active, a.button.active {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('/images/logo.png?1380606257');
+  background-image: url('/images/logo.png?1380123996');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 130px;
   height: 48px;
-  background-image: none, url('/images/logo.svg?1380606257');
+  background-image: none, url('/images/logo.svg?1380376821');
 }
 .nav h2 {
   display: none;
@@ -1328,7 +1347,7 @@ button.active, a.button.active {
   height: 310px;
 }
 .item.space {
-  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381899163') center center;
+  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381848689') center center;
 }
 @media (min-width: 1280px) {
   .item {
@@ -1376,11 +1395,7 @@ button.active, a.button.active {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 250, color-stop(20%, rgba(170, 170, 170, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.1)));
-  background-image: -webkit-radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
-  background-image: -moz-radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
-  background-image: -o-radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
-  background-image: radial-gradient(rgba(170, 170, 170, 0.5) 50px, rgba(0, 0, 0, 0.1) 250px);
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   text-decoration: none;
   -webkit-transition: opacity 0.7s;
@@ -1463,6 +1478,21 @@ button.active, a.button.active {
 .main-block {
   margin-bottom: 48px;
 }
+.main-block .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-block-col-2 {
+  float: left;
+  width: 45.25%;
+}
+.main-block-col-2 + .main-block-col-2 {
+  margin-left: 4.5%;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  padding-left: 4.5%;
+}
 
 .main-block-title {
   font-size: 24px;
@@ -1496,6 +1526,10 @@ button.active, a.button.active {
   line-height: 24px;
   margin-top: 12px;
   margin-bottom: 12px;
+}
+.main-block-sub-title .form-group {
+  margin: 0 0 0 6px;
+  display: inline-block;
 }
 
 .main-list {
@@ -1928,7 +1962,7 @@ button.active, a.button.active {
   line-height: 24px;
 }
 .sidebar .sidebar-title {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   font-weight: bold;
 }
@@ -1950,13 +1984,13 @@ button.active, a.button.active {
 .sidebar .product-number {
   font-size: 12px;
   line-height: 24px;
-  color: rgba(0, 0, 0, 0.85);
+  color: #999;
 }
 .sidebar .product-price {
-  margin-top: 24px;
+  margin-top: 12px;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 .sidebar .product-size {
   display: block;

@@ -1,5 +1,7 @@
 form.main-inner-container.paper-style
   h2.main-title 結帳
+
+
   .main-block
     .main-block-title
       |1.確認數量明細
@@ -42,45 +44,58 @@ form.main-inner-container.paper-style
       |2.填寫收件資訊
       span class="glyphicon glyphicon-ok"
       a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
-    .main-block-sub-title 購買人
-    .form-group
-      label.form-group-title 姓名
-      .form-group-content
-        input type="text" value="王小名" disabled="disabled"
-        .radio
-          label: input  type="radio" name="sex" checked="checked" disabled="disabled" 先生
-        .radio
-          label: input  type="radio" name="sex" disabled="disabled" 女士
-    .form-group
-      label.form-group-title 聯絡電話
-      .form-group-content
-        input type="tel" value="0911168168" disabled="disabled"
-    .form-group
-      label.form-group-title Email
-      .form-group-content
-        input type="email" value="xxx@gmail.com" disabled="disabled"
+    .row
+      .main-block-col-2
+        .main-block-sub-title 購買人
+        .form-group
+          label.form-group-title 姓名
+          .form-group-content
+            input.full-width type="text" value="王小名" disabled="disabled"
+            .radio
+              label: input type="radio" name="sex" checked="checked" disabled="disabled" 先生
+            .radio
+              label: input type="radio" name="sex" disabled="disabled" 女士
+        .form-group
+          label.form-group-title 聯絡電話
+          .form-group-content
+            input.full-width type="tel" value="0911168168" disabled="disabled"
+        .form-group
+          label.form-group-title Email
+          .form-group-content
+            input.full-width type="email" value="xxx@gmail.com" disabled="disabled"
+      .main-block-col-2
+        .main-block-sub-title
+          |收件人
+          .form-group
+            .checkbox-group
+              .checkbox
+                label
+                  input type="checkbox" disabled="disabled"
+                  |同購買人
 
-    .main-block-sub-title 收件人
+        .form-group
+          label.form-group-title 姓名
+          .form-group-content
+            input.full-width type="text" value="王小名" disabled="disabled"
+            .radio
+              label: input type="radio" name="sex1" checked="checked" disabled="disabled" 先生
+            .radio
+              label: input type="radio" name="sex1" disabled="disabled" 女士
+        .form-group
+          label.form-group-title 聯絡電話
+          .form-group-content
+            input.full-width type="tel" value="0911168168" disabled="disabled"
+        .form-group
+          label.form-group-title Email
+          .form-group-content
+            input.full-width type="email" value="xxx@gmail.com" disabled="disabled"
+
+    .split-line
+    .main-block-sub-title 選擇運送方式
     .form-group
-      label.form-group-title 姓名
-      .form-group-content
-        input type="text" value="王小名" disabled="disabled"
-        .radio
-          label: input  type="radio" name="sex1" checked="checked" disabled="disabled" 先生
-        .radio
-          label: input  type="radio" name="sex1" disabled="disabled" 女士
-    .form-group
-      label.form-group-title 聯絡電話
-      .form-group-content
-        input type="tel" value="0911168168" disabled="disabled"
-    .form-group
-      label.form-group-title Email
-      .form-group-content
-        input type="email" value="xxx@gmail.com" disabled="disabled"
-    .form-group
-      label.form-group-title 運送方式
       .form-group-content
         select disabled="disabled"
+          option value="" selected="selected"= "========== 請選擇 =========="
           option value="宅配" 宅配
           option value="面交" 面交
           option value="超商取貨" 超商取貨
@@ -135,15 +150,19 @@ form.main-inner-container.paper-style
   .main-block.last-main-block#payments.current
     .main-block-title 3.選擇付款方式
     .form-group
-      .radio-group
+      .radio-group.radio-with-icon
         .radio
           label
+            = image_tag "atm.png", :class => "radio-icon atm"
+            span.radio-text ATM 轉帳
             input type="radio" name="payments" checked="checked"
-            |ATM 轉帳
+
         .radio
           label
+            = image_tag "credit_card.png", :class => "radio-icon credit-card"
+            span.radio-text 信用卡付款
             input type="radio" name="payments"
-            |信用卡付款
+
 
 
   .form-action
