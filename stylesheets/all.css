@@ -1302,13 +1302,19 @@ button.active, a.button.active {
 }
 .nav .shop-nav {
   float: left;
-  padding: 12px 24px 15px;
-  padding-top: 48px;
-  margin-top: 120px;
-  background: rgba(0, 0, 0, 0.85);
+  padding: 18px 24px 16px;
+  margin-top: 60px;
+  background: black;
 }
 .nav .shop-nav a {
+  display: block;
+  margin: 0 -24px;
+  padding: 0 24px;
   color: white;
+}
+.nav .shop-nav a.has-order {
+  background-color: #aa0000;
+  text-shadow: 0 0 5px white, 0 0 5px white;
 }
 .nav .nav-inner.affix {
   position: fixed;
