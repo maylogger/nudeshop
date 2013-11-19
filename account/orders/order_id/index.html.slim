@@ -49,49 +49,61 @@ form.main-inner-container.paper-style
 
 
   .main-block
-    .main-block-title 購買人資訊
-    .form-group
-      label.form-group-title 姓名
-      .form-group-content
-        input type="text" value="王小名" disabled="disabled"
-        .radio
-          label: input disabled="disabled" type="radio" name="sex" checked="checked" 先生
-        .radio
-          label: input disabled="disabled" type="radio" name="sex" 女士
-    .form-group
-      label.form-group-title 聯絡電話
-      .form-group-content
-        input disabled="disabled" type="tel" value="0911168168"
-    .form-group
-      label.form-group-title Email
-      .form-group-content
-        input disabled="disabled" type="email" value="xxx@gmail.com"
-
-
-  .main-block
     .main-block-title
-      |收件人資訊
-      button 編輯
+      |收件資訊
+      a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
+    .row
+      .main-block-col-2
+        .main-block-sub-title 購買人
+        .form-group
+          label.form-group-title 姓名
+          .form-group-content
+            input.full-width type="text" value="王小名" disabled="disabled"
+            .radio
+              label: input type="radio" name="sex" checked="checked" disabled="disabled" 先生
+            .radio
+              label: input type="radio" name="sex" disabled="disabled" 女士
+        .form-group
+          label.form-group-title 聯絡電話
+          .form-group-content
+            input.full-width type="tel" value="0911168168" disabled="disabled"
+        .form-group
+          label.form-group-title Email
+          .form-group-content
+            input.full-width type="email" value="xxx@gmail.com" disabled="disabled"
+      .main-block-col-2
+        .main-block-sub-title
+          |收件人
+          .form-group
+            .checkbox-group
+              .checkbox
+                label
+                  input type="checkbox" disabled="disabled"
+                  |同購買人
+
+        .form-group
+          label.form-group-title 姓名
+          .form-group-content
+            input.full-width type="text" value="王小名" disabled="disabled"
+            .radio
+              label: input type="radio" name="sex1" checked="checked" disabled="disabled" 先生
+            .radio
+              label: input type="radio" name="sex1" disabled="disabled" 女士
+        .form-group
+          label.form-group-title 聯絡電話
+          .form-group-content
+            input.full-width type="tel" value="0911168168" disabled="disabled"
+        .form-group
+          label.form-group-title Email
+          .form-group-content
+            input.full-width type="email" value="xxx@gmail.com" disabled="disabled"
+
+    .split-line
+    .main-block-sub-title 選擇運送方式
     .form-group
-      label.form-group-title 姓名
-      .form-group-content
-        input type="text" value="王小名" disabled="disabled"
-        .radio
-          label: input disabled="disabled" type="radio" name="sex1" checked="checked" 先生
-        .radio
-          label: input disabled="disabled" type="radio" name="sex1" 女士
-    .form-group
-      label.form-group-title 聯絡電話
-      .form-group-content
-        input disabled="disabled" type="tel" value="0911168168"
-    .form-group
-      label.form-group-title Email
-      .form-group-content
-        input disabled="disabled" type="email" value="xxx@gmail.com"
-    .form-group
-      label.form-group-title 運送方式
       .form-group-content
         select disabled="disabled"
+          option value="" selected="selected"= "========== 請選擇 =========="
           option value="宅配" 宅配
           option value="面交" 面交
           option value="超商取貨" 超商取貨
