@@ -1,11 +1,8 @@
 form.main-inner-container.paper-style
-  h2.main-title 結帳
-
-
+  h2.main-title Payment <small>結帳</small>
   .main-block
     .main-block-title
-      |1.確認數量明細
-      span class="glyphicon glyphicon-ok"
+      |<span class="step">1.</span>確認數量明細
       a.button href="/account/orders/check.html" 編輯
     table.list
       thead
@@ -17,7 +14,13 @@ form.main-inner-container.paper-style
       tbody
         - 3.times do
           tr
-            td.product= zh_lorem_words( rand(10) + 6)
+            td.product
+              .product-image: img src="/data/product-item00#{rand(6)+1}.jpg"
+              .product-content
+                = zh_lorem_words( rand(10) + 6)
+                .detail #0001
+                .detail Size: L
+                .detail Color: Red
             td.price
               span.unit NT$
               = rand(20000) + 5000
@@ -26,7 +29,6 @@ form.main-inner-container.paper-style
             td.price
               span.unit NT$
               = rand(20000) + 5000
-
         tr.shipping-costs
           td colspan="3" 運費
           td.price
@@ -41,8 +43,7 @@ form.main-inner-container.paper-style
 
   .main-block#consumer-info
     .main-block-title
-      |2.填寫收件資訊
-      span class="glyphicon glyphicon-ok"
+      |<span class="step">2.</span>填寫收件資訊
       a.button href="/account/orders/order_id/edit.html#consumer-info" 編輯
     .row
       .main-block-col-2
@@ -148,7 +149,7 @@ form.main-inner-container.paper-style
 
 
   .main-block.last-main-block#payments.current
-    .main-block-title 3.選擇付款方式
+    .main-block-title <span class="step">3.</span>選擇付款方式
     .form-group
       .radio-group.radio-with-icon
         .radio

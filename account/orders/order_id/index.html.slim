@@ -27,7 +27,13 @@ form.main-inner-container.paper-style
       tbody
         - 3.times do
           tr
-            td.product: a href="/events/products"= zh_lorem_words( rand(10) + 6)
+            td.product
+              .product-image: img src="/data/product-item00#{rand(6)+1}.jpg"
+              .product-content
+                = zh_lorem_words( rand(10) + 6)
+                .detail #0001
+                .detail Size: L
+                .detail Color: Red
             td.price
               span.unit NT$
               = rand(20000) + 5000

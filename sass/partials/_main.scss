@@ -37,11 +37,11 @@ $main-context: 9;
 
 .main-block-col-2 {
   float: left;
-  width: 45.25%;
+  width: 45%;
   & + & {
-    margin-left: 4.5%;
-    border-left: 1px solid rgba(black, 0.05);
-    padding-left: 4.5%;
+    margin-left: 5%;
+    // border-left: 1px solid rgba(black, 0.05);
+    padding-left: 5%;
   }
 }
 
@@ -91,7 +91,7 @@ $main-context: 9;
   .title {
     float: left;
     margin-right: 10px;
-    width: 8.25em;
+    width: 5em;
     text-align: right;
   }
   .content {
@@ -108,27 +108,29 @@ $main-context: 9;
   .main-title {
     margin-bottom: 0;
     border-bottom: none;
-  }
-  .main-block {
-    margin-bottom: 0;
-    border: 1px solid #eee;
-    border-bottom: 1px transparent;
-    padding: 2em;
-    @include background-image( linear-gradient( rgba(black, 0), rgba(black, 0.02) ) );
-    &.last-main-block {
-      border-bottom: 1px solid #eee;
+    small {
+      font-size: 24px;
     }
-    &.current {
-      background-color: #ffd;
-    }
-  }
-  .main-block + .main-block {
-    border-top: 1px dashed #eee;
   }
   .main-block-title {
+    position: relative;
+    @include padding-trailer(.5);
+    border-bottom: 2px solid $gray;
+    @include trailer(.35);
+    @include adjust-font-size-to(20px);
+    .step {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 60px;
+      @extend %light;
+      margin-right: 6px;
+    }
     button, a.button {
-      left: 0;
-      float: right;
+      position: absolute;
+      left: auto;
+      top: auto;
+      right: 0;
+      bottom: 12px;
     }
   }
   .form-action {

@@ -22,6 +22,7 @@
 
   input, textarea, select {
     margin-right: 0;
+    border: 1px solid $gray;
     height: $base-line-height;
     @include adjust-font-size-to(13px, 2/3);
     font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
