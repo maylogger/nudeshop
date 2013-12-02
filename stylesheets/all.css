@@ -1030,12 +1030,9 @@ button.active, a.button.active {
   margin: 3px 0 0;
 }
 .form-group .radio-group.radio-with-icon .radio-icon {
+  width: 48px;
   display: block;
-  margin: 0 auto;
-}
-.form-group .radio-group.radio-with-icon .radio-icon.credit-card {
-  position: relative;
-  top: 6px;
+  margin: 12px auto 8px;
 }
 .form-group .radio-group.radio-with-icon .radio-text {
   display: block;

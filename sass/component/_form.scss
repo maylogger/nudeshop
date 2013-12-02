@@ -48,12 +48,9 @@
         margin: 3px 0 0;
       }
       .radio-icon {
+        width: 48px;
         display: block;
-        margin: 0 auto;
-        &.credit-card {
-          position: relative;
-          top: 6px;
-        }
+        margin: 12px auto 8px;
       }
       .radio-text {
         display: block;
