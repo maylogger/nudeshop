@@ -1048,7 +1048,7 @@ button.active, a.button.active {
   width: 100%;
 }
 .form-group textarea {
-  min-height: 144px;
+  min-height: 36px;
 }
 .form-group .radio-group {
   padding-left: 3px;
@@ -1299,12 +1299,12 @@ button.active, a.button.active {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('/images/logo.png?1380123996');
+  background-image: url('/images/logo.png?1380606257');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 130px;
   height: 48px;
-  background-image: none, url('/images/logo.svg?1380376821');
+  background-image: none, url('/images/logo.svg?1380606257');
 }
 .nav h2 {
   display: none;
@@ -1386,7 +1386,7 @@ button.active, a.button.active {
   height: 310px;
 }
 .item.space {
-  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381848689') center center;
+  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381899163') center center;
 }
 @media (min-width: 1280px) {
   .item {
@@ -1515,7 +1515,11 @@ button.active, a.button.active {
   margin: 0;
   position: relative;
   top: 3px;
-  left: 10px;
+}
+@media (min-width: 1280px) {
+  .main-title .pills {
+    margin-left: 10px;
+  }
 }
 .main-title .en {
   font-size: 36px;
