@@ -30,7 +30,8 @@
   %line { display: block; }
   .en, .zh {
     @extend %line;
-    @include adjust-font-size-to(16px);
+    // @include adjust-font-size-to(16px);
+    @include adjust-font-size-to(14px);
   }
   .only {
     @extend %line;
@@ -51,10 +52,9 @@
   }
   @include at-breakpoint($wide-screen) {
     .en, .zh {
-      @include adjust-font-size-to(20px);
+      @include adjust-font-size-to(14px);
     }
     .only {
-      @include adjust-font-size-to(15px);
       @include leader(2.5);
       @include trailer(1.5);
     }
@@ -62,7 +62,7 @@
       @include adjust-font-size-to(96px);
     }
     .unit {
-      @include adjust-font-size-to(20px);
+      @include adjust-font-size-to(14px);
     }
   }
 }

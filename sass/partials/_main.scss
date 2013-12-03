@@ -14,10 +14,11 @@ $main-context: 9;
 
 .main-title {
   @include trailer(1);
-  font-size: 28px;
+  font-size: 24px;
   line-height: $base-line-height * 2 - 1;
   padding: 12px 0 5px;
   border-bottom: 1px solid $gray;
+  letter-spacing: 1px;
   .alert {
     margin-left: 6px;
     @include ellipsis;

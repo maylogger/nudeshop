@@ -1,17 +1,18 @@
 .article {
   color: #444;
-  @include adjust-font-size-to(13px);
+  @include adjust-font-size-to(13px, 5/6);
   h1 {
     @include trailer(1);
     @include adjust-font-size-to(24px,1);
   }
   h2 {
     @include trailer(1);
-    @include adjust-font-size-to(24px,1);
+    @include adjust-font-size-to(16px,1);
+    font-weight: bold;
   }
   h3 {
     @include trailer(1);
-    @include adjust-font-size-to(20px,1);
+    @include adjust-font-size-to(16px,1);
   }
   h4 {
     @include trailer(1);
@@ -24,6 +25,7 @@
     max-width: 100%;
   }
   p {
+    @include adjust-font-size-to(12px, 3/4);
     @include trailer(1);
   }
   ul, ol {
