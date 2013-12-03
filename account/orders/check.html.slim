@@ -1,7 +1,7 @@
-form.main-inner-container.paper-style
-  h2.main-title 結帳
+form.main-inner-container.payment
+  h2.main-title <span class="en">Payment</span> 結帳
   .main-block.last-main-block.current
-    .main-block-title 1.確認數量明細
+    .main-block-title <span class="step">1.</span>確認數量明細
     table.list
       thead
         tr
@@ -13,10 +13,16 @@ form.main-inner-container.paper-style
       tbody
         - 3.times do
           tr
-            td.product= zh_lorem_words( rand(10) + 6)
+            td.product
+              a.product-image href="/events/products/": img src="/data/product-item00#{rand(6)+1}.jpg"
+              a.product-content href="/events/products/"
+                = zh_lorem_words( rand(10) + 6)
+                .detail #0001
+                .detail Size: L
+                .detail Color: Red
             td.price
               span.unit NT$
-              = rand(2000) + 5000
+              = rand(20000) + 5000
             td.quantity
               input type="number" value="#{rand(10) + 1}"
             td.price
@@ -38,5 +44,5 @@ form.main-inner-container.paper-style
           td
 
   .form-action
-    a.button.action href="/account/orders/new.html#consumer-info" 下一步：填寫收件資訊
+    a.button.action href="/account/orders/new.html" 下一步：填寫收件資訊
 

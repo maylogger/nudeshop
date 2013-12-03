@@ -20,8 +20,23 @@
     display: block;
   }
 
-  input, textarea, select {
+  textarea,
+  select,
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"] {
     margin-right: 0;
+    border: 1px solid $lighter-gray;
     height: $base-line-height;
     @include adjust-font-size-to(13px, 2/3);
     font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
@@ -29,8 +44,9 @@
       width: 100%;
     }
   }
+
   textarea {
-    min-height: $base-line-height * 6;
+    min-height: $base-line-height * 1.5;
   }
 
   .radio-group {
@@ -47,12 +63,9 @@
         margin: 3px 0 0;
       }
       .radio-icon {
+        width: 48px;
         display: block;
-        margin: 0 auto;
-        &.credit-card {
-          position: relative;
-          top: 6px;
-        }
+        margin: 12px auto 8px;
       }
       .radio-text {
         display: block;

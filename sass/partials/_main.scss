@@ -7,13 +7,17 @@ $main-context: 9;
 .main-content {
   @include padding-leader(3);
   @include span-columns(6, $main-context);
+  .product & {
+    text-align: center;
+  }
 }
 
 .main-title {
   @include trailer(1);
   font-size: 28px;
-  line-height: $base-line-height * 3 - 1;
-  border-bottom: 1px solid #ccc;
+  line-height: $base-line-height * 2 - 1;
+  padding: 12px 0 5px;
+  border-bottom: 1px solid $gray;
   .alert {
     margin-left: 6px;
     @include ellipsis;
@@ -24,12 +28,19 @@ $main-context: 9;
     margin: 0;
     position: relative;
     top: 3px;
-    left: 10px;
+    @include at-breakpoint($wide-screen) {
+      margin-left: 10px;
+    }
+  }
+  .en {
+    font-size: 36px;
+    margin-right: .2em;
+    @extend %light;
   }
 }
 
 .main-block {
-  @include trailer(2);
+  @include trailer(1.5);
   .row {
     @include pie-clearfix;
   }
@@ -37,11 +48,14 @@ $main-context: 9;
 
 .main-block-col-2 {
   float: left;
-  width: 45.25%;
+  width: 45%;
   & + & {
-    margin-left: 4.5%;
-    border-left: 1px solid rgba(black, 0.05);
-    padding-left: 4.5%;
+    margin-left: 5%;
+    // border-left: 1px solid rgba(black, 0.05);
+    padding-left: 5%;
+  }
+  .form-group:last-child {
+    @include trailer(0);
   }
 }
 
@@ -53,19 +67,6 @@ $main-context: 9;
     position: relative;
     top: 11px;
     left: 12px;
-  }
-  .glyphicon {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    @include border-radius(30px / 2);
-    margin: 0 .3em;
-    font-size: 18px;
-    line-height: 30px;
-    text-align: center;
-    text-indent: -1px;
-    color: white;
-    background-color: $green;
   }
 }
 
@@ -84,6 +85,8 @@ $main-context: 9;
   @include reset-box-model;
   list-style: none;
   @include adjust-font-size-to(13px);
+  // @include padding-trailer(.5);
+  // border-bottom: 2px solid $gray;
   @include trailer(1);
   li {
     @include pie-clearfix;
@@ -91,7 +94,7 @@ $main-context: 9;
   .title {
     float: left;
     margin-right: 10px;
-    width: 8.25em;
+    width: 6em;
     text-align: right;
   }
   .content {
@@ -99,46 +102,5 @@ $main-context: 9;
     .alert {
       margin-left: 0.5em;
     }
-  }
-}
-
-
-// 模擬紙張長相
-.paper-style {
-  .main-title {
-    margin-bottom: 0;
-    border-bottom: none;
-  }
-  .main-block {
-    margin-bottom: 0;
-    border: 1px solid #eee;
-    border-bottom: 1px transparent;
-    padding: 2em;
-    @include background-image( linear-gradient( rgba(black, 0), rgba(black, 0.02) ) );
-    &.last-main-block {
-      border-bottom: 1px solid #eee;
-    }
-    &.current {
-      background-color: #ffd;
-    }
-  }
-  .main-block + .main-block {
-    border-top: 1px dashed #eee;
-  }
-  .main-block-title {
-    button, a.button {
-      left: 0;
-      float: right;
-    }
-  }
-  .form-action {
-    text-align: right;
-  }
-  .form-group + .main-block-sub-title {
-    @include leader(1.5);
-  }
-  // 單一訂單頁使用
-  button.action, a.button.action {
-    padding: 0.5em 3em;
   }
 }

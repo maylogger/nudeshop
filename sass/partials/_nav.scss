@@ -1,6 +1,6 @@
 .nav {
   .nav-inner {
-    @include padding-leader(3.5);
+    @include padding-leader(3.2);
     @include pie-clearfix;
   }
   .logo {
@@ -42,12 +42,19 @@
   .shop-nav {
     @extend %subpixel;
     float: left;
-    padding: rhythm(.5) rhythm(1) 15px;
-    @include padding-leader(2);
-    @include leader(5);
-    background: rgba(black, .85);
+    padding: rhythm(.75) rhythm(1) rhythm(.7);
+    @include leader(2.5);
+    background: black;
     a {
+      display: block;
+      margin: 0 (-(rhythm(1)));
+      padding: 0 rhythm(1);
       @include link-colors(white);
+      @include nowrap;
+    }
+    a.has-order {
+      background-color: #666;
+      text-shadow: 0 0 5px white, 0 0 5px white;
     }
   }
   // for affix plugin
