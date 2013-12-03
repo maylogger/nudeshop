@@ -1,6 +1,10 @@
 %helvetica-light {
   // font-family: "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
-  font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+  font-family: "AvenirNext-Regular",
+               "HelveticaNeue-Light", "Helvetica", "Arial",
+               "Heiti TC",
+               "微軟正黑體", "Microsoft JhengHei",
+               sans-serif;
   font-weight: 300;
 }
 
@@ -48,6 +52,6 @@ p {
 }
 
 %light {
-  font-family: "AvenirNext-UltraLight", "Avenir-Light", "Helvetica", "Arial", sans-serif;
+  font-family: "AvenirNext-UltraLight", "Avenir-Light", "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
   font-weight: 100;
 }
