@@ -5,8 +5,10 @@
   .main-title {
     margin-bottom: 0;
     border-bottom: none;
-    small {
-      font-size: 24px;
+    .en {
+      font-size: 36px;
+      margin-right: .2em;
+      @extend %light;
     }
   }
   .main-block-title {

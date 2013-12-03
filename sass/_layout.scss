@@ -48,7 +48,7 @@ $main-inner-container-width: 7;
 }
 
 .main-inner-container {
-  @include padding-leader(3.25);
+  @include padding-leader(3);
   @include span-columns($main-inner-container-width, $main-width);
   @include pre(.5, $main-width);
   // min-height: 300px;
