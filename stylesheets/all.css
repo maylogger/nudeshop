@@ -1495,10 +1495,11 @@ button.active, a.button.active {
 
 .main-title {
   margin-bottom: 24px;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 47px;
   padding: 12px 0 5px;
   border-bottom: 1px solid #9fa1a0;
+  letter-spacing: 1px;
 }
 .main-title .alert {
   margin-left: 6px;
@@ -1613,10 +1614,6 @@ button.active, a.button.active {
   padding-left: 10px;
   padding-right: 0;
   text-align: right;
-}
-.list thead.with-border-top th {
-  padding-top: 12px;
-  border-top: 1px solid #9fa1a0;
 }
 .list tbody tr:first-child td {
   padding-top: 15px;
@@ -1921,7 +1918,7 @@ button.active, a.button.active {
 .article {
   color: #444;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 20px;
 }
 .article h1 {
   margin-bottom: 24px;
@@ -1930,12 +1927,13 @@ button.active, a.button.active {
 }
 .article h2 {
   margin-bottom: 24px;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 24px;
+  font-weight: bold;
 }
 .article h3 {
   margin-bottom: 24px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
 }
 .article h4 {
@@ -1950,6 +1948,8 @@ button.active, a.button.active {
   max-width: 100%;
 }
 .article p {
+  font-size: 12px;
+  line-height: 18px;
   margin-bottom: 24px;
 }
 .article ul, .article ol {
@@ -1979,6 +1979,13 @@ button.active, a.button.active {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 21px;
+  padding-right: 21px;
+}
+@media (min-width: 1280px) {
+  .sidebar {
+    padding-left: 49px;
+    padding-right: 49px;
+  }
 }
 .sidebar p {
   margin: 0;
@@ -1989,7 +1996,7 @@ button.active, a.button.active {
   line-height: 24px;
 }
 .sidebar .sidebar-title {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: bold;
 }
@@ -2163,12 +2170,11 @@ button.active, a.button.active {
   letter-spacing: 2px;
 }
 .sidebar .sidebar-list {
-  font-size: 13px;
+  font-size: 11px;
   line-height: 16px;
   margin: 0;
   padding: 0;
   border: 0;
-  padding-right: 21px;
   list-style: none;
 }
 .sidebar .sidebar-list li {
@@ -2187,11 +2193,11 @@ button.active, a.button.active {
 .sidebar .sidebar-affix.affix {
   position: fixed;
   top: 24px;
-  width: 209px;
+  width: 181px;
 }
 @media (min-width: 1280px) {
   .sidebar .sidebar-affix.affix {
-    width: 269px;
+    width: 192px;
   }
 }
 @media (max-height: 640px) {
@@ -2276,7 +2282,7 @@ button.active, a.button.active {
   display: block;
 }
 .header .en, .header .zh {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
 }
 .header .only {
@@ -2299,12 +2305,10 @@ button.active, a.button.active {
 }
 @media (min-width: 1280px) {
   .header .en, .header .zh {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 24px;
   }
   .header .only {
-    font-size: 15px;
-    line-height: 24px;
     margin-top: 60px;
     margin-bottom: 36px;
   }
@@ -2313,7 +2317,7 @@ button.active, a.button.active {
     line-height: 120px;
   }
   .header .unit {
-    font-size: 20px;
+    font-size: 14px;
     line-height: 24px;
   }
 }
