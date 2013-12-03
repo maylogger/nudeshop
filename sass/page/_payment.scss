@@ -1,4 +1,7 @@
 .payment {
+  .collapsed {
+    opacity: .3;
+  }
   .main-title {
     margin-bottom: 0;
     border-bottom: none;
@@ -23,9 +26,12 @@
     .step {
       display: inline-block;
       margin-top: 24px;
-      font-size: 60px;
+      font-size: 48px;
       @extend %light;
       margin-right: 6px;
+      letter-spacing: -.1em;
+      position: relative;
+      top: -1px;
     }
     button, a.button {
       position: absolute;

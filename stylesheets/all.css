@@ -2406,6 +2406,9 @@ button.active, a.button.active {
   border-bottom: 1px solid #ddd;
 }
 
+.payment .collapsed {
+  opacity: .3;
+}
 .payment .main-title {
   margin-bottom: 0;
   border-bottom: none;
@@ -2432,8 +2435,11 @@ button.active, a.button.active {
 .payment .main-block-title .step {
   display: inline-block;
   margin-top: 24px;
-  font-size: 60px;
+  font-size: 48px;
   margin-right: 6px;
+  letter-spacing: -.1em;
+  position: relative;
+  top: -1px;
 }
 .payment .main-block-title button, .payment .main-block-title a.button {
   position: absolute;
