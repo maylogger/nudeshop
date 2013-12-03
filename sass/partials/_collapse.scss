@@ -1,7 +1,7 @@
 .collapse {
-        display: none;
+  display: none;
 }
 .collapsing {
-        overflow-x: hidden;
-        @include transition(height .3s ease-in-out);
+  overflow-x: hidden;
+  @include transition(height .3s ease-in-out);
 }
