@@ -1,43 +1,49 @@
 form.main-inner-container.paper-style
-  h2.main-title 結帳
+  h2.main-title Payment <small>結帳</small>
   .main-block
     .main-block-title
-      |1.確認數量明細
-      span class="glyphicon glyphicon-ok"
+      a.collapse-btn href="#collapse1" data-toggle="collapse" <span class="step">1.</span>確認數量明細
       a.button href="/account/orders/check.html" 編輯
-    table.list
-      thead
-        tr
-          th.product.col-10 商品
-          th.price.col-4 單價
-          th.quantity.col-2 數量
-          th.price.col-4 小計
-      tbody
-        - 3.times do
+    #collapse1.collapse
+      table.list
+        thead
           tr
-            td.product= zh_lorem_words( rand(10) + 6)
+            th.product.col-10 商品
+            th.price.col-4 單價
+            th.quantity.col-2 數量
+            th.price.col-4 小計
+        tbody
+          - 3.times do
+            tr
+              td.product
+                .product-image: img src="/data/product-item00#{rand(6)+1}.jpg"
+                .product-content
+                  = zh_lorem_words( rand(10) + 6)
+                  .detail #0001
+                  .detail Size: L
+                  .detail Color: Red
+              td.price
+                span.unit NT$
+                = rand(20000) + 5000
+              td.quantity
+                input type="number" value="#{rand(10) + 1}" disabled="disabled"
+              td.price
+                span.unit NT$
+                = rand(20000) + 5000
+          tr.shipping-costs
+            td colspan="3" 運費
+            td.price
+              span.unit NT$
+              |80
+          tr.total
+            td colspan="3" 總金額
             td.price
               span.unit NT$
               = rand(20000) + 5000
-            td.quantity
-              input type="number" value="#{rand(10) + 1}" disabled="disabled"
-            td.price
-              span.unit NT$
-              = rand(20000) + 5000
-        tr.shipping-costs
-          td colspan="3" 運費
-          td.price
-            span.unit NT$
-            |80
-        tr.total
-          td colspan="3" 總金額
-          td.price
-            span.unit NT$
-            = rand(20000) + 5000
 
 
-  .main-block#consumer-info.last-main-block.current
-    .main-block-title 2.填寫收件資訊
+  .main-block.last-main-block
+    .main-block-title <span class="step">2.</span>填寫收件資訊
     .row
       .main-block-col-2
         .main-block-sub-title 購買人

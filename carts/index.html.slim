@@ -1,9 +1,8 @@
 form.main-inner-container.paper-style
-  h2.main-title
-    |購物車
+  h2.main-title Carts <small>購物車</small>
   .main-block.last-main-block
     table.list
-      thead
+      thead.with-border-top
         tr
           th.product.col-8 商品
           th.price.col-4 單價
@@ -13,10 +12,16 @@ form.main-inner-container.paper-style
       tbody
         - 3.times do
           tr
-            td.product= zh_lorem_words( rand(10) + 6)
+            td.product
+              .product-image: img src="/data/product-item00#{rand(6)+1}.jpg"
+              .product-content
+                = zh_lorem_words( rand(10) + 6)
+                .detail #0001
+                .detail Size: L
+                .detail Color: Red
             td.price
               span.unit NT$
-              = rand(2000) + 5000
+              = rand(20000) + 5000
             td.quantity
               input type="number" value="#{rand(10) + 1}" disabled="disabled"
             td.price

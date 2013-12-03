@@ -30,7 +30,6 @@
 
   .post-group {
     .post {
-      @include leader(2);
       @include trailer(2);
       @include padding-trailer(1);
       border-bottom: 1px solid #ddd;
