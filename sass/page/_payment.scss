@@ -1,0 +1,48 @@
+.payment {
+  .main-title {
+    margin-bottom: 0;
+    border-bottom: none;
+    small {
+      font-size: 24px;
+    }
+  }
+  .main-block-title {
+    position: relative;
+    @include padding-trailer(.5);
+    border-bottom: 2px solid $gray;
+    @include trailer(.35);
+    @include adjust-font-size-to(20px);
+    .collapse-btn {
+      display: block;
+      color: $black;
+      &:hover {
+        text-decoration: none;
+        color: lighten($black, 20%);
+      }
+    }
+    .step {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 60px;
+      @extend %light;
+      margin-right: 6px;
+    }
+    button, a.button {
+      position: absolute;
+      left: auto;
+      top: auto;
+      right: 0;
+      bottom: 12px;
+    }
+  }
+  .form-action {
+    text-align: right;
+  }
+  .form-group + .main-block-sub-title {
+    @include leader(1.5);
+  }
+  // 單一訂單頁使用
+  button.action, a.button.action {
+    padding: 0.5em 3em;
+  }
+}
