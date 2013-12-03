@@ -3,13 +3,14 @@
   .main-content#gallery
     .article
       a.gallery-photo href="#{lorem_image('900x1350', :text => "1")}": img src="#{lorem_image('900x1350')}"
-      p= lorem_sentences rand(7) + 3
-      p= lorem_sentences rand(7) + 3
+      - (rand(5) + 1).times do
+        p= zh_lorem_sentences rand(3) + 1
       a.gallery-photo href="#{lorem_image('900x1350', :text => "2")}": img src="#{lorem_image('900x1350')}"
+      - (rand(4) + 1).times do
+        p= zh_lorem_sentences rand(3) + 1
       a.gallery-photo href="#{lorem_image('900x1350', :text => "3")}": img src="#{lorem_image('900x1350')}"
-      a.gallery-photo href="#{lorem_image('900x1350', :text => "4")}": img src="#{lorem_image('900x1350')}"
-      a.gallery-photo href="#{lorem_image('900x1350', :text => "5")}": img src="#{lorem_image('900x1350')}"
-      a.gallery-photo href="#{lorem_image('900x1350', :text => "6")}": img src="#{lorem_image('900x1350')}"
+      - (rand(3) + 1).times do
+        p= zh_lorem_sentences rand(3) + 1
 
   .sidebar
     .sidebar-block
