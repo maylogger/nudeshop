@@ -28,7 +28,9 @@ $main-context: 9;
     margin: 0;
     position: relative;
     top: 3px;
-    left: 10px;
+    @include at-breakpoint($wide-screen) {
+      margin-left: 10px;
+    }
   }
   .en {
     font-size: 36px;
