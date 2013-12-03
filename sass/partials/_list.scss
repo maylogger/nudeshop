@@ -2,13 +2,11 @@
   table-layout: fixed;
   width: 100%;
   text-align: left;
-  // @include trailer(1);
-  // border-bottom: 1px solid black;
   @include adjust-font-size-to(13px);
 
   thead {
     th {
-      border-bottom: 1px solid black;
+      border-bottom: 2px solid $lighter-gray;
       @include padding-trailer(.35);
     }
     th + th {
@@ -18,6 +16,12 @@
       padding-left: 10px;
       padding-right: 0;
       text-align: right;
+    }
+    &.with-border-top {
+      th {
+        @include padding-leader(.5);
+        border-top: 2px solid $gray;
+      }
     }
   }
 
@@ -44,28 +48,31 @@
   .order {
     td {
       padding-top: 10px;
-      border-bottom: 1px solid rgba(black,.1);
+      border-bottom: 1px solid $lighter-gray;
+    }
+    &:last-child td {
+      border-bottom: none;
     }
   }
 
   .shipping-costs {
     td {
-      border-top: 1px solid rgba(black,.1);
+      border-top: 2px solid $lighter-gray;
       padding-top: 10px;
     }
   }
   .total {
     td {
-      border-top: 1px solid black;
+      border-top: 2px solid $gray;
       padding-top: 10px;
     }
   }
   .alert {
     td {
-      border-top: 1px solid black;
+      border-top: 2px solid $gray;
       padding: 10px 0;
       text-align: center;
-      border-bottom: 1px solid rgba(black,.1);
+      // border-bottom: 2px solid rgba(black,.1);
     }
   }
 

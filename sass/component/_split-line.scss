@@ -1,9 +1,10 @@
 .split-line {
-  @include leader(1);
-  @include trailer(1);
+  @include leader(1.5);
+  @include trailer(1.5);
   height: 1px;
   background-color: $split-line-color;
 }
+
 
 .split-line-with-text {
   @include padding-leader(.5);

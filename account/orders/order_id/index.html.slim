@@ -1,7 +1,7 @@
 form.main-inner-container.paper-style
   h2.main-title 訂單資訊
   .main-block
-    .main-block-title 訂單明細
+    .main-block-title 訂單資訊
     ul.main-list
       li
         .title 訂單編號：
@@ -17,6 +17,9 @@ form.main-inner-container.paper-style
         .content
           = "Zh" + "#{rand(10000)}" + "#{1000000}"
           a.alert href="#" (查詢貨物目前情況)
+
+  .main-block
+    .main-block-title 商品與數量
     table.list
       thead
         tr
