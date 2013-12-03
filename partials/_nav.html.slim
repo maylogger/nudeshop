@@ -9,14 +9,13 @@ nav.main-nav
     = nav_link_to("過季連線商品", "/shop/", :style => "color: #999")
     = nav_link_to("過季店內商品", "/shop/", :style => "color: #999")
     li.divider
-    = nav_link_to("聯絡", "/contact/")
-    = nav_link_to("blog", "#")
+    = nav_link_to("contact us", "/contact/")
     = nav_link_to("Facebook", "http://fb.com")
     = nav_link_to("special event", "/news/post.html", :class => "sp")
 nav.shop-nav
   h2 Shop Navigation
   ul
-    li: a href="/carts" 購物車 ( 0 )
+    li: a.has-order href="/carts" 購物車 ( 0 )
     li: a href="#" 購物需知
     li: a href="#" 購物流程
     li.divider
