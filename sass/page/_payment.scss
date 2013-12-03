@@ -2,19 +2,10 @@
   .collapsed {
     opacity: .3;
   }
-  .main-title {
-    margin-bottom: 0;
-    border-bottom: none;
-    .en {
-      font-size: 36px;
-      margin-right: .2em;
-      @extend %light;
-    }
-  }
   .main-block-title {
     position: relative;
     @include padding-trailer(.5);
-    border-bottom: 2px solid $gray;
+    border-bottom: 1px solid $gray;
     @include trailer(.35);
     @include adjust-font-size-to(20px);
     .collapse-btn {

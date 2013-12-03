@@ -15,8 +15,9 @@ $main-context: 9;
 .main-title {
   @include trailer(1);
   font-size: 28px;
-  line-height: $base-line-height * 3 - 1;
-  border-bottom: 2px solid $gray;
+  line-height: $base-line-height * 2 - 1;
+  padding: 12px 0 5px;
+  border-bottom: 1px solid $gray;
   .alert {
     margin-left: 6px;
     @include ellipsis;
@@ -29,10 +30,15 @@ $main-context: 9;
     top: 3px;
     left: 10px;
   }
+  .en {
+    font-size: 36px;
+    margin-right: .2em;
+    @extend %light;
+  }
 }
 
 .main-block {
-  @include trailer(2);
+  @include trailer(1.5);
   .row {
     @include pie-clearfix;
   }

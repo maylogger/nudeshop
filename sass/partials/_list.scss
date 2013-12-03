@@ -6,7 +6,7 @@
 
   thead {
     th {
-      border-bottom: 2px solid $lighter-gray;
+      border-bottom: 1px solid $lighter-gray;
       @include padding-trailer(.35);
     }
     th + th {
@@ -20,7 +20,7 @@
     &.with-border-top {
       th {
         @include padding-leader(.5);
-        border-top: 2px solid $gray;
+        border-top: 1px solid $gray;
       }
     }
   }
@@ -57,19 +57,19 @@
 
   .shipping-costs {
     td {
-      border-top: 2px solid $lighter-gray;
+      border-top: 1px solid $lighter-gray;
       padding-top: 10px;
     }
   }
   .total {
     td {
-      border-top: 2px solid $gray;
+      border-top: 1px solid $gray;
       padding-top: 10px;
     }
   }
   .alert {
     td {
-      border-top: 2px solid $gray;
+      border-top: 1px solid $gray;
       padding: 10px 0;
       text-align: center;
       // border-bottom: 2px solid rgba(black,.1);

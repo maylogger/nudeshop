@@ -386,7 +386,7 @@ html {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: "AvenirNext-Regular", "HelveticaNeue-Light", "Helvetica", "Arial", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-family: "AvenirNext-Regular", "Roboto", "HelveticaNeue-Light", "Helvetica", "Arial", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
   font-weight: 300;
 }
 
@@ -441,9 +441,15 @@ p {
   margin-bottom: 24px;
 }
 
-.sidebar .timer .d, .sidebar .timer .h, .sidebar .timer .m, .header .count, .payment .main-block-title .step {
-  font-family: "AvenirNext-UltraLight", "Avenir-Light", "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
+.main-title .en, .sidebar .timer .d, .sidebar .timer .h, .sidebar .timer .m, .header .count, .payment .main-block-title .step {
+  font-family: "AvenirNext-UltraLight", "Avenir-Light", "Roboto-Thin", "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
   font-weight: 100;
+}
+
+@font-face {
+  font-family: "Roboto-Thin";
+  font-weight: 200;
+  src: local("sans-serif-thin");
 }
 
 /* debug background grid */
@@ -537,7 +543,7 @@ body {
 }
 
 .main-inner-container {
-  padding-top: 78px;
+  padding-top: 72px;
   width: 77.46479%;
   float: left;
   margin-right: 1.40845%;
@@ -1273,7 +1279,7 @@ button.active, a.button.active {
 }
 
 .nav .nav-inner {
-  padding-top: 84px;
+  padding-top: 76px;
 }
 .nav .nav-inner:after {
   content: "";
@@ -1337,6 +1343,7 @@ button.active, a.button.active {
   margin: 0 -24px;
   padding: 0 24px;
   color: white;
+  white-space: nowrap;
 }
 .nav .shop-nav a.has-order {
   background-color: #666;
@@ -1489,8 +1496,9 @@ button.active, a.button.active {
 .main-title {
   margin-bottom: 24px;
   font-size: 28px;
-  line-height: 71px;
-  border-bottom: 2px solid #9fa1a0;
+  line-height: 47px;
+  padding: 12px 0 5px;
+  border-bottom: 1px solid #9fa1a0;
 }
 .main-title .alert {
   margin-left: 6px;
@@ -1509,9 +1517,13 @@ button.active, a.button.active {
   top: 3px;
   left: 10px;
 }
+.main-title .en {
+  font-size: 36px;
+  margin-right: .2em;
+}
 
 .main-block {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
 .main-block .row:after {
   content: "";
@@ -1587,7 +1599,7 @@ button.active, a.button.active {
   line-height: 24px;
 }
 .list thead th {
-  border-bottom: 2px solid #c9cbca;
+  border-bottom: 1px solid #c9cbca;
   padding-bottom: 8px;
 }
 .list thead th + th {
@@ -1600,7 +1612,7 @@ button.active, a.button.active {
 }
 .list thead.with-border-top th {
   padding-top: 12px;
-  border-top: 2px solid #9fa1a0;
+  border-top: 1px solid #9fa1a0;
 }
 .list tbody tr:first-child td {
   padding-top: 15px;
@@ -1627,15 +1639,15 @@ button.active, a.button.active {
   border-bottom: none;
 }
 .list .shipping-costs td {
-  border-top: 2px solid #c9cbca;
+  border-top: 1px solid #c9cbca;
   padding-top: 10px;
 }
 .list .total td {
-  border-top: 2px solid #9fa1a0;
+  border-top: 1px solid #9fa1a0;
   padding-top: 10px;
 }
 .list .alert td {
-  border-top: 2px solid #9fa1a0;
+  border-top: 1px solid #9fa1a0;
   padding: 10px 0;
   text-align: center;
 }
@@ -2409,17 +2421,10 @@ button.active, a.button.active {
 .payment .collapsed {
   opacity: .3;
 }
-.payment .main-title {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-.payment .main-title small {
-  font-size: 24px;
-}
 .payment .main-block-title {
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #9fa1a0;
+  border-bottom: 1px solid #9fa1a0;
   margin-bottom: 8px;
   font-size: 20px;
   line-height: 24px;

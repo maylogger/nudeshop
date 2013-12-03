@@ -1,6 +1,6 @@
 .nav {
   .nav-inner {
-    @include padding-leader(3.5);
+    @include padding-leader(3.2);
     @include pie-clearfix;
   }
   .logo {
@@ -50,6 +50,7 @@
       margin: 0 (-(rhythm(1)));
       padding: 0 rhythm(1);
       @include link-colors(white);
+      @include nowrap;
     }
     a.has-order {
       background-color: #666;
