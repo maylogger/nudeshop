@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
+
 %helvetica-light {
   // font-family: "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
   font-family: "AvenirNext-Regular",
@@ -53,13 +55,13 @@ p {
 }
 
 %light {
-  font-family: "AvenirNext-UltraLight", "Avenir-Light", "Roboto-Thin", "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
+  font-family: "AvenirNext-UltraLight", "Avenir-Light", "Roboto-Thin", "Roboto", "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
   font-weight: 100;
 }
 
 // hack for android 4.4
 @font-face {
     font-family: "Roboto-Thin";
-    font-weight: 200;
+    font-weight: 100;
     src: local("sans-serif-thin");
 }
