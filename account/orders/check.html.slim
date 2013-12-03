@@ -14,8 +14,8 @@ form.main-inner-container.payment
         - 3.times do
           tr
             td.product
-              .product-image: img src="/data/product-item00#{rand(6)+1}.jpg"
-              .product-content
+              a.product-image href="/events/products/": img src="/data/product-item00#{rand(6)+1}.jpg"
+              a.product-content href="/events/products/"
                 = zh_lorem_words( rand(10) + 6)
                 .detail #0001
                 .detail Size: L
