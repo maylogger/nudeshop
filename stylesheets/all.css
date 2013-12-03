@@ -949,7 +949,7 @@ button.disable, a.button.disable {
   color: #888;
 }
 button.active, a.button.active {
-  background-color: #efefed;
+  background-color: #c9cbca;
   color: #333;
   cursor: default;
 }
@@ -1002,7 +1002,21 @@ button.active, a.button.active {
 .form-group .form-group-content {
   display: block;
 }
-.form-group input, .form-group textarea, .form-group select {
+.form-group textarea,
+.form-group select,
+.form-group input[type="date"],
+.form-group input[type="datetime"],
+.form-group input[type="datetime-local"],
+.form-group input[type="email"],
+.form-group input[type="month"],
+.form-group input[type="number"],
+.form-group input[type="password"],
+.form-group input[type="search"],
+.form-group input[type="tel"],
+.form-group input[type="text"],
+.form-group input[type="time"],
+.form-group input[type="url"],
+.form-group input[type="week"] {
   margin-right: 0;
   border: 1px solid #c9cbca;
   height: 24px;
@@ -1010,7 +1024,21 @@ button.active, a.button.active {
   line-height: 16px;
   font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
 }
-.form-group input.full-width, .form-group textarea.full-width, .form-group select.full-width {
+.form-group textarea.full-width,
+.form-group select.full-width,
+.form-group input[type="date"].full-width,
+.form-group input[type="datetime"].full-width,
+.form-group input[type="datetime-local"].full-width,
+.form-group input[type="email"].full-width,
+.form-group input[type="month"].full-width,
+.form-group input[type="number"].full-width,
+.form-group input[type="password"].full-width,
+.form-group input[type="search"].full-width,
+.form-group input[type="tel"].full-width,
+.form-group input[type="text"].full-width,
+.form-group input[type="time"].full-width,
+.form-group input[type="url"].full-width,
+.form-group input[type="week"].full-width {
   width: 100%;
 }
 .form-group textarea {
@@ -1084,7 +1112,7 @@ button.active, a.button.active {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   padding-bottom: 11px;
-  border-color: #efefed;
+  border-color: #c9cbca;
 }
 .form-text p {
   margin: 0;
@@ -1106,10 +1134,10 @@ button.active, a.button.active {
 }
 
 .split-line {
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 36px;
+  margin-bottom: 36px;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #c9cbca;
 }
 
 .split-line-with-text {
@@ -1136,7 +1164,7 @@ button.active, a.button.active {
   right: 0;
   margin-top: -0.5px;
   height: 1px;
-  background-color: #efefed;
+  background-color: #c9cbca;
 }
 
 .social-link a.button {
@@ -1224,7 +1252,7 @@ button.active, a.button.active {
   text-align: center;
   display: inline-block;
   padding: 0.25em 0.75em;
-  background-color: #efefed;
+  background-color: #c9cbca;
   cursor: pointer;
 }
 .pagination li a:hover {
@@ -1459,7 +1487,7 @@ button.active, a.button.active {
   margin-bottom: 24px;
   font-size: 28px;
   line-height: 71px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #9fa1a0;
 }
 .main-title .alert {
   margin-left: 6px;
@@ -1496,6 +1524,9 @@ button.active, a.button.active {
   margin-left: 5%;
   padding-left: 5%;
 }
+.main-block-col-2 .form-group:last-child {
+  margin-bottom: 0px;
+}
 
 .main-block-title {
   font-size: 24px;
@@ -1505,23 +1536,6 @@ button.active, a.button.active {
   position: relative;
   top: 11px;
   left: 12px;
-}
-.main-block-title .glyphicon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  border-radius: 15px;
-  margin: 0 .3em;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  text-indent: -1px;
-  color: white;
-  background-color: #468847;
 }
 
 .main-block-sub-title {
@@ -1552,7 +1566,7 @@ button.active, a.button.active {
 .main-list .title {
   float: left;
   margin-right: 10px;
-  width: 5em;
+  width: 6em;
   text-align: right;
 }
 .main-list .content {
@@ -1572,10 +1586,18 @@ button.active, a.button.active {
 .paper-style .main-block-title {
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 2px solid #c9cbca;
+  border-bottom: 2px solid #9fa1a0;
   margin-bottom: 8px;
   font-size: 20px;
   line-height: 24px;
+}
+.paper-style .main-block-title .collapse-btn {
+  display: block;
+  color: #252525;
+}
+.paper-style .main-block-title .collapse-btn:hover {
+  text-decoration: none;
+  color: #585858;
 }
 .paper-style .main-block-title .step {
   display: inline-block;
@@ -1608,7 +1630,7 @@ button.active, a.button.active {
   line-height: 24px;
 }
 .list thead th {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #c9cbca;
   padding-bottom: 8px;
 }
 .list thead th + th {
@@ -1618,6 +1640,10 @@ button.active, a.button.active {
   padding-left: 10px;
   padding-right: 0;
   text-align: right;
+}
+.list thead.with-border-top th {
+  padding-top: 12px;
+  border-top: 2px solid #9fa1a0;
 }
 .list tbody tr:first-child td {
   padding-top: 15px;
@@ -1638,21 +1664,23 @@ button.active, a.button.active {
 }
 .list .order td {
   padding-top: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #c9cbca;
+}
+.list .order:last-child td {
+  border-bottom: none;
 }
 .list .shipping-costs td {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #c9cbca;
   padding-top: 10px;
 }
 .list .total td {
-  border-top: 1px solid black;
+  border-top: 2px solid #9fa1a0;
   padding-top: 10px;
 }
 .list .alert td {
-  border-top: 1px solid black;
+  border-top: 2px solid #9fa1a0;
   padding: 10px 0;
   text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .list .order-number a {
   color: #369;
@@ -2218,6 +2246,18 @@ button.active, a.button.active {
   color: #999;
 }
 
+.collapse {
+  display: none;
+}
+
+.collapsing {
+  overflow-x: hidden;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+
 .message {
   text-align: center;
   font-size: 15px;
@@ -2404,7 +2444,6 @@ button.active, a.button.active {
   color: #aa0000;
 }
 .news .post-group .post {
-  margin-top: 48px;
   margin-bottom: 48px;
   padding-bottom: 24px;
   border-bottom: 1px solid #ddd;
