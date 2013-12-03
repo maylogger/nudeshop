@@ -1300,12 +1300,12 @@ button.active, a.button.active {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background-image: url('/images/logo.png?1380606257');
+  background-image: url('/images/logo.png?1380123996');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 130px;
   height: 48px;
-  background-image: none, url('/images/logo.svg?1380606257');
+  background-image: none, url('/images/logo.svg?1380376821');
 }
 .nav h2 {
   display: none;
@@ -1387,7 +1387,7 @@ button.active, a.button.active {
   height: 310px;
 }
 .item.space {
-  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381899163') center center;
+  background: rgba(0, 0, 0, 0.05) url('/images/space.gif?1381848689') center center;
 }
 @media (min-width: 1280px) {
   .item {
@@ -1496,11 +1496,12 @@ button.active, a.button.active {
 
 .main-title {
   margin-bottom: 24px;
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: 100;
   line-height: 47px;
   padding: 12px 0 5px;
   border-bottom: 1px solid #9fa1a0;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 .main-title .alert {
   margin-left: 6px;
@@ -1516,7 +1517,7 @@ button.active, a.button.active {
 .main-title .pills {
   margin: 0;
   position: relative;
-  top: 3px;
+  top: 2px;
 }
 @media (min-width: 1280px) {
   .main-title .pills {
@@ -1526,6 +1527,7 @@ button.active, a.button.active {
 .main-title .en {
   font-size: 36px;
   margin-right: .2em;
+  letter-spacing: 0px;
 }
 
 .main-block {
