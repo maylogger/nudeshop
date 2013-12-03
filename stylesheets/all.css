@@ -386,7 +386,7 @@ html {
 }
 
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: "AvenirNext-Regular", "Helvetica", "Arial", sans-serif;
+  font-family: "AvenirNext-Regular", "HelveticaNeue-Light", "Helvetica", "Arial", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
   font-weight: 300;
 }
 
@@ -442,7 +442,7 @@ p {
 }
 
 .sidebar .timer .d, .sidebar .timer .h, .sidebar .timer .m, .header .count {
-  font-family: "AvenirNext-UltraLight", "Avenir-Light", "Helvetica", "Arial", sans-serif;
+  font-family: "AvenirNext-UltraLight", "Avenir-Light", "HelveticaNeue-Light", "Helvetica", "Arial", sans-serif;
   font-weight: 100;
 }
 
@@ -1313,7 +1313,7 @@ button.active, a.button.active {
   color: white;
 }
 .nav .shop-nav a.has-order {
-  background-color: #aa0000;
+  background-color: #666;
   text-shadow: 0 0 5px white, 0 0 5px white;
 }
 .nav .nav-inner.affix {
@@ -1455,6 +1455,9 @@ button.active, a.button.active {
   width: 66.19718%;
   float: left;
   margin-right: 1.40845%;
+}
+.product .main-content {
+  text-align: center;
 }
 
 .main-title {
