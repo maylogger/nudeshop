@@ -7,6 +7,12 @@ $sidebar-context: 9;
   @include box-sizing(border-box);
   $sidebar-padding: columns(.3, $sidebar-context, static);
   padding-left: $sidebar-padding;
+  padding-right: $sidebar-padding;
+  @include at-breakpoint($wide-screen) {
+    $sidebar-padding: columns(.7, $sidebar-context, static);
+    padding-left: $sidebar-padding;
+    padding-right: $sidebar-padding;
+  }
 
   // space adjust
   p {
@@ -23,7 +29,7 @@ $sidebar-context: 9;
 
 
   .sidebar-title {
-    @include adjust-font-size-to(20px);
+    @include adjust-font-size-to(16px);
     font-weight: bold;
     a {
       border-bottom: 1px solid $black;
@@ -180,9 +186,9 @@ $sidebar-context: 9;
   }
 
   .sidebar-list {
-    @include adjust-font-size-to(13px, 2/3);
+    @include adjust-font-size-to(11px, 2/3);
     @include reset-box-model;
-    padding-right: $sidebar-padding;
+    // padding-right: $sidebar-padding;
     list-style: none;
     li {
       // @include ellipsis;
@@ -208,7 +214,7 @@ $sidebar-context: 9;
     width: columns(3, 12, static) - $sidebar-padding;
     @include at-breakpoint($wide-screen) {
       @include with-grid-settings(12,90px,10px,0) {
-        width: columns(3, 12, static) - $sidebar-padding;
+        width: columns(3, 12, static) - 2 * $sidebar-padding;
       }
     }
     @media (max-height: 640px) {

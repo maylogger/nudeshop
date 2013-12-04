@@ -14,10 +14,12 @@ $main-context: 9;
 
 .main-title {
   @include trailer(1);
-  font-size: 28px;
+  font-size: 22px;
+  font-weight: 100;
   line-height: $base-line-height * 2 - 1;
   padding: 12px 0 5px;
   border-bottom: 1px solid $gray;
+  letter-spacing: 3px;
   .alert {
     margin-left: 6px;
     @include ellipsis;
@@ -27,7 +29,7 @@ $main-context: 9;
   .pills {
     margin: 0;
     position: relative;
-    top: 3px;
+    top: 2px;
     @include at-breakpoint($wide-screen) {
       margin-left: 10px;
     }
@@ -36,6 +38,7 @@ $main-context: 9;
     font-size: 36px;
     margin-right: .2em;
     @extend %light;
+    letter-spacing: 0px;
   }
 }
 

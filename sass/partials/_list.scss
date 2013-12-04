@@ -17,12 +17,6 @@
       padding-right: 0;
       text-align: right;
     }
-    &.with-border-top {
-      th {
-        @include padding-leader(.5);
-        border-top: 1px solid $gray;
-      }
-    }
   }
 
   tbody tr:first-child td {
