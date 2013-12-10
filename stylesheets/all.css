@@ -1650,11 +1650,6 @@ button.active, a.button.active {
   border-top: 1px solid #9fa1a0;
   padding-top: 10px;
 }
-.list .alert td {
-  border-top: 1px solid #9fa1a0;
-  padding: 10px 0;
-  text-align: center;
-}
 .list .order-number a {
   color: #369;
 }
