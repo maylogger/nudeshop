@@ -545,6 +545,7 @@ p {
   color: #666;
 }
 .list.ship-to {
+  margin-top: 24px;
   width: 70%;
 }
 .list .col-1 {
@@ -606,8 +607,4 @@ p {
 }
 .list .col-20 {
   width: 100%;
-}
-
-.list + .list {
-  margin-top: 24px;
 }

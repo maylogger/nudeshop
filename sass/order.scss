@@ -129,7 +129,8 @@ $page-container: ".page";
   	color: #666;
   }
   &.ship-to {
-	width: 70%;
+    margin-top: rhythm(1);
+    width: 70%;
   }
   // list-columns
   @for $i from 1 through 20 {
@@ -137,7 +138,4 @@ $page-container: ".page";
       width: $i * 5%;
     }
   }
-}
-.list + .list {
-  margin-top: rhythm(1);
 }
