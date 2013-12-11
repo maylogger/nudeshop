@@ -61,4 +61,6 @@
           .info-item 11:00 ~ 18:00
         td 
           .info-item 小心輕放
-  .logo = image_tag("logo.png")
+  .logo 
+    <!--[if IE]> <img src="/images/logo.png" alt="" /> <![endif]-->
+    <!--[if !IE]--> <img src="/images/logo.svg" alt="" /> <!--[endif]-->
