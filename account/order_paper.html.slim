@@ -1,0 +1,64 @@
+.main-full
+  h2.main-title
+    span.en Package List 
+    span.en.right Order #000000001
+  table.list
+    thead
+      tr
+        th.product.col-8 Product
+        th.col-3
+        th.price.col-3 Price
+        th.quantity.col-3 Quantity
+        th.price.col-3 Total
+    tbody
+      - 5.times do
+        tr
+          td.product
+            .product-content href="/events/products/"
+            = zh_lorem_words( rand(10) + 6)
+          td.product.detail
+            .info-item #0001
+            .info-item Size: L
+            .info-item Color: Red
+          td.price
+            .price-unit = rand(20000) + 5000
+          td.quantity 1
+          td.price
+            .price-unit = rand(20000) + 5000
+  table.list.page-break
+    tbody
+      tr.shipping-costs
+        td colspan="3" Shipping
+        td.price colspan="2"
+          .price-unit 80
+      tr.subtotal
+        td colspan="3" Subtotal
+        td.price colspan="2"
+          .price-unit = rand(20000) + 5000
+      tr.tax
+        td colspan="3" Tax
+        td.price colspan="2"
+          .price-unit = rand(20000) + 5000
+      tr.total
+        td colspan="3" Total
+        td.price colspan="2"
+          .price-unit = rand(20000) + 5000
+
+  table.list.ship-to.page-break
+    thead
+      tr
+        th.ship-to.col-8 Ship to
+        th.shipping-time.col-6 Shipping Time
+        th.addinfo.col-6 Note
+    tbody
+      tr
+        td.ship-to
+          .info-item 蔡 易成
+          .info-item 0912-576-155
+          .info-item 02-2591-0007
+          .info-item 104 台北市中山區松江路 372 巷 16 號
+        td 
+          .info-item 11:00 ~ 18:00
+        td 
+          .info-item 小心輕放
+  .logo = image_tag("logo.png")

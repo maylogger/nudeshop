@@ -1,0 +1,11 @@
+doctype 5
+html lang="zh-TW"
+  head
+  	meta charset="utf-8"
+  	title nude 出貨單
+	= stylesheet_link_tag "order", :media => "print, screen"
+	= stylesheet_link_tag "order-screen-adjust", :media => "screen"
+  body
+    .page
+        = yield
+    = render "/layout_livereload"
