@@ -1,0 +1,16 @@
+@import "compass";
+
+body {
+  background: #ddd;
+  padding: 50px 0;
+}
+
+.main-full {
+  width: 580px;
+  min-height: 750px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px 50px 100px;
+  @include clearfix;
+  @include box-shadow(0 0 5px rgba(black,.3));
+}
